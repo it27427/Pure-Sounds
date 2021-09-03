@@ -647,9 +647,9 @@ h1 {
 .home-header .main-nav .main-list-link {
   font-family: "Helvetica";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.25;
+  line-height: 1.42857;
   color: #333333;
   -webkit-transition: color 350ms ease;
   transition: color 350ms ease;
@@ -669,9 +669,9 @@ h1 {
   background: transparent;
   font-family: "Helvetica";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.25;
+  line-height: 1.42857;
   color: #333333;
   text-transform: uppercase;
   -webkit-transition: color 350ms ease;
@@ -3308,12 +3308,12 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3.125rem;
-  width: 30%;
+  width: 40%;
 }
 
 @media screen and (max-width: 87.5rem) {
   .puresound-box {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -3480,12 +3480,12 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: black;
-  width: 70%;
+  width: 60%;
 }
 
 @media screen and (max-width: 87.5rem) {
   .puresound .puresound-descriptions {
-    width: 60%;
+    width: 50%;
   }
 }
 

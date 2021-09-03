@@ -144,7 +144,7 @@
             }
 
             &-link {
-                @include text-20-16-normal-basefont;
+                @include text-20-14-normal-basefont;
                 color: $textPrimary;
                 @include transition(color $time ease);
 
@@ -162,7 +162,7 @@
 
             &-link {
                 background: transparent;
-                @include text-20-16-normal-basefont;
+                @include text-20-14-normal-basefont;
                 color: $textPrimary;
                 text-transform: uppercase;
                 @include transition(color $time ease);

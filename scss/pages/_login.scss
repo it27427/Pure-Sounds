@@ -10,10 +10,10 @@
         padding: length(0) length(80);
         @include flex-column;
         gap: length(50);
-        width: 30%;
+        width: 40%;
 
         @include breakpoint(desktop1400) {
-            width: 40%;
+            width: 50%;
         }
 
         @include breakpoint(desktop1199) {
@@ -103,10 +103,10 @@
         padding: length(80);
         @include flex-center-column;
         background-color: $black;
-        width: 70%;
+        width: 60%;
 
         @include breakpoint(desktop1400) {
-            width: 60%;
+            width: 50%;
         }
 
         @include breakpoint(desktop1199) {
