@@ -1,0 +1,123 @@
+.footer {
+    padding: length(50) length(0);
+    background: $black;
+
+    &-content {
+        @include flex-column;
+        gap: length(50);
+
+        .footer-infos {
+            display: flex;
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+                gap: length(20);
+            }
+
+            .footer-logo {
+                width: 25%;
+            
+                @include breakpoint(phone768) {
+                    width: 100%;
+                    @include flex-center;
+                }
+
+                .footer-link {
+                    @include flex-center-vert;
+                    gap: length(4);
+                    overflow: hidden;
+                    
+                    svg {
+                        width: length(24);
+                        @include square(length(24));
+                        
+                        path {
+                            fill: $featured-category-title;
+                        }
+                    }
+                    
+                    .link-title {
+                        @include text-20-14-semibold-basefont;
+                        color: $featured-category-title;
+                    }
+                }
+            }
+
+            .footer-nav {
+                @include flex-between;
+                width: 55%;
+
+                @include breakpoint(phone768) {
+                    width: 100%;
+                    @include flex-center-column;
+                    gap: length(20);
+                }
+
+                .footlist-info {
+                    @include flex-column;
+                    gap: length(20);
+
+                    @include breakpoint(phone768) {
+                        text-align: center;
+                    }
+
+                    .footlist-title {
+                        @include text-20-16-normal-basefont;
+                        color: $white;
+                    }
+
+                    .footlist {
+                        @include list-vertical;
+                        gap: length(10);
+
+                        &-link {
+                            @include text-20-14-normal-basefont;
+                            color: rgba($white, 0.5);
+                            @include transition(color $time ease);
+
+                            @include hover {
+                                color: rgba($white, 0.3);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social-list {
+                @include list-horizontal;
+                align-items: flex-start;
+                justify-content: flex-end;
+                gap: length(20);
+                padding: 0 length(0);
+                width: 25%;
+            
+                @include breakpoint(phone768) {
+                    width: 100%;
+                    justify-content: center;
+                }
+    
+                &-link {
+                    i {
+                        color: rgba($white, 0.5);
+                        font-size:length(18);
+                        @include transition(color $time ease);
+                    }
+    
+                    @include hover {
+                        i {
+                            color: rgba($white, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            &-text {
+                @include text-20-14-normal-basefont;
+                color: rgba($white, 0.5);
+                text-align: center;
+            }
+        }
+    }
+}

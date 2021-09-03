@@ -1,0 +1,136 @@
+.search-form {
+    position: relative;
+    @include flex-center-vert;
+    flex-grow: 100;
+    background: $searchBg;
+    @include border(solid, 1, transparent);
+    @include radius(4);
+    @include transition(all $time ease);
+
+    .btn-search {
+        background: transparent;
+        @include square(length(48));
+        @include double-radius(top, left, 4, bottom, left, 4);
+        @include flex-center;
+    }
+
+    .inputbox {
+        width: calc(100% - 3rem);
+        @include double-radius(top, right, 4, bottom, right, 4);
+        position: relative;
+        @include flex-center;
+
+        .search-input {
+            @include double-radius(top, right, 4, bottom, right, 4);
+            width: 100%;
+            @include setBgColor(transparent, $textPrimary);
+            padding: length(12) length(43) length(12) length(8);
+            @include text-18-16-normal-basefont;
+
+            &::placeholder {
+                @include text-18-16-medium-basefont;
+                color: $textPlaceholder;
+            }
+            
+            @include breakpoint(tablet991) {
+                padding:length(12) length(8);
+            }
+        }
+    }
+
+    &:focus-within {
+        border-color: $searchFocusBorder;
+    }
+    
+    @include breakpoint(phone768) {
+        display: none;
+    }
+}
+
+.responsive-search-form {
+    display: none;
+    flex-grow: 100;
+    background: $searchBg;
+    @include border(solid, 1, transparent);
+    @include radius(4);
+    @include transition(all $time ease);
+    position: relative;
+
+    .btn-search {
+        background: transparent;
+        @include square(length(48));
+        @include double-radius(top, left, 4, bottom, left, 4);
+        @include flex-center;
+    }
+
+    .inputbox {
+        width: calc(100% - 3rem);
+        @include double-radius(top, right, 4, bottom, right, 4);
+        position: relative;
+        @include flex-center;
+
+        .search-input {
+            @include double-radius(top, right, 4, bottom, right, 4);
+            width: 100%;
+            @include setBgColor(transparent, $textPrimary);
+            padding: length(12) length(43) length(12) length(8);
+            @include text-18-16-normal-basefont;
+
+            &::placeholder {
+                @include text-18-16-medium-basefont;
+                color: $textPlaceholder;
+            }
+            
+            @include breakpoint(tablet991) {
+                padding:length(12) length(8);
+            }
+        }
+    }
+
+    &:focus-within {
+        border-color: $searchFocusBorder;
+    }
+    
+    @include breakpoint(phone768) {
+        @include flex-center-vert;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.search-suggestions {
+    position: absolute;
+    background: $white;
+    top: calc(100% + 0.65rem);
+    filter: $search-shadow;
+    width: 100%;
+    @include radius(5);
+    z-index: 300;
+    display: none;
+
+    @extend %animation;
+    @extend %slideUpIn;
+
+    .suggestion-list {
+        @include list-vertical;
+        padding: length(20);
+
+        &-link {
+            padding: length(8) length(30);
+            cursor: pointer;
+            background: $white;
+            @include text-20-16-medium-basefont;
+            display: inline-block;
+            width: 100%;
+            @include transition(background $time ease);
+
+            @include hover {
+                background: $searchBg;
+            }
+        }
+    }
+
+    &.show {
+        display: block;
+    }
+}

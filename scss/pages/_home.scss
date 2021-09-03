@@ -1,0 +1,421 @@
+.home-banner {
+    display: flex;
+    background: $black;
+    height: length(400);
+    position: relative;
+    top: length(62);
+    padding: length(62) length(0);
+    margin-bottom: length(128);
+             
+    @include breakpoint(phone768) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .home-banner-descriptions,
+    .banner-cover-image {
+        width: 50%;
+
+        @include breakpoint(phone768) {
+            width: 100%;
+            max-height: length(286);
+        }
+    }
+
+    .home-banner-descriptions {
+        @include flex-end;
+        align-items: center;
+        padding: length(0) length(120) length(0) length(0);
+        
+        @include breakpoint(desktop1366) {
+            padding: length(0) length(60);
+            @include flex-center;
+        }
+
+        .description {
+            .home-title {
+                @include h1-font-style;
+                color: $white;
+
+                @include breakpoint(laptop1100) {
+                    @include titletext-font-style;
+                }
+
+                @include breakpoint(tablet991) {
+                    @include h2-font-style;
+                }
+            }
+
+            .text {
+                color: $white;
+                margin: length(21) length(0) length(32);
+                @include text-20-16-normal-basefont;
+                
+                @include breakpoint(laptop1100) {
+                    @include text-20-14-normal-basefont;
+                }
+            }
+
+            @include breakpoint(phone768) {
+                max-width: length(345);
+            }
+        }
+        
+        @include breakpoint(phone768) {
+            width: 100%;
+            order: 1;
+            @include flex-center;
+        }
+    }
+
+    .banner-cover-image {
+        overflow: hidden;
+        position: relative;
+        margin: length(-62) length(0);
+        order: 0;
+                    
+        @include breakpoint(phone768) {
+            margin: length(0);
+            margin: length(-62) length(0) length(62);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            
+            @include breakpoint(phone768) {
+                height: length(286);
+                max-height: length(286);
+            }
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            background-image: linear-gradient(180deg,rgba(26,26,26,0) 70%,#1a1a1a 100%);
+            height: 100%;
+            bottom: 0;
+            width: 100%;
+            content: '';
+        }
+    }
+}
+
+.featured-categories {
+    @include flex-column;
+    margin-bottom: length(88);
+    
+    @include breakpoint(phone768) {
+        margin-bottom: length(55);
+    }
+
+    .featuerd-box {
+        @include flex-column;
+        gap: length(28);
+
+        .featured-title {
+            @include h2-font-style;
+            color: $textPrimary;
+        }
+    }
+
+    .featured {
+        @include flex-column;
+        gap: length(8);
+    }
+
+    .featured-category {
+        @include flex-center-vert;
+        gap: length(8);
+        flex-wrap: wrap;
+        
+        @include breakpoint(tablet880) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .featured-category-half {
+        @include flex-center-vert;
+        gap: length(8);
+            
+        @include breakpoint(phone768) {
+            flex-direction: column;
+        }
+    }
+}
+
+.browse-sound {
+    margin-bottom: length(88);
+    
+    &-content {
+        @include flex-column;
+        gap: length(28);
+
+        .borwse-title {
+            @include h2-font-style;
+            color: $textPrimary;
+        }
+
+        .nav-tabs {
+            @include border-single(bottom, solid, 1, $tabBorder);
+            margin-bottom: length(12);
+
+            .nav-link {
+                padding: length(10) length(24) length(20);
+                border: none;
+                color: $tabTitle;
+                margin-bottom: length(0);
+                @include transition(color $time ease);
+                @include text-20-14-medium-basefont;
+                @include flex-center;
+
+                &:hover:not(.active) {
+                    color: $tabTitle-Active;
+                }
+
+                &.active {
+                    color: $tabTitle-Active;
+                    @include border-single(bottom, solid, 2, $tabTitle-Active);
+                }
+            }
+        }
+
+        .tab-content {
+            .tab-pane {
+                .browse-latest {
+                    @include flex-center-vert;
+                    gap: length(10);
+                    flex-wrap: wrap;
+                }
+
+                .browse-location {
+                    @include flex-center-vert;
+                    gap: length(16);
+                    flex-wrap: wrap;
+                }
+
+                .browse-tag {
+                    @include flex-center-vert;
+                    gap: length(16);
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+.sound-designer {
+    margin-bottom: length(88);
+
+    &-content {
+        @include flex-column;
+        gap: length(28);
+
+        .featuring-title {
+            @include h2-font-style;
+            color: $textPrimary;
+        }
+
+        .featured {
+            &-category {
+                @include flex-center-vert;
+                gap: length(10);
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+.home-discover {
+    padding: length(104) length(0) length(88);
+    background: $locationBg;
+
+    &-content {
+        @include flex-column;
+        gap: length(28);
+
+        .discover-title {
+            @include h2-font-style;
+            color: $textPrimary;
+            
+            @include breakpoint(phone768) {
+                @include text-28-20-bold-basefont;
+            }
+        }
+
+        .discover-counters {
+            @include flex-center-vert;
+            gap: length(24);
+            
+            @include breakpoint(phone575) {
+                @include flex-column;
+                align-items: flex-start;
+            }
+
+            .card-counter {
+                width: length(272);
+            
+                @include breakpoint(phone575) {
+                    width: 100%;
+                }
+
+                .counter-title {
+                    margin: length(12) length(0) length(14);
+                    color: $featured-category-title;
+                    @include text-24-38-bold-basefont;
+                }
+                
+                .counter-text {
+                    @include text-24-16-bold-basefont;
+                    color: $textGray-1;
+                }
+            }
+        }
+
+        .discovers {
+            padding: length(38) length(0);
+            display: flex;
+            gap: length(12);
+            flex-wrap: wrap;
+            
+            @include breakpoint(phone575) {
+                padding: length(0) length(0) length(38);
+            }
+        }
+    }
+}
+
+.our-clients {
+    background: $black;
+    position: relative;
+    display: flex;
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+    }
+
+    &-title {
+        width: 33%;
+        background-color: red;
+        background: $black;
+        @include flex-center-column;
+
+        @include breakpoint(laptop1100) {
+            width: 40%;
+        }
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+        }
+
+        .title {
+            @include flex-column;
+            padding-left: length(140);
+
+            @include breakpoint(desktop1366) {
+                padding-left: 0;
+            }
+
+            @include breakpoint(tablet991) {
+                padding: length(50) length(30);
+                text-align: center
+            }
+            
+            &-text {
+                @include h2-font-style;
+                color: $white;
+            }
+        }
+    }
+
+    &-bg {
+        width: 67%;
+        background: url(../images/home-banner/home-client-bg.jpg) no-repeat center center/cover;
+        background-attachment: fixed;
+
+        @include breakpoint(laptop1100) {
+            width: 60%;
+        }
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+        }
+    }
+
+    .our-client-descriptions {
+        position: relative;
+        background-color: $clientBg;
+        background-image: $gradient-1;
+
+        .clients {
+            @include flex-center-vert;
+            flex-wrap: wrap;
+            max-width: length(695);
+            padding: length(35);
+
+            @include breakpoint(tablet991) {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .clientbox {
+            width: 25%;
+            height: length(132);
+            padding: length(26);
+            @include flex-center;
+
+            img {
+                max-width: 100%;
+            }
+
+            @include breakpoint(phone575) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.home-client {
+    background: $black;
+
+    &-content {
+        @include flex-center-column;
+        padding: length(200) length(15) length(132);
+
+        @include breakpoint(tablet991) {
+            padding: length(120) length(15) length(132);
+        }
+    }
+
+    &-titles {
+        text-align: center;
+
+        .title {
+            @include titletext-font-style;
+            color: $white;
+
+            @include breakpoint(phone500) {
+                @include price-font-style;
+            }
+        }
+
+        .subtitle {
+            .sublink {
+                @include titletext-fontbold-style;
+                color: $lightGreen;
+                @include transition(color $time ease);
+
+                @include breakpoint(phone500) {
+                    @include price-font-style;
+                }
+
+                @include hover {
+                    color: rgba($lightGreen, 0.5);
+                }
+            }
+        }
+    }
+}

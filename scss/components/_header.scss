@@ -1,0 +1,323 @@
+.header-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    @include transition(all $time ease);
+    background: $white;
+    box-shadow: $header-box-shadow;
+    z-index: 250;
+
+    &.shadowless {
+        box-shadow: none;
+    }
+}
+
+.home-header {
+    @include flex-center-vert;
+    padding: length(0) length(30);
+    margin: 0 auto;
+
+    .brand {
+        object-fit: contain;
+        width: length(113);
+        height: length(32);
+        margin: length(19) length(44) length(20) length(0);
+        display: flex;
+        position: relative;
+
+        &-title {
+            @include text-20-14-semibold-basefont;
+            color: $textPrimary;
+        }
+
+        .logo {
+            @include flex-center-vert;
+            gap: length(4);
+            overflow: hidden;
+            
+            svg {
+                width: length(24);
+                @include square(length(24));
+            }
+        }
+           
+        @include breakpoint(phone768) {
+            margin: length(0) auto;
+            order: 1;
+        }
+    }
+
+    .main-nav {
+        @include flex-center-vert;
+        gap: length(28);
+        margin-left: length(24);
+
+        .main-list,
+        .login-register-modal-list,
+        .login-register-list,
+        .social-list {
+            @include list-horizontal;
+        }
+
+        .main-list {
+            gap: length(24);
+
+            &-item {
+                color: $textPrimary;
+            }
+
+            .main-dropdown {
+                position: relative;
+
+                .dropdown-link {
+                    padding: length(25) length(0);
+
+                    &:hover ~ .dropdownmain {
+                        display: block;
+                    }
+                }
+
+                .dropdownmain {
+                    background: $white;
+                    position: absolute;
+                    top: 220%;
+                    left: -75%;
+                    z-index: 450;
+                    filter: $search-shadow;
+                    display: none;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: length(-5);
+                        left: 50%;
+                        @include transform(translateX(-50%) rotate(45deg));
+                        @include border(solid, 5, $white);
+                        border-bottom-color: transparent;
+                        border-right-color: transparent;
+                        z-index: -1;
+                        box-shadow: none;
+                    }
+
+                    .mail-text {
+                        padding: length(4) length(32);
+                        cursor: pointer;
+                        @include text-30-12-normal-basefont;
+                        color: $textGray-1;
+                    }
+
+                    .main-dropdown-menu {
+                        position: absolute;
+                        background: $white;
+                        width: 100%;
+                        @include list-vertical;
+
+                        &-item {
+                            
+
+                            &:last-of-type {
+                                .main-dropdown-link {
+                                    @include border-single(top, solid, 1, $dropdown-border);
+                                }
+                            }
+                        }
+
+                        .main-dropdown-link {
+                            padding: length(8) length(32);
+                            @include text-20-14-normal-basefont;
+                            display: inline-block;
+                            width: 100%;
+                            @include setBgColor(transparent, $textPrimary);
+                            @include transition(background $time ease);
+
+                            @include hover {
+                                @include setBgColor($searchBg, $textPrimary);
+                            }
+                        }
+                    }
+
+                    &.show {
+                        display: block;
+                    }
+                }
+            }
+
+            &-link {
+                @include text-20-16-normal-basefont;
+                color: $textPrimary;
+                @include transition(color $time ease);
+
+                @include hover {
+                    color: $textPlaceholder;
+                }
+            }
+        }
+        
+        .login-register-modal-list,
+        .login-register-list {
+            &-item {
+                color: $textPrimary;
+            }
+
+            &-link {
+                background: transparent;
+                @include text-20-16-normal-basefont;
+                color: $textPrimary;
+                text-transform: uppercase;
+                @include transition(color $time ease);
+
+                @include hover {
+                    color: $textPlaceholder;
+                }
+            }
+        }
+
+        .social-list {
+            gap: length(14);
+            padding: length(16) length(0);
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+
+            &-link {
+                i {
+                    color: $textPlaceholder;
+                    font-size:length(16);
+                    @include transition(color $time ease);
+                }
+
+                @include hover {
+                    i {
+                        color: $socialHover;
+                    }
+                }
+            }
+        }
+        
+        @include breakpoint(phone768) {
+            display: none;
+        }
+    }
+    
+    .hamburger-icon {
+        @include transparent-button;
+        @include square(length(32));
+        @include double-radius(top, left, 4, bottom, left, 4);
+        display: none;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        @include breakpoint(phone768) {
+            @include flex-center;
+        }
+    }
+
+    .responsive-search {
+        display: none;
+        order: 3;
+
+        .btn-responsivesearch {
+            @include transparent-button;
+            @include square(length(24));
+            @include double-radius(top, left, 4, bottom, left, 4);
+            @include flex-center;
+            
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        // .responsive-search-box {
+        //     // display: none;
+        // }
+               
+        @include breakpoint(phone768) {
+            display: block;
+        }
+    }
+    
+    .headermenu {
+        @include flex-center-vert;
+        width: 100%;
+        position: relative;
+        
+        @include breakpoint(phone768) {
+            justify-content: space-between;
+        }
+    }
+
+    @include breakpoint(phone768) {
+        flex-direction: column;
+        gap: length(8);
+        padding: length(16) length(20) length(14);
+    }
+}
+
+.header-overlay {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba($black, 0.25);
+    z-index: 20;
+    display: none;
+    @include transition(all $time ease);
+
+    &.show {
+        display: block;
+    }
+}
+
+.responsive-search-box {
+    width: 100%;
+    display: none;
+    
+    @extend %animation;
+    @extend %slideDownIn;
+
+    &.show {
+        @include flex-center;
+    }
+}
+
+.loaderbox {
+    position: absolute;
+    top: 50%;
+    right: length(5);
+    @include square(length(30));
+    @include transform(translateY(-50%));
+    display: none;
+    
+    .loading-spinner {
+        @include border(solid, 2, green);
+        @include percentradius(100%);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        @include square(length(15));
+        animation-name: loading;
+        animation-duration: 700ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    &.show {
+        @include flex-center;
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

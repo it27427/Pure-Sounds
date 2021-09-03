@@ -1,0 +1,253 @@
+.puresound {
+    display: flex;
+    min-height: 100vh;
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+    }
+
+    &-box {
+        padding: length(0) length(80);
+        @include flex-column;
+        gap: length(50);
+        width: 30%;
+
+        @include breakpoint(desktop1400) {
+            width: 40%;
+        }
+
+        @include breakpoint(desktop1199) {
+            padding: length(0) length(40);
+        }
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+            padding: length(0) length(24) length(80);
+            gap: length(0);
+        }
+
+        @include breakpoint(phone500) {
+            padding: length(0) length(0) length(40);
+        }
+
+        .puresoundlogo {
+            height: length(130);
+            @include flex-center-vert;
+    
+            .logo {
+                @include flex-center-vert;
+                gap: length(4);
+                overflow: hidden;
+                
+                svg {
+                    width: length(24);
+                    @include square(length(24));
+                }
+
+                &-title {
+                    @include text-20-14-semibold-basefont;
+                    color: $textPrimary;
+                }
+            }
+
+            @include breakpoint(tablet991) {
+                height: length(80);
+                justify-content: center;
+            }
+        }
+
+        .formbox {
+            @include flex-column;
+            gap: length(20);
+
+            @include breakpoint(tablet991) {
+                padding: length(0) length(24);
+            }
+
+            .formdescriptions {
+                @include flex-column;
+                gap: length(20);
+
+                @include breakpoint(tablet991) {
+                    align-items: center;
+                    text-align: center;
+                    padding: length(0) length(50);
+                }
+
+                @include breakpoint(phone500) {
+                    padding: length(0) length(16);
+                }
+
+                .title {
+                    @include text-48-34-bold-basefont;
+                    color: $textPrimary;
+
+                    @include breakpoint(phone500) {
+                        @include text-28-20-bold-basefont;
+                    }
+                }
+
+                .text {
+                    @include text-24-16-normal-basefont;
+                    color: $textGray-1;
+
+                    @include breakpoint(phone500) {
+                        @include text-20-14-normal-basefont;
+                    }
+                }
+            }
+        }
+    }
+
+    .puresound-descriptions {
+        padding: length(80);
+        @include flex-center-column;
+        background-color: $black;
+        width: 70%;
+
+        @include breakpoint(desktop1400) {
+            width: 60%;
+        }
+
+        @include breakpoint(desktop1199) {
+            padding: length(40);
+        }
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+            align-items: center;
+            gap: length(0);
+            text-align: center;
+            padding: length(24);
+        }
+
+        .description {
+            max-width: length(470);
+            @include flex-center-column;
+            gap: length(20);
+        
+            @include breakpoint(desktop1199) {
+                max-width: 100%;
+            }
+
+            hgroup {
+                @include flex-center-column;
+                gap: length(20);
+
+                .title {
+                    @include text-20-14-normal-basefont;
+                    color: $textSecondary;
+                    text-align: center;
+                }
+
+                .subtitle {
+                    @include text-36-28-normal-basefont;
+                    color: $white;
+                    text-align: center;
+
+                    @include breakpoint(tablet991) {
+                        @include text-32-24-normal-basefont;
+                    }
+
+                    @include breakpoint(phone500) {
+                        @include text-28-20-semibold-basefont;
+                    }
+                }
+            }
+
+            .price {
+                @include text-24-16-normal-basefont;
+                color: $textGray-1;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.form-check {
+    @include transition(all $time ease);
+    padding-left: 0;
+    width: 88%;
+
+    &-input {
+        opacity: 0;
+        margin-left: 0;
+
+        &:checked {
+            ~ .form-check-label {
+                &::before {
+                    border-color: $lightGreen;
+                    background: $lightGreen;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-label {
+        position: relative;
+        cursor: pointer;
+        @include transition(all $time ease);
+        @include text-30-12-normal-basefont;
+        line-height: 1;
+        color: $textGray-1;
+        
+        @include breakpoint(phone500) {
+            @include text-30-12-normal-basefont;
+            line-height: 1;
+        }
+
+        .formlink {
+            @include text-30-12-bold-basefont;
+            line-height: 1;
+            color: $accessActiveBg;
+            @include transition(color $time ease);
+
+            @include hover {
+                color: $accessActiveHoverBg;
+            }
+        
+            @include breakpoint(phone500) {
+                @include text-30-12-normal-basefont;
+                line-height: 1;
+            }
+        }
+
+        &:hover {
+            &::before {
+                border-color: $lightGreen;
+            }
+        }
+
+        &::before {
+            content: '';
+            @include square(length(16));
+            @include flex-center;
+            position: absolute;
+            top: 50%;
+            left: length(-24);
+            @include transform(translateY(-50%));
+            @include border(solid, 1, $searchBorder);
+            background: $white;
+            @include transition(all $time ease);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: length(-2);
+            left: length(-19);
+            width: length(6);
+            height: length(12);
+            @include border(solid, 2, $white);
+            @include transform(rotate(45deg));
+            border-top-color: transparent;
+            border-left-color: transparent;
+            opacity: 0;
+            @include transition(opacity $time ease);
+        }
+    }
+}

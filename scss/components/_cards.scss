@@ -1,0 +1,321 @@
+.category-card {
+    width: calc(16.75% - .5rem);
+    height: length(142);
+    position: relative;
+    @include radius(4);
+    @include border(solid, 1, transparent);
+
+    @include breakpoint(desktop1199) {
+        width: calc(33% - .25rem);
+    }
+
+    @include breakpoint(phone768) {
+        width: calc(50% - .25rem);
+    }
+
+    .card-cap {
+        @include radius(4);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include radius(4);
+        }
+    }
+    
+    .card-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex-center;
+        background: linear-gradient(to top,rgba(0,0,0,.8),rgba(16,22,35,.26));
+        color: $white;
+        text-transform: uppercase;
+        @include text-20-14-semibold-basefont;
+        @include radius(4);
+        @include transition(all $time ease);
+        letter-spacing: length(3.4);
+
+        @include hover {
+            @include setBgColor($featuredcard-hover-bg, $featured-category-title);
+            height: length(142);
+            @include radius(4);
+        }
+    }
+}
+
+.card-category {
+    width: calc(100% - .5rem);
+    height: length(202);
+    position: relative;
+    @include radius(4);
+    @include border(solid, 1, transparent);
+    overflow: hidden;
+    
+    @include breakpoint(phone768) {
+        width: 100%;
+        height: length(142);
+    }
+
+    .card-cap {
+        @include radius(4);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include radius(4);
+        }
+    }
+    
+    .card-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex-center;
+        background: linear-gradient(to top,rgba(0,0,0,.8),rgba(16,22,35,.26));
+        color: $white;
+        text-transform: uppercase;
+        @include text-20-14-semibold-basefont;
+        @include radius(4);
+        @include transition(all $time ease);
+        letter-spacing: length(3.4);
+
+        @include hover {
+            @include setBgColor($featuredcard-hover-bg, $featured-category-title);
+            height: length(202);
+            @include radius(4);
+            
+            @include breakpoint(phone768) {
+                height: length(142);
+            }
+        }
+    }
+}
+
+.browse-card {
+    width: calc(25% - .5rem);
+    height: length(142);
+    position: relative;
+    @include radius(4);
+    @include border(solid, 1, transparent);
+
+    @include breakpoint(desktop1199) {
+        width: calc(50% - .5rem);
+    }
+
+    @include breakpoint(phone575) {
+        width: 100%;
+    }
+
+    .card-cap {
+        @include radius(4);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include radius(4);
+        }
+    }
+    
+    .card-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex-center;
+        background: linear-gradient(to top,rgba(0,0,0,.8),rgba(16,22,35,.26));
+        color: $white;
+        text-transform: uppercase;
+        @include text-20-14-semibold-basefont;
+        @include radius(4);
+        @include transition(all $time ease);
+        letter-spacing: length(3.4);
+
+        @include hover {
+            @include setBgColor($featuredcard-hover-bg, $featured-category-title);
+            height: length(142);
+            @include radius(4);
+        }
+    }
+}
+
+.location-card {
+    width: calc(25% - 1rem);
+    height: length(80);
+    background: $locationBg;
+    position: relative;
+    @include radius(4);
+    @include flex-center;
+    @include transition(background $time ease);
+
+    @include breakpoint(desktop1199) {
+        width: calc(50% - 1rem);
+    }
+
+    @include breakpoint(phone575) {
+        width: 100%;
+    }
+
+    .card-cap {
+        @include square(48);
+        overflow: hidden;
+        @include flex-center-vert;
+        position: absolute;
+        top: 50%;
+        left: length(20);
+        @include transform(translateY(-50%));
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .location-title {
+        @include text-20-14-semibold-basefont;
+        color: $textPrimary;
+    }
+
+    @include hover {
+        background: $featuredcard-hover-bg;
+    }
+}
+
+.tag-card {
+    width: calc(25% - 1rem);
+    height: length(80);
+    background: $locationBg;
+    position: relative;
+    @include radius(4);
+    @include flex-center;
+    @include transition(background $time ease);
+
+    @include breakpoint(desktop1199) {
+        width: calc(50% - 1rem);
+    }
+
+    @include breakpoint(phone575) {
+        width: 100%;
+    }
+
+    .location-title {
+        @include text-20-14-semibold-basefont;
+        color: $textPrimary;
+    }
+
+    @include hover {
+        background: $featuredcard-hover-bg;
+    }
+}
+
+.featuring-card {
+    width: calc(16.75% - .625rem);
+    height: length(140);
+    background: $locationBg;
+    position: relative;
+    @include radius(4);
+    @include flex-center;
+
+    .card-cap {
+        @include radius(4);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include radius(4);
+        }
+    }
+
+    .featured-title {
+        position: absolute;
+        background: 0 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex-center;
+        background: linear-gradient(to top,rgba(0,0,0,.8),rgba(16,22,35,.26));
+        color: $white;
+        text-transform: uppercase;
+        @include text-20-14-semibold-basefont;
+        @include radius(4);
+        @include transition(all $time ease);
+        letter-spacing: length(3.4);
+    }
+
+    @include breakpoint(desktop1199) {
+        width: calc(33% - .625rem);
+    }
+
+    @include breakpoint(phone768) {
+        width: calc(50% - .3125rem);
+    }
+
+    .location-title {
+        @include text-20-14-semibold-basefont;
+        color: $textPrimary;
+    }
+}
+
+.card-discover {
+    width: calc(25% - .75rem);
+
+    @include breakpoint(tablet991) {
+        width: calc(50% - .75rem);
+    }
+
+    @include breakpoint(phone575) {
+        width: 100%;
+    }
+
+    &-header {
+        .card-cap {
+            @include flex-center;
+            @include square(length(104));
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-body {
+        max-width: length(272);
+        @include flex-column;
+        gap: length(8);
+        
+        @include breakpoint(phone575) {
+            max-width: 100%;
+        }
+        
+        .title {
+            @include text-28-20-bold-basefont;
+            color: $textPrimary;
+            @include text-overflow;
+        }
+        
+        .text {
+            @include text-20-14-normal-basefont;
+            color: $textGray-1;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.btn-sound {
+    display: inline-block;
+    text-align: center;
+    padding: length(17) length(40) length(19);
+    background: rgba($white, 0.1);
+    @include text-28-18-medium-basefont;
+    line-height: 1;
+    @include border(solid, 1, $white);
+    @include setBgColor($black, $white);
+    @include radius(4);
+    background: transparent;
+    color: $white;
+    @include transition(all $time ease);
+
+    @include hover {
+        color: $white;
+        @include setBgColor(rgba($white, 0.1), $white);
+    }
+
+    @include breakpoint(phone768) {
+        font-size: length(15);
+    }
+}

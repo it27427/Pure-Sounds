@@ -1,0 +1,588 @@
+/*------------------------------------*\
+    // FONT STYLE VARIABLES
+\*------------------------------------*/
+
+$HelveticaNeueLTPro: 'Helvetica';
+
+$font-sizes: ('extrasmall': 10, 'small': 12, 'medium': 14, 'base': 16, 'midbig': 18, 'big': 20, 'extra': 24, 'heading1': 52, 'heading2': 28, 'faqtitle': 32, 'f34': 34, 'counter': 38, 'f40': 40, 'titletext': 42);
+$font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
+$font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
+
+
+/*------------------------------------*\
+    // FONT STYLE FUNCTIONS
+\*------------------------------------*/
+
+// SET FONT-FAMILY
+@function family($font-family) {
+    @return inspect($value: $font-family);
+}
+
+// SET FONT-STYLE
+@function style($font-style) {
+    @return map-get($font-styles, $font-style);
+}
+
+// SET FONT-STYLE
+@function size($font-size) {
+    @return map-get($font-sizes, $font-size);
+}
+
+// SET FONT-WEIGHT
+@function weight($font-weight) {
+    @return map-get($font-weights, $font-weight);
+}
+
+// SET LINE-HEIGHT
+@function line-height($line-height, $font-size) {
+    @return ($line-height / $font-size);
+}
+
+/*------------------------------------*\
+    // FONT STYLE MIXINS
+\*------------------------------------*/
+
+@mixin font($font-family, $font-style, $font-size, $font-weight, $line-height) {
+    font: {
+      family: $font-family;
+      style: $font-style;
+      size: $font-size / $base + rem;
+      weight: $font-weight;
+    }
+    line-height: $line-height;
+}
+
+/*------------------------------------*\
+    // h1 FONT SETTINGS
+\*------------------------------------*/
+@mixin h1-font-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('heading1'),
+		weight('bold'),
+		line-height(64, size('heading1'))
+  	);
+}
+
+/*------------------------------------*\
+    // h2 FONT SETTINGS
+\*------------------------------------*/
+@mixin h2-font-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('heading2'),
+		weight('bold'),
+		line-height(38, size('heading2'))
+  	);
+}
+
+@mixin text-36-28-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('counter'),
+		weight('normal'),
+		line-height(36, size('heading2'))
+  	);
+}
+
+@mixin text-24-38-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('counter'),
+		weight('normal'),
+		line-height(24, size('counter'))
+  	);
+}
+
+@mixin text-48-34-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('f34'),
+		weight('normal'),
+		line-height(48, size('f34'))
+  	);
+}
+
+@mixin text-48-34-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('f34'),
+		weight('bold'),
+		line-height(48, size('f34'))
+  	);
+}
+
+@mixin text-24-38-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('counter'),
+		weight('medium'),
+		line-height(24, size('counter'))
+  	);
+}
+
+@mixin text-24-38-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('counter'),
+		weight('semibold'),
+		line-height(24, size('counter'))
+  	);
+}
+
+@mixin text-24-38-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('counter'),
+		weight('bold'),
+		line-height(24, size('counter'))
+  	);
+}
+
+/*------------------------------------*\
+    // COUNTER FONT SETTINGS
+\*------------------------------------*/
+@mixin counter-font-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('counter'),
+		weight('normal'),
+		line-height(42, size('counter'))
+  	);
+}
+
+/*------------------------------------*\
+    // COUNTER FONT SETTINGS
+\*------------------------------------*/
+@mixin hometitle-mobile-font-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('f40'),
+		weight('normal'),
+		line-height(40, size('f40'))
+  	);
+}
+
+/*------------------------------------*\
+    // TITLE-TEXT FONT SETTINGS
+\*------------------------------------*/
+@mixin titletext-font-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('titletext'),
+		weight('normal'),
+		line-height(48, size('titletext'))
+  	);
+}
+@mixin titletext-fontbold-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('titletext'),
+		weight('bold'),
+		line-height(48, size('titletext'))
+  	);
+}
+
+/*------------------------------------*\
+    // FAQ-TITLE FONT SETTINGS
+\*------------------------------------*/
+@mixin faqtitle-font-style {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('faqtitle'),
+		weight('bold'),
+		line-height(44, size('faqtitle'))
+  	);
+}
+
+
+/*------------------------------------*\
+    // PRICE FONT SETTINGS
+\*------------------------------------*/
+@mixin price-font-style {
+      @include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('heading2'),
+		weight('bold'),
+		line-height(32, size('heading2'))
+      );
+}
+@mixin log-reg-font-style {
+      @include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('heading2'),
+		weight('bold'),
+		line-height(32, size('extra'))
+      );
+}
+
+/*------------------------------------*\
+    // 28-20 basefont
+\*------------------------------------*/
+@mixin text-28-20-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('normal'),
+		line-height(28, size('big'))
+  	);
+}
+
+@mixin text-28-20-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('big'),
+		line-height(28, size('big'))
+  	);
+}
+
+@mixin text-28-20-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('semibold'),
+		line-height(28, size('big'))
+  	);
+}
+
+@mixin text-28-20-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('bold'),
+		line-height(28, size('big'))
+  	);
+}
+
+/*------------------------------------*\
+    // 28-18 basefont
+\*------------------------------------*/
+@mixin text-28-18-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('midbig'),
+		weight('normal'),
+		line-height(28, size('midbig'))
+  	);
+}
+
+
+@mixin text-28-18-medium-basefont {
+	@include font(family($HelveticaNeueLTPro),
+	  style('normal'),
+	  size('midbig'),
+	  weight('big'),
+	  line-height(28, size('midbig'))
+	);
+}
+
+@mixin text-28-18-semibold-basefont {
+	@include font(family($HelveticaNeueLTPro),
+	  style('normal'),
+	  size('midbig'),
+	  weight('semibold'),
+	  line-height(28, size('midbig'))
+	);
+}
+
+@mixin text-28-18-bold-basefont {
+	@include font(family($HelveticaNeueLTPro),
+	  style('normal'),
+	  size('midbig'),
+	  weight('bold'),
+	  line-height(28, size('midbig'))
+	);
+}
+
+
+/*------------------------------------*\
+    // 20-16 basefont
+\*------------------------------------*/
+@mixin text-20-16-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(20, size('base'))
+  	);
+}
+
+@mixin text-20-16-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(20, size('base'))
+  	);
+}
+
+@mixin text-20-16-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(20, size('base'))
+  	);
+}
+
+@mixin text-20-16-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(20, size('base'))
+  	);
+}
+
+/*------------------------------------*\
+    // 24-16 basefont
+\*------------------------------------*/
+@mixin text-24-16-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(24, size('base'))
+  	);
+}
+
+@mixin text-24-16-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(24, size('base'))
+  	);
+}
+
+@mixin text-24-16-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(24, size('base'))
+  	);
+}
+
+@mixin text-24-16-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(24, size('base'))
+  	);
+}
+
+/*------------------------------------*\
+    // 28-16 basefont
+\*------------------------------------*/
+@mixin text-28-16-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(28, size('base'))
+  	);
+}
+
+@mixin text-28-16-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(28, size('base'))
+  	);
+}
+
+@mixin text-28-16-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(28, size('base'))
+  	);
+}
+
+@mixin text-28-16-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(28, size('base'))
+  	);
+}
+
+/*------------------------------------*\
+    // 18-16 basefont
+\*------------------------------------*/
+@mixin text-18-16-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('normal'),
+		line-height(18, size('base'))
+  	);
+}
+
+@mixin text-18-16-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('medium'),
+		line-height(18, size('base'))
+  	);
+}
+
+@mixin text-18-16-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('semibold'),
+		line-height(18, size('base'))
+  	);
+}
+
+@mixin text-18-16-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('base'),
+		weight('bold'),
+		line-height(18, size('base'))
+  	);
+}
+
+/*------------------------------------*\
+    // 32-24 basefont
+\*------------------------------------*/
+@mixin text-32-24-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('normal'),
+		line-height(32, size('extra'))
+  	);
+}
+
+@mixin text-32-24-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('medium'),
+		line-height(32, size('extra'))
+  	);
+}
+
+@mixin text-32-24-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('semibold'),
+		line-height(32, size('extra'))
+  	);
+}
+
+@mixin text-32-24-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('bold'),
+		line-height(32, size('extra'))
+  	);
+}
+
+/*------------------------------------*\
+    // 20-14 basefont
+\*------------------------------------*/
+@mixin text-20-14-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('normal'),
+		line-height(20, size('medium'))
+  	);
+}
+
+@mixin text-20-14-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('medium'),
+		line-height(20, size('medium'))
+  	);
+}
+
+@mixin text-20-14-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('semibold'),
+		line-height(20, size('medium'))
+  	);
+}
+
+@mixin text-20-14-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('bold'),
+		line-height(20, size('medium'))
+  	);
+}
+
+/*------------------------------------*\
+    // 12-10 basefont
+\*------------------------------------*/
+@mixin text-12-10-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extrasmall'),
+		weight('normal'),
+		line-height(12, size('extrasmall'))
+  	);
+}
+
+@mixin text-12-10-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extrasmall'),
+		weight('medium'),
+		line-height(12, size('extrasmall'))
+  	);
+}
+
+@mixin text-12-10-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extrasmall'),
+		weight('semibold'),
+		line-height(12, size('extrasmall'))
+  	);
+}
+
+@mixin text-12-10-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extrasmall'),
+		weight('bold'),
+		line-height(12, size('extrasmall'))
+  	);
+}
+
+@mixin text-30-12-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('small'),
+		weight('normal'),
+		line-height(30, size('small'))
+  	);
+}
+
+@mixin text-30-12-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('small'),
+		weight('bold'),
+		line-height(30, size('small'))
+  	);
+}

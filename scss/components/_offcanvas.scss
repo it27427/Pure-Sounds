@@ -1,0 +1,141 @@
+.mobile-menu-sidebar {
+    .mobmenu {
+        width: 65%;
+        background: black;
+
+        .offcanvas-header {
+            padding: length(15);
+
+            .logo {
+                @include flex-center-vert;
+                gap: length(4);
+                overflow: hidden;
+                
+                svg {
+                    width: length(24);
+                    @include square(length(24));
+                }
+
+                &-text {
+                    @include text-20-14-semibold-basefont;
+                    color: $featured-category-title;
+                }
+            }
+
+            .btn-close {
+                @include transparent-button;
+                margin: 0;
+                @include flex-center;
+
+                svg {
+                    @include transition(transform $time ease);
+
+                    path {
+                        fill: $white;
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        @include transform(rotate(360deg));
+
+                        path {
+                            fill: $lightGreen;
+                        }
+                    }
+                }
+            }
+        }
+
+        .offcanvas-body {
+
+            .mobile-nav {
+                @include flex-column;
+                gap: length(12);
+                padding: length(0) length(8);
+
+                .mobilemenu {
+                    @include flex-column;
+                    gap: length(18);
+
+                    .divider {
+                        width: 100%;
+                        height: length(1);
+                        background: rgba($white, 0.2);
+                    }
+
+                    .loggedmenu {
+                        .loggedmail {
+                            @include text-30-12-normal-basefont;
+                            color: $textGray-1;
+                        }
+
+                        .profilemenu {
+                            @include list-vertical;
+
+                            &-link {
+                                @include text-20-14-semibold-basefont;
+                                line-height: 2.5;
+                                color: rgba($mobilemenuLink, 0.3);
+                                @include transition(color $time ease);
+
+                                &:hover:not(.active) {
+                                    color: $featured-category-title;
+                                }
+
+                                &.active {
+                                    color: $featured-category-title;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .mobile-menu-list,
+            .mobilelogin-register-modal-list,
+            .mobilelogin-register-list {
+                @include list-vertical;
+            }
+            
+            .mobile-menu-list {
+                gap: length(12);
+
+                &-item {
+                    color: $white;
+                }
+
+                &-link {
+                    @include text-20-16-normal-basefont;
+                    color: $white;
+                    @include transition(color $time ease);
+
+                    @include hover {
+                        color: $textPlaceholder;
+                    }
+                }
+            }
+        
+            .mobilelogin-register-modal-list,
+            .mobilelogin-register-list {
+                gap: length(12);
+
+                &-item {
+                    color: $white;
+                }
+
+                &-link {
+                    background: transparent;
+                    @include text-20-16-normal-basefont;
+                    text-transform: uppercase;
+                    @include transition(color $time ease);
+                    color: $white;
+
+                    @include hover {
+                        color: $textPlaceholder;
+                    }
+                }
+            }
+        }
+    }
+}

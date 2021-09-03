@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, button,
+body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt,
+em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
+header, hgroup, html, i, input, iframe, img, ins, kbd, label, legend, li, mark,
+menu, main, nav, object, ol, output, option, p, pre, q, ruby, s, samp, section,
+small, span, strike, strong, sub, summary, select, sup, table, tbody, td, tfoot,
+th, thead, time, tr, tt, u, ul, var, video, br {
+    margin: 0;
+	padding: 0;
+    border: 0;
+    
+    &::selection {
+        background: $textPrimary;
+        background: $featured-category-title;
+        color: $white;
+    }
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, main, nav, section {
+    display: block;
+    margin: 0;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: $white;
+    font-family: Helvetica, sans-serif;
+    scroll-behavior: smooth;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: length(0.2);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// HIDE INPUT ARROWS
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $textPrimary;
+
+    @include hover {
+        color: $textPrimary;
+    }
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+h1 {
+    @include h1-font-style;
+}
