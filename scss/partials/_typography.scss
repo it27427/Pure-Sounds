@@ -79,7 +79,7 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
 @mixin text-36-28-normal-basefont {
   	@include font(family($HelveticaNeueLTPro),
 		style('normal'),
-		size('counter'),
+		size('heading2'),
 		weight('normal'),
 		line-height(36, size('heading2'))
   	);
