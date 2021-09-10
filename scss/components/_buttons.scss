@@ -21,3 +21,131 @@
         font-size: length(15);
     }
 }
+
+.btn-sorting,
+.btn-library {
+    display: inline-block;
+    width: calc(50% - .75rem);
+    width: 46%;
+    padding: length(8);
+    @include radius(4);
+    @include setBgColor($searchBg, $bgnBorder);
+    @include transition(background $time ease);
+    @include text-20-14-medium-basefont;
+    @include text-overflow;
+
+    &:hover:not(.active) {
+        @include setBgColor($noticeBg, $bgnBorder);
+    }
+
+    &.active {
+        @include setBgColor($noticeBg, $bgnBorder);
+    }
+}
+
+.btn-library {
+    width: 100%;
+}
+
+.btn-collapse {
+    @include transparent-button;
+    
+    svg {
+        @include transition(transform $time ease);
+
+        path {
+            fill: $textGray-1;
+        }
+    }
+
+    &.active {
+        svg {
+            @include transform(rotateX(180deg));
+        }
+    }
+}
+
+.btn-filter {
+    width: calc(100% - 2rem);
+    position: relative;
+    padding: length(12);
+    margin: length(0) auto;
+    @include setBgColor($filterBg, $bgnBorder);
+    @include radius(4);
+    display: none;
+
+    @include breakpoint(tablet991) {
+        @include flex-center;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: length(12);
+    }
+
+    .text {
+        @include text-20-14-semibold-basefont;
+        color: $bgnBorder;
+    }
+}
+
+.btn-player {
+    padding: length(16);
+    // width: length(24);
+    @include square(length(48));
+    cursor: pointer;
+    @include transparent-button;
+}
+
+.btn-play {
+    .play {
+        display: none;
+    }
+
+    &.playing {
+        .play {
+            display: block;
+        }
+
+        .pause {
+            display: none;
+        }
+    }
+}
+
+.btn-stop {
+    svg {
+
+    }
+}
+
+.btn-mute {
+    .volumeup {
+        
+    }
+
+    .mute {
+        display: none;
+    }
+
+    &.muted {
+        .mute {
+            display: block;
+        }
+
+        .volumeup {
+            display: none;
+        }
+    }
+}
+
+.btn-next {
+    .next {
+        
+    }
+    .previous {
+
+    }
+}

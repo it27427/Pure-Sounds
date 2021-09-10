@@ -106,3 +106,16 @@ textarea {
 h1 {
     @include h1-font-style;
 }
+
+.dropdown-toggle {
+    &::after {
+        display: none;
+        margin-left: 0;
+        vertical-align: 0;
+        content: "";
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-left: 0;
+    }
+}

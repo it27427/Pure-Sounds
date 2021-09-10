@@ -1,0 +1,172 @@
+
+// input[type=range] {
+// 	position: absolute;
+// 	pointer-events: none;
+// 	-webkit-appearance: none;
+// 	z-index: 2;
+// 	height: 10px;
+// 	width: 100%;
+// 	opacity: 0;
+// }
+// input[type=range]::-webkit-slider-thumb {
+// 	pointer-events: all;
+// 	width: 30px;
+// 	height: 30px;
+// 	border-radius: 0;
+// 	border: 0 none;
+// 	background-color: red;
+// 	-webkit-appearance: none;
+// }
+
+
+
+.irs--round .irs-bar {
+    background-color: #00C2C0;
+ }
+ 
+ .irs--round .irs-handle {
+   background-color: #00C2C0;
+   border-color: #00C2C0;
+   box-shadow: 0px 0px 0px 5px rgba(0, 194, 192, 0.2);
+ }
+ 
+ .irs--round .irs-handle.state_hover, 
+ .irs--round .irs-handle:hover {
+    background-color: #00C2C0;
+ }
+ 
+ .irs--round .irs-handle {
+   width: 16px;
+   height: 16px;
+   top: 29px
+ }
+ 
+ .irs--round .irs-from, 
+ .irs--round .irs-to, 
+ .irs--round .irs-single {
+   background-color: transparent;
+   color: #666666;
+ }
+ 
+ .irs--round .irs-from:before, 
+ .irs--round .irs-to:before, 
+ .irs--round .irs-single:before,
+ .irs--round .irs-min, 
+ .irs--round .irs-max {
+   display: none;
+ }
+
+.irs-from,
+.irs-single,
+.irs-to {
+    visibility: hidden !important;
+}
+
+.inputbox {
+	@include flex-center-vert;
+	gap: length(8);
+
+	.checkbox {
+		opacity: 0;
+		display: none;
+
+		&:checked {
+			~ .check-label {
+				&::before {
+					background: $accessActiveBg;
+					border-color: $accessActiveBg;
+				}
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.check-label {
+		position: relative;
+		padding-left: length(24);
+		cursor: pointer;
+
+		.labeltext {
+			@include text-overflow;
+			@include text-14-14-bold-basefont;
+			color: $bgnBorder;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			@include transform(translateY(-50%));
+			left: 0;
+			@include square(length(16));
+			@include border(solid, 1, $textPlaceholder);
+			@include flex-center;
+			background: $white;
+			@include transition(all $time ease-in-out);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: length(0);
+			left: length(5.5);
+			width: length(5);
+			height: length(10);
+			@include border(solid, 1, $white);
+			border-top: 0;
+			border-left: 0;
+			@include transform(rotate(45deg));
+			opacity: 0;
+			@include transition(opacity $time ease-in-out);
+		}
+
+		@include hover {
+			&::before {
+				border-color: $accessActiveBg;
+			}
+		}
+	}
+}
+
+.audio-container {
+	width: length(500);
+	box-shadow: length(0) length(4) length(8) length(-4) rgba($black, 0.3);
+	position: relative;
+	@include radius(10);
+	overflow: hidden;
+
+	.track-name {
+		position: absolute;
+		top: length(8);
+		left: length(8);
+		color: $white;
+		background:rgba($black, 0.7);
+		padding: length(8) length(32);
+		@include radius(10);
+		@include text-14-14-medium-basefont;
+	}
+
+	.audio {
+		width: 100%;
+		height: length(130);
+		background: $textGray-1;
+	}
+
+	.controls {
+		@include flex-center-vert;
+		gap: length(16);
+		padding: length(40) length(0);
+	}
+}
+
+.volumerange {
+	width: length(200);
+
+	.volume-slider {
+		width: 100%;
+		position: static;
+	}
+}

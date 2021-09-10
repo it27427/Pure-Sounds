@@ -112,6 +112,15 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
   	);
 }
 
+@mixin text-48-42-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('titletext'),
+		weight('bold'),
+		line-height(48, size('titletext'))
+  	);
+}
+
 @mixin text-24-38-medium-basefont {
   	@include font(family($HelveticaNeueLTPro),
 		style('normal'),
@@ -527,6 +536,84 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
 		size('medium'),
 		weight('bold'),
 		line-height(20, size('medium'))
+  	);
+}
+
+/*------------------------------------*\
+    // 14-14 basefont
+\*------------------------------------*/
+@mixin text-14-14-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('normal'),
+		line-height(14, size('medium'))
+  	);
+}
+
+@mixin text-14-14-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('medium'),
+		line-height(14, size('medium'))
+  	);
+}
+
+@mixin text-14-14-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('semibold'),
+		line-height(14, size('medium'))
+  	);
+}
+
+@mixin text-14-14-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('medium'),
+		weight('bold'),
+		line-height(14, size('medium'))
+  	);
+}
+
+/*------------------------------------*\
+    // 12-12 basefont
+\*------------------------------------*/
+@mixin text-12-12-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('small'),
+		weight('normal'),
+		line-height(12, size('small'))
+  	);
+}
+
+@mixin text-12-12-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('small'),
+		weight('medium'),
+		line-height(12, size('small'))
+  	);
+}
+
+@mixin text-12-12-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('small'),
+		weight('semibold'),
+		line-height(12, size('small'))
+  	);
+}
+
+@mixin text-12-12-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('small'),
+		weight('bold'),
+		line-height(12, size('small'))
   	);
 }
 

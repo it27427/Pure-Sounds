@@ -1,0 +1,699 @@
+.filter-head {
+    margin-top: length(72);
+    padding: length(16) length(30);
+    position: relative;
+    background: $locationBg;
+    @include flex-center;
+
+    @include breakpoint(phone768) {
+        // @include flex-center-column;
+        // gap: length(16);
+        // margin-top: length(62);
+        display: none;
+    }
+
+    .filter-head-title {
+        @include text-20-14-semibold-basefont;
+        text-align: center;
+        margin-left: auto;
+        
+        @include breakpoint(phone768) {
+            margin-left: 0;
+        }
+    }
+
+    .btn-buy {
+        margin-left: auto;
+        @include setBgColor($accessActiveBg, $white);
+        padding: length(13) length(26);
+        @include text-20-16-normal-basefont;
+        @include radius(4);
+        text-align: center;
+        @include transition(background $time ease);
+        
+        @include breakpoint(phone768) {
+            margin-left: 0;
+        }
+
+        @include hover {
+            @include setBgColor($accessActiveHoverBg, $white);
+        }
+    }
+}
+
+.filter {
+    display: flex;
+
+    &-sidebar {
+        width: length(300);
+        height: calc(100vh - 9.375rem);
+        @include border-single(right, solid, 1, $filterBorder);
+        padding-right: length(4);
+
+        @include breakpoint(tablet991) {
+            display: none;
+        }
+
+        .accordion {
+            overflow-y: scroll;
+            max-height: 98%;
+            scroll-behavior: smooth;
+    
+            &::-webkit-scrollbar-track {
+                @include radius(10);
+            }
+    
+            &::-webkit-scrollbar {
+                width: length(5);
+                background: transparent;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                @include radius(10);
+                background-color: $socialHover;
+            }
+
+            &-item {
+                padding: length(20) length(33);
+                border: 0;
+                @include border-single(bottom, solid, 1, $filterBorder);
+                @include flex-column;
+                // gap: length(12);
+
+                &:last-of-type {
+                    border-bottom: 0
+                }
+
+                .sorting,
+                .length,
+                .tags,
+                .categories,
+                .libraries {
+                    @include flex-center-between;
+                    margin-bottom: length(12);
+
+                    .title {
+                        @include text-20-16-semibold-basefont;
+                        color: $bgnBorder;
+                        width: calc(100% - 2.25rem);
+                    }
+
+                    .accordion-header {
+                        .accordion-button {
+                            box-shadow: none;
+                            border-radius: 0;
+                            @include setBgColor(transparent, $textGray-1);
+                            padding: 0;
+                            @include square(length(36));
+                            @include flex-end;
+
+                            svg {
+                                path {
+                                    fill: $textGray-1;
+                                }
+                            }
+
+                            &.collapsed {
+                                svg {
+                                    @include transform(rotate(180deg));
+
+                                    path {
+                                        fill: $textGray-1;
+                                    }
+                                }
+                            }
+                            
+                            &::before,
+                            &::after {
+                                background: transparent;
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                display: none;
+                            }
+
+                            &::after {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                .accordion-collapse {
+                    .accordion-body {
+                        padding: 0;
+
+                        .sorting-buttons {
+                            @include flex-center;
+                            gap: length(12);
+                        }
+
+                        .sidebar-tags {
+                            @include flex-column;
+                            gap: length(16);
+
+                            .tag-buttons {
+                                @include flex-center-between;
+                                flex-wrap: wrap;
+                                gap: length(14);
+                                height: length(235);
+                                overflow: hidden;
+
+                                &.show {
+                                    height: 100%;
+                                }
+                            }
+
+                            .btn-showless {
+                                display: inline-block;
+                                text-align: left;
+                                max-width: 40%;
+                                @include transparent-button;
+                                @include text-20-14-medium-basefont;
+                                color: $accessActiveBg;
+                                @include transition(color $time ease);
+
+                                @include hover {
+                                    color: $accessActiveHoverBg;
+                                }
+                            }
+                        }
+
+                        .library-tags {
+                            @include flex-column;
+                            gap: length(16);
+
+                            .library-buttons {
+                                @include flex-center-between;
+                                flex-wrap: wrap;
+                                gap: length(14);
+                                height: length(530);
+                                overflow: hidden;
+
+                                &.show {
+                                    height: 100%;
+                                }
+                            }
+
+                            .btn-showall {
+                                display: inline-block;
+                                text-align: left;
+                                max-width: 40%;
+                                @include transparent-button;
+                                @include text-20-14-medium-basefont;
+                                color: $accessActiveBg;
+                                @include transition(color $time ease);
+
+                                @include hover {
+                                    color: $accessActiveHoverBg;
+                                }
+                            }
+                        }
+
+                        .ranges {
+                            .multi-range {
+                                .range-update {
+                                    @include flex-center-vert;
+                                    gap: length(12);
+
+                                    .input-range {
+                                        @include flex-center-vert;
+                                        gap: length(8);
+                                        
+                                        .from,
+                                        .to {
+                                            width: length(50);
+                                            @include radius(4);
+                                            padding: length(4);
+                                            color: $textGray-1;
+                                            text-align: center;
+                                            @include border(solid, 1, $searchBorder);
+                                            @include text-20-14-normal-basefont;
+                                        }
+                                    }
+
+                                    .btn-update {
+                                        @include transparent-button;
+
+                                        .updateicon {
+                                            display: none;
+                                        }
+
+                                        .updatetext {
+                                            @include text-30-12-normal-basefont;
+                                            color: $accessActiveHoverBg;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .categoriesbox {
+                            width: 100%;
+                            @include flex-column;
+                            gap: length(20);
+                            
+                            .category {
+                                @include flex-column;
+                                gap: length(20);
+                                width: 100%;
+
+                                .checkmarkbox {
+                                    @include flex-center-between;
+                                    width: 100%;
+
+                                    .checkmark {
+                                        @include flex-center-vert;
+                                        gap: length(12);
+                                        width: calc(100% - 1.25rem);
+
+                                        .inputbox {
+                                            max-width: length(158);
+                                        }
+
+                                        .checkmarkvalue {
+                                            @include text-14-14-normal-basefont;
+                                            color: $checkmarkvalue;
+                                        }
+                                    }
+                                }
+
+                                .collapse {
+                                    // padding-left: length(20);
+
+                                    .checkmarks {
+                                        @include flex-column;
+                                        gap: length(20);
+
+                                        .checkmark {
+                                            @include flex-center-vert;
+                                            gap: length(12);
+
+                                            .inputbox {
+                                                width: calc(100% - 2.3125rem);
+                                            }
+
+                                            .checkmarkvalue {
+                                                @include text-14-14-normal-basefont;
+                                                color: $checkmarkvalue;
+                                                display: inline-block;
+                                                width: length(25);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        width: calc(100% - 18.75rem);
+        padding: length(40) length(0);
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+        }
+
+        .filter-title {
+            @include text-48-42-bold-basefont;
+            color: $textPrimary;
+            margin-bottom: length(16);
+            padding: length(0) length(40);
+
+            @include breakpoint(phone768) {
+                @include text-32-24-bold-basefont;
+                padding: length(0) length(16) length(16);
+                text-align: center;
+                margin-top: length(62);
+            }
+        }
+
+        .filter-results {
+            @include flex-center-between;
+            padding: length(0) length(40) length(16);
+            
+            @include breakpoint(phone768) {
+                padding: length(30) length(16);
+                @include flex-center;
+            }
+
+            .showing-results {
+                @include flex-center-vert;
+                gap: length(16);
+
+                .resultcounter {
+                    @include text-14-14-normal-basefont;
+                    color: $textPrimary;
+
+                    span {
+                        font: inherit;
+                        color: inherit;
+                    }
+                }
+            }
+
+            .paging {
+                @include breakpoint(phone768) {
+                    display: none;
+                }
+            }
+        }
+
+        .filter-playlist {
+            .playlist {
+                @include flex-column;
+
+                &-item {
+                    @include flex-column;
+
+                    .playlist-top {
+                        @include flex-center-vert;
+                        padding: length(20) length(40);
+                        width: 100%;
+                        @include border-single(top, solid, 1, rgba(223,223,223,.5));
+                        @include border-single(bottom, solid, 1, rgba(223,223,223,.5));
+
+                        @include breakpoint(phone768) {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: length(20) length(16);
+                        }
+
+                        .playbox {
+                            @include flex-center-vert;
+                            gap: length(24);
+                            width: calc(50% - 1.5rem);
+
+                            @include breakpoint(desktop1400) {
+                                width: 40%;
+                            }
+
+                            @include breakpoint(phone768) {
+                                width: 100%;
+                            }
+
+                            .playinglist {
+                                @include flex-center-vert;
+                                gap: length(24);
+                                width: 100%;
+                                
+                                @include breakpoint(phone768) {
+                                    width: calc(100% - 8.75rem);
+                                }
+    
+                                .play-btn {
+                                    @include transparent-button;
+                                    @include square(length(54));
+                                    @include circle;
+                                    @include border(solid, 1, $textPrimary);
+                                    @include transition(background $time ease);
+
+                                    @include breakpoint(phone768) {
+                                        @include square(length(40));
+                                    }
+        
+                                    &:focus {
+                                        outline: none;
+                                    }
+        
+                                    @include hover {
+                                        background: $filterBg;
+                                    }
+        
+                                    .play {
+                                        display: none;
+                                    }
+        
+                                    &.playing {
+                                        .play {
+                                            display: block;
+                                        }
+        
+                                        .pause {
+                                            display: none;
+                                        }
+                                    }
+                                }
+    
+                                .soundtrack {
+                                    width: calc(100% - 4.875rem);
+                                    overflow: hidden;
+                                    height: length(44);
+
+                                    @include breakpoint(phone768) {
+                                        width: calc(100% - 4rem);
+                                    }
+                                }
+                            }
+
+                            .track-download {
+                                display: none;
+                            }
+
+                            .track-download {
+                                @include breakpoint(phone768) {
+                                    @include flex-center-vert;
+                                }
+                            }
+                        }
+    
+                        .descriptionbox {
+                            @include flex-center-vert;
+                            width: 50%;
+
+                            @include breakpoint(desktop1400) {
+                                width: 60%;
+                            }
+
+                            @include breakpoint(phone768) {
+                                width: 100%;
+                            }
+
+                            .title-durations {
+                                @include flex-center-vert;
+                                gap: length(16);
+                                width: calc(100% - 15.5rem);
+                                flex-grow: 1;
+                                padding-left: length(16);
+
+                                @include breakpoint(phone768) {
+                                    padding-left: length(0);
+                                }
+
+                                .description {
+                                    .text {
+                                        @include text-14-14-normal-basefont;
+                                        color: $textPrimary;
+                                    }
+                                }
+        
+                                .durations {
+                                    min-width: length(40);
+                                    max-width: length(60);
+        
+                                    &-length {
+                                        @include text-14-14-normal-basefont;
+                                        color: $textPrimary;
+                                    }
+                                }
+                            }
+
+                            .download-collapse {
+                                @include flex-end;
+                                gap: length(24);
+                                align-items: center;
+        
+                                .descriptioncollapse {
+                                    @include flex-center;
+
+                                    .btn-collapse {
+                                        @include square(length(48));
+                                        @include flex-center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .playlist-bottom {
+                        padding: length(20) length(40);
+                        @include flex-center-vert;
+                        background: $collapseBg;
+                        flex-wrap: wrap;
+
+                        @include breakpoint(phone768) {
+                            padding: length(20) length(16);
+                            gap: length(16);
+                        }
+
+                        .category,
+                        .tags,
+                        .library,
+                        .quality {
+                            min-width: 20%;
+                            width: 25%;
+                            @include flex-column;
+                            gap: length(3);
+
+                            @include breakpoint(phone768) {
+                                width: calc(50% - 1rem);
+                            }
+
+                            .title {
+                                @include text-20-16-semibold-basefont;
+                                color: $textPrimary;
+                            }
+                        }
+
+                        .category,
+                        .tags,
+                        .library {
+                            .categorylinks,
+                            .taglinks,
+                            .librarylinks {
+                                .playlistlink {
+                                    @include text-14-14-normal-basefont;
+                                    color: $textGray-1;
+
+                                    @include breakpoint(phone768) {
+                                        @include text-12-12-normal-basefont;
+                                    }
+                                }
+                            }
+                        }
+
+                        .quality {
+                            .qualitytext {
+                                @include text-14-14-normal-basefont;
+                                color: $textGray-1;
+
+                                @include breakpoint(phone768) {
+                                    @include text-12-12-normal-basefont;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filter-pagination-bottom {
+            @include flex-end;
+            padding: length(16) length(40);
+
+            @include breakpoint(phone768) {
+                padding: length(16);
+            }
+        }
+    }
+}
+
+.paging {
+    @include flex-center-vert;
+    gap: length(16);
+
+    .btn-prev,
+    .btn-next,
+    .currentnumber {
+        @include square(length(48));
+        @include flex-center;
+        @include radius(4);
+        @include text-14-14-normal-basefont;
+        color: $textPrimary;
+    }
+
+    .btn-prev,
+    .btn-next {
+        background: $filterBg;
+        @include transition(background $time ease);
+        
+        &:hover:not(.disabled) {
+            background: $noticeBg;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+        }
+
+        &.disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+
+    .currentnumber {
+        text-align: center;
+        @include border(solid, 1, $noticeBg);
+    }
+
+    .totalnumber {
+        @include text-14-14-normal-basefont;
+        color: $textPrimary;
+    }
+}
+
+.track-download {
+    @include flex-center-vert;
+    gap: length(16);
+
+    @include breakpoint(phone768) {
+        display: none;
+    }
+
+    .btn-track {
+        @include square(length(48));
+        @include flex-center;
+        @include radius(5);
+        background: $filterBg;
+        @include transition(background $time ease);
+
+        @include breakpoint(phone768) {
+            @include square(length(36));
+        }
+
+        @include hover {
+            background: $btnHoverBg;
+        }
+    }
+
+    .btn-download {
+        background: $featuredcard-hover-bg;
+        @include transition(background $time ease);
+
+        @include hover {
+            background: $btnHoverBg;
+        }
+    }
+}
+
+.time {
+    padding: length(6) length(10);
+}
+
+input[type="time"] {
+    -webkit-appearance: none
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+}
+
+input[type=time]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.without_ampm::-webkit-datetime-edit-ampm-field {
+    display: none;
+}
+input[type=time]::-webkit-clear-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance:none;
+    appearance: none;
+    margin: -10px; 
+}
