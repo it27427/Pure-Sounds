@@ -139,3 +139,322 @@
         }
     }
 }
+
+.offcanvas {
+    width: length(300);
+
+    &-header {
+        .offcanvas-title {
+            @include text-28-18-semibold-basefont;
+            color: $textPrimary;
+        }
+
+        .btn-close {
+            background: transparent;
+            margin: length(0);
+            padding: length(0);
+            @include square(length(24));
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &-body {
+        scroll-behavior: smooth;
+        padding: length(0);
+
+        &::-webkit-scrollbar-track {
+            @include radius(10);
+        }
+
+        &::-webkit-scrollbar {
+            width: length(5);
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            @include radius(10);
+            background-color: $socialHover;
+        }
+
+        .accordion {
+            &-item {
+                padding: length(20);
+                border: 0;
+                @include border-single(bottom, solid, 1, $filterBorder);
+                @include flex-column;
+
+                &:last-of-type {
+                    border-bottom: 0
+                }
+
+                .sorting,
+                .length,
+                .tags,
+                .categories,
+                .libraries {
+                    @include flex-center-between;
+                    margin-bottom: length(12);
+
+                    .title {
+                        @include text-20-16-semibold-basefont;
+                        color: $bgnBorder;
+                        width: calc(100% - 2.25rem);
+                    }
+
+                    .accordion-header {
+                        @include square(length(36));
+
+                        .accordion-button {
+                            box-shadow: none;
+                            border-radius: 0;
+                            @include setBgColor(transparent, $textGray-1);
+                            padding: 0;
+                            @include square(length(36));
+                            @include flex-end;
+
+                            svg {
+                                path {
+                                    fill: $textGray-1;
+                                }
+                            }
+
+                            &.collapsed {
+                                svg {
+                                    @include transform(rotate(180deg));
+
+                                    path {
+                                        fill: $textGray-1;
+                                    }
+                                }
+                            }
+                            
+                            &::before,
+                            &::after {
+                                background: transparent;
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                display: none;
+                            }
+
+                            &::after {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                .accordion-collapse {
+                    .accordion-body {
+                        padding: 0;
+
+                        .sorting-buttons {
+                            @include flex-center;
+                            gap: length(12);
+                        }
+
+                        .sidebar-tags {
+                            @include flex-column;
+                            gap: length(16);
+
+                            .tag-buttons-mobile {
+                                @include flex-center-between;
+                                flex-wrap: wrap;
+                                gap: length(14);
+                                height: length(235);
+                                overflow: hidden;
+
+                                &.show {
+                                    height: 100%;
+                                }
+                            }
+
+                            .btn-showless-mobile {
+                                display: inline-block;
+                                text-align: left;
+                                max-width: 40%;
+                                @include transparent-button;
+                                @include text-20-14-medium-basefont;
+                                color: $accessActiveBg;
+                                @include transition(color $time ease);
+
+                                @include hover {
+                                    color: $accessActiveHoverBg;
+                                }
+                            }
+                        }
+
+                        .library-tags {
+                            @include flex-column;
+                            gap: length(16);
+
+                            .library-buttons-mobile {
+                                @include flex-center-between;
+                                flex-wrap: wrap;
+                                gap: length(14);
+                                height: length(530);
+                                overflow: hidden;
+
+                                &.show {
+                                    height: 100%;
+                                }
+                            }
+
+                            .btn-showall-mobile {
+                                display: inline-block;
+                                text-align: left;
+                                max-width: 40%;
+                                @include transparent-button;
+                                @include text-20-14-medium-basefont;
+                                color: $accessActiveBg;
+                                @include transition(color $time ease);
+
+                                @include hover {
+                                    color: $accessActiveHoverBg;
+                                }
+                            }
+                        }
+
+                        .ranges {
+                            .multi-range {
+                                .range-update {
+                                    @include flex-center-vert;
+                                    gap: length(12);
+
+                                    .input-range {
+                                        @include flex-center-vert;
+                                        gap: length(8);
+                                        
+                                        .from,
+                                        .to {
+                                            width: length(50);
+                                            @include radius(4);
+                                            padding: length(4);
+                                            color: $textGray-1;
+                                            text-align: center;
+                                            @include border(solid, 1, $searchBorder);
+                                            @include text-20-14-normal-basefont;
+                                        }
+                                    }
+
+                                    .btn-update {
+                                        @include transparent-button;
+
+                                        .updateicon {
+                                            display: none;
+                                        }
+
+                                        .updatetext {
+                                            @include text-30-12-normal-basefont;
+                                            color: $accessActiveHoverBg;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .accordion-item {
+                            padding: length(0);
+
+                            .categories {
+                                .checkmark {
+                                    @include flex-center-vert;
+                                    gap: length(14);
+            
+                                    .checkmarkvalue {
+                                        @include text-14-14-normal-basefont;
+                                        color: $checkmarkvalue;
+                                        display: inline-block;
+                                        width: length(25);
+                                    }
+                                }
+
+                                .accordion-header {
+                                    @include square(length(36));
+                                }
+                            }
+
+                            .accordion-collapse {
+                                .accordion-body {
+                                    @include flex-column;
+                                    gap: length(16);
+
+                                    .checkmarks-mobile {
+                                        @include flex-column;
+                                        gap: length(20);
+                                        height: length(464);
+                                        overflow: hidden;
+                                        padding-left: length(24);
+
+                                        &.show {
+                                            height: 100%;
+                                        }
+
+                                        .checkmark {
+                                            @include flex-center-vert;
+                                            gap: length(12);
+
+                                            .checkmarkvalue {
+                                                @include text-14-14-normal-basefont;
+                                                color: $checkmarkvalue;
+                                                display: inline-block;
+                                                width: length(25);
+                                            }
+                                        }
+                                    }
+
+                                    .btn-seeall-mobile {
+                                        display: inline-block;
+                                        text-align: left;
+                                        max-width: 40%;
+                                        @include transparent-button;
+                                        @include text-20-14-medium-basefont;
+                                        color: $accessActiveBg;
+                                        @include transition(color $time ease);
+        
+                                        @include hover {
+                                            color: $accessActiveHoverBg;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-footer {
+        padding: length(12) length(30);
+        @include border-single(top, solid, 1, $filterBorder);
+
+        .update-results {
+            @include flex-center;
+            gap: length(5);
+            @include border(solid, 1, $bgnBorder);
+            padding: length(12) length(24);
+            @include radius(4);
+
+            .text {
+                @include text-20-14-semibold-basefont;
+                color: $textPrimary;
+            }
+
+            .counters {
+                @include flex-center;
+                @include text-20-14-semibold-basefont;
+                color: $textPrimary;
+
+                span {
+                    font: inherit;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

@@ -421,9 +421,10 @@
 
     <!-- FILTER SECTION START -->
     <section class="filter">
-        <!-- FILTER SIDEBAR START -->
+        <!-- DESKTOP FILTER SIDEBAR START -->
         <aside class="filter-sidebar">
             <div class="accordion" id="filterAccordion">
+                <!-- SORTING ACCORDION START -->
                 <div class="accordion-item">
                     <div class="sorting">
                         <h2 class="title">Sorting</h2>
@@ -445,6 +446,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- SORTING ACCORDION END -->
 
                 <div class="accordion-item d-none">
                     <div class="length">
@@ -496,6 +498,7 @@
                     </div>
                 </div>
 
+                <!-- TAGS ACCORDION START -->
                 <div class="accordion-item">
                     <div class="tags">
                         <h2 class="title">Tags</h2>
@@ -541,7 +544,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- TAGS ACCORDION END -->
 
+                <!-- CATEGORIES ACCORDION START -->
                 <div class="accordion-item">
                     <div class="categories">
                         <h2 class="title">Categories</h2>
@@ -556,28 +561,29 @@
 
                     <div id="categoriesCollapse" class="accordion-collapse collapse show" aria-labelledby="filtercategories" data-bs-parent="#filterAccordion">
                         <div class="accordion-body">
-                            <div class="categoriesbox">
-                                <div class="category">
-                                    <div class="checkmarkbox">
-                                        <div class="checkmark">
-                                            <div class="inputbox">
-                                                <input type="checkbox" class="checkbox" id="exteriors">
-                                                <label for="exteriors" class="check-label">
-                                                    <span class="labeltext">Exteriors</span>
-                                                </label>
-                                            </div>
-        
-                                            <span class="checkmarkvalue">621</span>
+                            <div class="accordion-item">
+                                <div class="categories">
+                                    <div class="checkmark">
+                                        <div class="inputbox">
+                                            <input type="checkbox" class="checkbox" id="exteriors">
+                                            <label for="exteriors" class="check-label">
+                                                <span class="labeltext">Exteriors</span>
+                                            </label>
                                         </div>
-        
-                                        <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCheck-1" aria-expanded="false" aria-controls="collapseCheck-1">
+            
+                                        <span class="checkmarkvalue">621</span>
+                                    </div>
+                                    <h2 class="accordion-header" id="filtercategories1">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesCollapse1" aria-expanded="false" aria-controls="categoriesCollapse1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
                                             </svg>
                                         </button>
-                                    </div>
-
-                                    <div class="collapse show" id="collapseCheck-1">
+                                    </h2>
+                                </div>
+            
+                                <div id="categoriesCollapse1" class="accordion-collapse collapse show" aria-labelledby="filtercategories1" data-bs-parent="#categoriesCollapse">
+                                    <div class="accordion-body">
                                         <div class="checkmarks">
                                             <div class="checkmark">
                                                 <div class="inputbox">
@@ -600,7 +606,7 @@
             
                                                 <span class="checkmarkvalue">65</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="town">
@@ -611,7 +617,7 @@
             
                                                 <span class="checkmarkvalue">59</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="street">
@@ -622,7 +628,7 @@
             
                                                 <span class="checkmarkvalue">59</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="market">
@@ -633,7 +639,7 @@
             
                                                 <span class="checkmarkvalue">59</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="beach">
@@ -644,7 +650,7 @@
             
                                                 <span class="checkmarkvalue">37</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="school">
@@ -655,7 +661,7 @@
             
                                                 <span class="checkmarkvalue">28</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="stations">
@@ -666,7 +672,7 @@
             
                                                 <span class="checkmarkvalue">10</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="restaurant">
@@ -677,7 +683,7 @@
             
                                                 <span class="checkmarkvalue">6</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="countryside">
@@ -688,7 +694,7 @@
             
                                                 <span class="checkmarkvalue">3</span>
                                             </div>
-
+        
                                             <div class="checkmark">
                                                 <div class="inputbox">
                                                     <input type="checkbox" class="checkbox" id="lake">
@@ -699,386 +705,53 @@
             
                                                 <span class="checkmarkvalue">1</span>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="category">
-                                    <div class="checkmarkbox">
-                                        <div class="checkmark">
-                                            <div class="inputbox">
-                                                <input type="checkbox" class="checkbox" id="interiors">
-                                                <label for="interiors" class="check-label">
-                                                    <span class="labeltext">Interiors</span>
-                                                </label>
+        
+                                            <div class="checkmark">
+                                                <div class="inputbox">
+                                                    <input type="checkbox" class="checkbox" id="lake1">
+                                                    <label for="lake1" class="check-label">
+                                                        <span class="labeltext">River/ lake/ wetland</span>
+                                                    </label>
+                                                </div>
+            
+                                                <span class="checkmarkvalue">1</span>
                                             </div>
         
-                                            <span class="checkmarkvalue">409</span>
-                                        </div>
-        
-                                        <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCheck-2" aria-expanded="false" aria-controls="collapseCheck-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="collapse" id="collapseCheck-2">
-                                        <div class="checkmarks">
                                             <div class="checkmark">
                                                 <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="otherinteriors">
-                                                    <label for="otherinteriors" class="check-label">
-                                                        <span class="labeltext">Other interiors</span>
+                                                    <input type="checkbox" class="checkbox" id="lake2">
+                                                    <label for="lake2" class="check-label">
+                                                        <span class="labeltext">River/ lake/ wetland</span>
                                                     </label>
                                                 </div>
             
-                                                <span class="checkmarkvalue">95</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="station">
-                                                    <label for="station" class="check-label">
-                                                        <span class="labeltext">Station</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">74</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="airport">
-                                                    <label for="airport" class="check-label">
-                                                        <span class="labeltext">Airport</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">50</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="restaurant">
-                                                    <label for="restaurant" class="check-label">
-                                                        <span class="labeltext">Restaurant</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">37</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="cafe">
-                                                    <label for="cafe" class="check-label">
-                                                        <span class="labeltext">Cafe</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">32</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="mall">
-                                                    <label for="mall" class="check-label">
-                                                        <span class="labeltext">Mall</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">31</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="hospital">
-                                                    <label for="hospital" class="check-label">
-                                                        <span class="labeltext">Hospital</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">29</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="museum">
-                                                    <label for="museum" class="check-label">
-                                                        <span class="labeltext">Museum</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">25</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="office">
-                                                    <label for="office" class="check-label">
-                                                        <span class="labeltext">Office</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">22</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="supermarket">
-                                                    <label for="supermarket" class="check-label">
-                                                        <span class="labeltext">Supermarket</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">10</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="gamehall">
-                                                    <label for="gamehall" class="check-label">
-                                                        <span class="labeltext">Gamehall</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">6</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="worship">
-                                                    <label for="worship" class="check-label">
-                                                        <span class="labeltext">Places of worship</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">4</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="bar">
-                                                    <label for="bar" class="check-label">
-                                                        <span class="labeltext">Bar</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">45</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="apartment">
-                                                    <label for="apartment" class="check-label">
-                                                        <span class="labeltext">House/ apartment</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">2</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="circus">
-                                                    <label for="circus" class="check-label">
-                                                        <span class="labeltext">Circus</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">10</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="category">
-                                    <div class="checkmarkbox">
-                                        <div class="checkmark">
-                                            <div class="inputbox">
-                                                <input type="checkbox" class="checkbox" id="human">
-                                                <label for="human" class="check-label">
-                                                    <span class="labeltext">Human</span>
-                                                </label>
+                                                <span class="checkmarkvalue">1</span>
                                             </div>
         
-                                            <span class="checkmarkvalue">307</span>
-                                        </div>
-        
-                                        <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCheck-3" aria-expanded="false" aria-controls="collapseCheck-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="collapse" id="collapseCheck-3">
-                                        <div class="checkmarks">
                                             <div class="checkmark">
                                                 <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="crowds">
-                                                    <label for="crowds" class="check-label">
-                                                        <span class="labeltext">Crowds</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">216</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="speech2">
-                                                    <label for="speech2" class="check-label">
-                                                        <span class="labeltext">Speech</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">45</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="footsteps2">
-                                                    <label for="footsteps2" class="check-label">
-                                                        <span class="labeltext">Footsteps</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">25</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="children">
-                                                    <label for="children" class="check-label">
-                                                        <span class="labeltext">Children</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">25</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="otherhuman">
-                                                    <label for="otherhuman" class="check-label">
-                                                        <span class="labeltext">Other human</span>
+                                                    <input type="checkbox" class="checkbox" id="lake3">
+                                                    <label for="lake3" class="check-label">
+                                                        <span class="labeltext">River/ lake/ wetland</span>
                                                     </label>
                                                 </div>
             
                                                 <span class="checkmarkvalue">1</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="category">
-                                    <div class="checkmarkbox">
-                                        <div class="checkmark">
-                                            <div class="inputbox">
-                                                <input type="checkbox" class="checkbox" id="transport">
-                                                <label for="transport" class="check-label">
-                                                    <span class="labeltext">Transport</span>
-                                                </label>
-                                            </div>
-        
-                                            <span class="checkmarkvalue">41</span>
-                                        </div>
-        
-                                        <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCheck-4" aria-expanded="false" aria-controls="collapseCheck-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                                            </svg>
+                                        <button class="btn-seeall" type="button">
+                                            See more
                                         </button>
-                                    </div>
-
-                                    <div class="collapse" id="collapseCheck-4">
-                                        <div class="checkmarks">
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="trains2">
-                                                    <label for="trains2" class="check-label">
-                                                        <span class="labeltext">Trains</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">21</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="boats2">
-                                                    <label for="boats2" class="check-label">
-                                                        <span class="labeltext">Boats</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">5</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="motorbike">
-                                                    <label for="motorbike" class="check-label">
-                                                        <span class="labeltext">Motorbike</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">4</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="buses">
-                                                    <label for="buses" class="check-label">
-                                                        <span class="labeltext">Bus</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">4</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="aeroplanes2">
-                                                    <label for="aeroplanes2" class="check-label">
-                                                        <span class="labeltext">Aeroplanes</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">4</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="trams2">
-                                                    <label for="trams2" class="check-label">
-                                                        <span class="labeltext">Trams</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">2</span>
-                                            </div>
-
-                                            <div class="checkmark">
-                                                <div class="inputbox">
-                                                    <input type="checkbox" class="checkbox" id="car3">
-                                                    <label for="car3" class="check-label">
-                                                        <span class="labeltext">Car</span>
-                                                    </label>
-                                                </div>
-            
-                                                <span class="checkmarkvalue">1</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- CATEGORIES ACCORDION END -->
 
+                <!-- LIBRARIES ACCORDION START -->
                 <div class="accordion-item">
                     <div class="libraries">
                         <h2 class="title">Libraries</h2>
@@ -1130,20 +803,427 @@
                         </div>
                     </div>
                 </div>
+                <!-- LIBRARIES ACCORDION END -->
             </div>
         </aside>
-        <!-- FILTER SIDEBAR END -->
+        <!-- DESKTOP FILTER SIDEBAR END -->
+
+        <!-- MOBILE FILTER SIDEBAR START -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="mobileFilterSidebar" aria-labelledby="mobileFilterSidebarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileFilterSidebarLabel">Refine</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <div class="accordion" id="filterAccordion">
+                    <!-- SORTING ACCORDION START -->
+                    <div class="accordion-item">
+                        <div class="sorting">
+                            <h2 class="title">Sorting</h2>
+                            <h2 class="accordion-header" id="filterSorting">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sortingCollapse" aria-expanded="true" aria-controls="sortingCollapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                    </svg>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="sortingCollapse" class="accordion-collapse collapse show" aria-labelledby="filterSorting" data-bs-parent="#filterAccordion">
+                            <div class="accordion-body">
+                                <div class="sorting-buttons">
+                                    <button class="btn-sorting active">Relevant</button>
+                                    <button class="btn-sorting">Newer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SORTING ACCORDION END -->
+
+                    <div class="accordion-item d-none">
+                        <div class="length">
+                            <h2 class="title">Length</h2>
+                            <h2 class="accordion-header" id="filterLength">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#lengthCollapse" aria-expanded="false" aria-controls="lengthCollapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                    </svg>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="lengthCollapse" class="accordion-collapse collapse show" aria-labelledby="filterLength" data-bs-parent="#filterAccordion">
+                            <div class="accordion-body">
+                                <div class="ranges">
+                                    <div class="multi-range">
+                                        <div class="range-update">
+                                            <div class="input-range">
+                                                <input type="number" maxlength="4" value="0" class="from" placeholder="0:02">
+                                                <span class="divider">&hyphen;</span>
+                                                <input type="number" maxlength="4" value="1000" class="to" placeholder="27:49">
+                                            </div>
+                                            <button class="btn-update">
+                                                <figure class="updateicon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 8 8">
+                                                        <path fill="#828282" d="M6.747.195C6.622.07 6.453 0 6.276 0s-.346.07-.471.195L.667 5.333 0 8l2.667-.667 5.138-5.138C7.93 2.07 8 1.901 8 1.724s-.07-.346-.195-.471L6.747.195z"/>
+                                                    </svg>
+                                                </figure>
+                                                <span class="updatetext">Update</span>
+                                            </button>
+                                        </div>
+
+                                        <input type="text" class="js-range-slider" id="demo_44" name="my_range" value=""
+                                            data-skin="round"
+                                            data-type="double"
+                                            data-min="00.00"
+                                            data-max="12.12"
+                                            data-grid="false"
+                                            data-step="00.30"
+                                        />
+
+                                        <!-- <input type="text" class="js-range-slider" id="demo_4" name="my_range" value=""
+                                    
+                                        /> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAGS ACCORDION START -->
+                    <div class="accordion-item">
+                        <div class="tags">
+                            <h2 class="title">Tags</h2>
+                            <h2 class="accordion-header" id="filterTags">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tagsCollapse" aria-expanded="false" aria-controls="tagsCollapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                    </svg>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="tagsCollapse" class="accordion-collapse collapse show" aria-labelledby="filterTags" data-bs-parent="#filterAccordion">
+                            <div class="accordion-body">
+                                <div class="sidebar-tags">
+                                    <div class="tag-buttons-mobile">
+                                        <button class="btn-sorting active">All</button>
+                                        <button class="btn-sorting">Ambience</button>
+                                        <button class="btn-sorting">Atmosphere</button>
+                                        <button class="btn-sorting">Environment</button>
+                                        <button class="btn-sorting">Crowd</button>
+                                        <button class="btn-sorting">Background</button>
+                                        <button class="btn-sorting">Traffic</button>
+                                        <button class="btn-sorting">City</button>
+                                        <button class="btn-sorting">Exterior</button>
+                                        <button class="btn-sorting">Outside</button>
+                                        <button class="btn-sorting">Outdoor</button>
+                                        <button class="btn-sorting">Interior</button>
+                                        <button class="btn-sorting">Urban</button>
+                                        <button class="btn-sorting">Ccc</button>
+                                        <button class="btn-sorting">Craig carter</button>
+                                        <button class="btn-sorting">Craig carter collection</button>
+                                        <button class="btn-sorting">People</button>
+                                        <button class="btn-sorting">Inside</button>
+                                        <button class="btn-sorting">Crowds</button>
+                                        <button class="btn-sorting">Indoor</button>
+                                    </div>
+                                    
+                                    <button class="btn-showless-mobile" type="button">
+                                        See more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TAGS ACCORDION END -->
+
+                    <!-- CATEGORIES ACCORDION START -->
+                    <div class="accordion-item">
+                        <div class="categories">
+                            <h2 class="title">Categories</h2>
+                            <h2 class="accordion-header" id="filtercategories">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesCollapse" aria-expanded="false" aria-controls="categoriesCollapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                    </svg>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="categoriesCollapse" class="accordion-collapse collapse show" aria-labelledby="filtercategories" data-bs-parent="#filterAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion-item">
+                                    <div class="categories">
+                                        <div class="checkmark">
+                                            <div class="inputbox">
+                                                <input type="checkbox" class="checkbox" id="exteriorsmob">
+                                                <label for="exteriorsmob" class="check-label">
+                                                    <span class="labeltext">Exteriors</span>
+                                                </label>
+                                            </div>
+                
+                                            <span class="checkmarkvalue">621</span>
+                                        </div>
+
+                                        <h2 class="accordion-header" id="filtercategories1">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesCollapse1" aria-expanded="false" aria-controls="categoriesCollapse1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                    </div>
+                
+                                    <div id="categoriesCollapse1" class="accordion-collapse collapse show" aria-labelledby="filtercategories1" data-bs-parent="#categoriesCollapse">
+                                        <div class="accordion-body">
+                                            <div class="checkmarks-mobile">
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="citymob">
+                                                        <label for="citymob" class="check-label">
+                                                            <span class="labeltext">City</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">318</span>
+                                                </div>
+                                                
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="otherexteriorsmob">
+                                                        <label for="otherexteriorsmob" class="check-label">
+                                                            <span class="labeltext">Other Exteriors</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">65</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="townmob">
+                                                        <label for="townmob" class="check-label">
+                                                            <span class="labeltext">Town</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">59</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="streetmob">
+                                                        <label for="streetmob" class="check-label">
+                                                            <span class="labeltext">Street</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">59</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="marketmob">
+                                                        <label for="marketmob" class="check-label">
+                                                            <span class="labeltext">Market</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">59</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="beachmob">
+                                                        <label for="beachmob" class="check-label">
+                                                            <span class="labeltext">Beach</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">37</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="schoolmob">
+                                                        <label for="schoolmob" class="check-label">
+                                                            <span class="labeltext">School</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">28</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="stationsmob">
+                                                        <label for="stationsmob" class="check-label">
+                                                            <span class="labeltext">Stations</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">10</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="restaurantmob">
+                                                        <label for="restaurantmob" class="check-label">
+                                                            <span class="labeltext">Cafe/ restaurant</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">6</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="countrysidemob">
+                                                        <label for="countrysidemob" class="check-label">
+                                                            <span class="labeltext">Countryside</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">3</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="lakemob">
+                                                        <label for="lakemob" class="check-label">
+                                                            <span class="labeltext">River/ lake/ wetland</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">1</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="lakemobmob">
+                                                        <label for="lakemobmob" class="check-label">
+                                                            <span class="labeltext">River/ lake/ wetland</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">1</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="lakemobmobmob">
+                                                        <label for="lakemobmobmob" class="check-label">
+                                                            <span class="labeltext">River/ lake/ wetland</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">1</span>
+                                                </div>
+            
+                                                <div class="checkmark">
+                                                    <div class="inputbox">
+                                                        <input type="checkbox" class="checkbox" id="lakemobmobmobmob">
+                                                        <label for="lakemobmobmobmob" class="check-label">
+                                                            <span class="labeltext">River/ lake/ wetland</span>
+                                                        </label>
+                                                    </div>
+                
+                                                    <span class="checkmarkvalue">1</span>
+                                                </div>
+                                            </div>
+
+                                            <button class="btn-seeall-mobile" type="button">
+                                                See more
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CATEGORIES ACCORDION END -->
+
+                    <!-- LIBRARIES ACCORDION START -->
+                    <div class="accordion-item">
+                        <div class="libraries">
+                            <h2 class="title">Libraries</h2>
+                            <h2 class="accordion-header" id="filterLibraries">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#librariesCollapse" aria-expanded="false" aria-controls="librariesCollapse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                    </svg>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="librariesCollapse" class="accordion-collapse collapse show" aria-labelledby="filterLibraries" data-bs-parent="#filterAccordion">
+                            <div class="accordion-body">
+                                <div class="library-tags">
+                                    <div class="library-buttons-mobile">
+                                        <button class="btn-library active">All Libraries</button>
+                                        <button class="btn-library">Edible Audio</button>
+                                        <button class="btn-library">Charlie Atanasyan</button>
+                                        <button class="btn-library">CA Sound</button>
+                                        <button class="btn-library">Richard Humphries</button>
+                                        <button class="btn-library">Audiophile Sound and Music</button>
+                                        <button class="btn-library">Articulated Sounds</button>
+                                        <button class="btn-library">Twisted Signals</button>
+                                        <button class="btn-library">The Audioville</button>
+                                        <button class="btn-library">SoundBits Sound FX</button>
+                                        <button class="btn-library">Trent Williams</button>
+                                        <button class="btn-library">WW Audio</button>
+                                        <button class="btn-library">Tom Hutchings</button>
+                                        <button class="btn-library">Mechanical Wave</button>
+                                        <button class="btn-library">Shapingwaves</button>
+                                        <button class="btn-library">Western Tiger Sound Co.</button>
+                                        <button class="btn-library">Marcel Gnauk</button>
+                                        <button class="btn-library">Airborne Sound</button>
+                                        <button class="btn-library">DaCave Audio</button>
+                                        <button class="btn-library">Tone Manufacture</button>
+                                        <button class="btn-library">SFX Bible</button>
+                                        <button class="btn-library">SFX Source</button>
+                                        <button class="btn-library">Justine Angus</button>
+                                        <button class="btn-library">Rob Bridgett</button>
+                                        <button class="btn-library">West Wolf</button>
+                                        <button class="btn-library">Frank Serafine</button>
+                                    </div>
+                                    
+                                    <button class="btn-showall-mobile" type="button">
+                                        See more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LIBRARIES ACCORDION END -->
+                </div>
+            </div>
+
+            <div class="offcanvas-footer">
+                <div class="update-results">
+                    <p class="text">Update Results</p>
+                    <p class="counters">
+                        <span class="icon">&#40;</span>
+                        <span class="counter">0</span>
+                        <span class="icon">&#41;</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- MOBILE FILTER SIDEBAR END -->
 
         <!-- FILTER CONTENT START -->
         <div class="filter-content">
             <h1 class="filter-title">Walla sound effects</h1>
             
-            <button class="btn-filter">
+            <button class="btn-filter" data-bs-toggle="offcanvas" data-bs-target="#mobileFilterSidebar" aria-controls="mobileFilterSidebar">
                 <figure class="icon">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="24" height="24" viewBox="0 0 100 125" enable-background="new 0 0 24 24" xml:space="preserve">
-                        <path d="M6.7,33h44.8c1,7,7.5,13.3,15.2,13.3S80.9,40,81.9,33h11.4c0.9,0,1.7-0.6,1.7-1.5c0-0.9-0.8-1.5-1.7-1.5H82  c-0.7-8-7.3-14.1-15.3-14.1S52.1,22,51.4,30H6.7C5.8,30,5,30.6,5,31.5C5,32.4,5.8,33,6.7,33z M66.7,18.9c6.6,0,12,5.4,12,12  s-5.4,12-12,12c-6.6,0-12-5.4-12-12S60.1,18.9,66.7,18.9z"/>
-                        <path d="M93.3,66H57.6c-1.2-7-7.5-12.9-15.2-12.9S28.4,59,27.2,66H6.7C5.8,66,5,66.6,5,67.5S5.8,69,6.7,69h20.4  c0.5,8,7.2,14.4,15.3,14.4S57.2,77,57.7,69h35.6c0.9,0,1.7-0.6,1.7-1.5S94.2,66,93.3,66z M42.4,80.4c-6.6,0-12-5.4-12-12  c0-6.6,5.4-12,12-12s12,5.4,12,12C54.4,75,49,80.4,42.4,80.4z"/>
-                    </svg> -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.375 16.188h7.5M4 16.188h3.75"/>
                         <path fill-rule="evenodd" stroke="#1A1A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.375 16.188c0 .556-.165 1.1-.474 1.562-.309.462-.748.823-1.262 1.036-.514.213-1.08.268-1.625.16-.545-.108-1.046-.376-1.44-.77-.393-.392-.661-.894-.77-1.439-.108-.545-.053-1.111.16-1.625.212-.514.573-.953 1.035-1.262.462-.31 1.006-.475 1.562-.475.37 0 .736.072 1.077.214.341.141.652.348.913.61.261.26.468.57.61.912.141.341.214.707.214 1.076v0z" clip-rule="evenodd"/>
@@ -1189,7 +1269,7 @@
             <!-- PLAY LIST START -->
             <div class="filter-playlist">
                 <ul class="playlist">
-                    <li class="playlist-item" >
+                    <li class="playlist-item">
                         <div class="playlist-top">
                             <div class="playbox">
                                 <div class="playinglist">
@@ -1211,8 +1291,7 @@
                                         </figure>
                                     </button>
         
-                                    <div class="soundtrack" id="soundtrack1">
-                                    </div>
+                                    <div class="soundtrack" id="soundtrack1" data-url="assets/audio/track1.mp3"></div>
                                 </div>
 
                                 <div class="track-download">
@@ -1386,7 +1465,7 @@
                                         </figure>
                                     </button>
                                     
-                                    <div class="soundtrack" id="soundtrack2"></div>
+                                    <div class="soundtrack" id="soundtrack2" data-url="assets/audio/track2.mp3"></div>
                                 </div>
 
                                 <div class="track-download">
@@ -1557,7 +1636,7 @@
                                         </figure>
                                     </button>
                                     
-                                    <div class="soundtrack" id="soundtrack3"></div>
+                                    <div class="soundtrack" id="soundtrack3" data-url="assets/audio/track3.mp3"></div>
                                 </div>
 
                                 <div class="track-download">
@@ -1728,7 +1807,7 @@
                                         </figure>
                                     </button>
                                     
-                                    <div class="soundtrack" id="soundtrack4"></div>
+                                    <div class="soundtrack" id="soundtrack4" data-url="assets/audio/track4.wav"></div>
                                 </div>
 
                                 <div class="track-download">
