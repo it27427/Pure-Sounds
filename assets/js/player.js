@@ -24,13 +24,14 @@ for(let i = 0; i < playList.length; i++){
     let singlePlay = play[i];
 
     singlePlay.addEventListener('click', (e) => {
-        if(e.currentTarget == singlePlay) {
+        if(e.currentTarget) {
             playlists.playPause();
         } else {
             playlists.stop();
         }
 
-        console.log(e.currentTarget == singlePlay);
+        console.log(singlePlay);
+        console.log(e.currentTarget);
 
         playlists.on('finish', () => {
             singlePlay.classList.remove('playing');
