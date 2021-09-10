@@ -90,31 +90,31 @@
 
 @-webkit-keyframes slideUpIn {
   0% {
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    -webkit-transform: translateY(-1.25rem);
+            transform: translateY(-1.25rem);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   0% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(1.25rem);
+            transform: translateY(1.25rem);
   }
 }
 
 @keyframes slideUpIn {
   0% {
-    -webkit-transform: translateY(-40px);
-            transform: translateY(-40px);
+    -webkit-transform: translateY(-1.25rem);
+            transform: translateY(-1.25rem);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   0% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(1.25rem);
+            transform: translateY(1.25rem);
   }
 }
 
@@ -444,6 +444,70 @@ h1 {
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
+}
+
+.dropdown-menu {
+  border: none;
+  -webkit-filter: drop-shadow(0 0.9375rem 1.875rem rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 0.9375rem 1.875rem rgba(0, 0, 0, 0.15));
+  min-width: 11.25rem;
+  margin-top: 0.875rem !important;
+  padding: 0;
+  z-index: 100;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  height: 0.875rem;
+  width: 0.875rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -0.4375rem;
+  right: 0.875rem;
+  z-index: -1;
+  background: white;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li:hover {
+  background: #f2f2f2;
+}
+
+.dropdown-menu .dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+}
+
+.dropdown-menu .dropdown-item i {
+  font-size: 0.875rem;
+  color: #979797;
+}
+
+.dropdown-menu .dropdown-item .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: #333333;
+  text-transform: capitalize;
+}
+
+.dropdown-menu .dropdown-item:not([disabled]):hover {
+  background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:active {
+  background-color: transparent;
 }
 
 /*------------------------------------*\
