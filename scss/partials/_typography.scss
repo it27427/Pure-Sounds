@@ -204,25 +204,25 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
   	);
 }
 
-
 /*------------------------------------*\
     // PRICE FONT SETTINGS
 \*------------------------------------*/
 @mixin price-font-style {
-      @include font(family($HelveticaNeueLTPro),
+	@include font(family($HelveticaNeueLTPro),
 		style('normal'),
 		size('heading2'),
 		weight('bold'),
 		line-height(32, size('heading2'))
-      );
+	);
 }
+
 @mixin log-reg-font-style {
-      @include font(family($HelveticaNeueLTPro),
+	@include font(family($HelveticaNeueLTPro),
 		style('normal'),
 		size('heading2'),
 		weight('bold'),
 		line-height(32, size('extra'))
-      );
+	);
 }
 
 /*------------------------------------*\
@@ -240,8 +240,8 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
 @mixin text-28-20-medium-basefont {
   	@include font(family($HelveticaNeueLTPro),
 		style('normal'),
-		size('base'),
-		weight('big'),
+		size('big'),
+		weight('medium'),
 		line-height(28, size('big'))
   	);
 }
@@ -265,6 +265,45 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
 }
 
 /*------------------------------------*\
+    // 28-24 basefont
+\*------------------------------------*/
+@mixin text-28-24-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('normal'),
+		line-height(28, size('extra'))
+  	);
+}
+
+@mixin text-28-24-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('big'),
+		line-height(28, size('extra'))
+  	);
+}
+
+@mixin text-28-24-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('semibold'),
+		line-height(28, size('extra'))
+  	);
+}
+
+@mixin text-28-24-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('extra'),
+		weight('bold'),
+		line-height(28, size('extra'))
+  	);
+}
+
+/*------------------------------------*\
     // 28-18 basefont
 \*------------------------------------*/
 @mixin text-28-18-normal-basefont {
@@ -276,12 +315,11 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
   	);
 }
 
-
 @mixin text-28-18-medium-basefont {
 	@include font(family($HelveticaNeueLTPro),
 	  style('normal'),
 	  size('midbig'),
-	  weight('big'),
+	  weight('medium'),
 	  line-height(28, size('midbig'))
 	);
 }

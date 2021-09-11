@@ -1,11 +1,11 @@
-.header-wrapper {
+.dark-header-wrapper {
     position: sticky;
     width: 100%;
     top: 0;
     left: 0;
     @include transition(all $time ease);
-    background: $white;
-    box-shadow: $header-box-shadow;
+    background: $black;
+    // box-shadow: $header-box-shadow;
     z-index: 250;
 
     &.shadowless {
@@ -13,7 +13,7 @@
     }
 }
 
-.home-header {
+.dark-header {
     @include flex-center-vert;
     padding: length(0) length(30);
     margin: 0 auto;
@@ -28,7 +28,7 @@
 
         &-title {
             @include text-20-14-semibold-basefont;
-            color: $textPrimary;
+            color: $white;
         }
 
         .logo {
@@ -39,12 +39,39 @@
             svg {
                 width: length(24);
                 @include square(length(24));
+
+                path {
+                    fill: $white;
+                }
             }
         }
            
         @include breakpoint(phone768) {
             margin: length(0) auto;
             order: 1;
+        }
+    }
+
+    .search-form,
+    .responsive-search-form {
+        background: $darkSearchbg;
+
+        .btn-search {
+            svg {
+                path {
+                    fill:rgba($white, 0.5);
+                }
+            }
+        }
+
+        .inputbox {
+            .search-input {
+                @include setBgColor(transparent, $white);
+
+                &::placeholder {
+                    color: $white;
+                }
+            }
         }
     }
 
@@ -145,7 +172,7 @@
 
             &-link {
                 @include text-20-14-normal-basefont;
-                color: $textPrimary;
+                color: $white;
                 @include transition(color $time ease);
 
                 @include hover {
@@ -163,12 +190,12 @@
             &-link {
                 background: transparent;
                 @include text-20-14-normal-basefont;
-                color: $textPrimary;
+                color: $white;
                 text-transform: uppercase;
                 @include transition(color $time ease);
 
                 @include hover {
-                    color: $textPlaceholder;
+                    color: rgba($white, 0.5);
                 }
             }
         }
@@ -210,6 +237,10 @@
         svg {
             width: 100%;
             height: 100%;
+
+            path {
+                fill:rgba($white, 0.5);
+            }
         }
         
         @include breakpoint(phone768) {
@@ -256,97 +287,5 @@
         flex-direction: column;
         gap: length(8);
         padding: length(16) length(20) length(14);
-    }
-}
-
-.checkout-header {
-    @include flex-center;
-    background: $black;
-    padding: length(20);
-
-    .brand {
-        object-fit: contain;
-        width: length(113);
-        display: flex;
-        position: relative;
-
-        &-title {
-            @include text-20-14-semibold-basefont;
-            color: $white;
-        }
-
-        .logo {
-            @include flex-center-vert;
-            gap: length(4);
-            overflow: hidden;
-            
-            svg {
-                width: length(24);
-                @include square(length(24));
-            }
-        }
-    }
-}
-
-.header-overlay {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    height: 100vh;
-    background: rgba($black, 0.25);
-    z-index: 20;
-    display: none;
-    @include transition(all $time ease);
-
-    &.show {
-        display: block;
-    }
-}
-
-.responsive-search-box {
-    width: 100%;
-    display: none;
-    
-    @extend %animation;
-    @extend %slideDownIn;
-
-    &.show {
-        @include flex-center;
-    }
-}
-
-.loaderbox {
-    position: absolute;
-    top: 50%;
-    right: length(5);
-    @include square(length(30));
-    @include transform(translateY(-50%));
-    display: none;
-    
-    .loading-spinner {
-        @include border(solid, 2, green);
-        @include percentradius(100%);
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        @include square(length(15));
-        animation-name: loading;
-        animation-duration: 700ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    &.show {
-        @include flex-center;
-    }
-}
-
-@keyframes loading {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
     }
 }

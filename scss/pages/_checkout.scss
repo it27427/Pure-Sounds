@@ -1,0 +1,72 @@
+.checkout-banner {
+    background: $black;
+    padding: length(0) length(30) length(60);
+    height: length(260);
+}
+
+.checkout-content {
+    @include flex-center;
+    background: $filterBg;
+}
+
+.checkoutbox {
+    background: $white;
+    box-shadow: $box-shadow-3;
+    width: length(770);
+    margin-top: length(-230);
+    position: relative;
+    @include flex-column;
+    gap: length(12);
+    padding: length(16) length(56) length(40);
+    @include radius(4);
+
+    @include breakpoint(tablet991) {
+        width: calc(100% - 2.5rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .icon {
+        @include square(length(56));
+        @include circle;
+        background: $white;
+        padding: length(4);
+        top: length(-28);
+        left: 50%;
+        @include transform(translateX(-50%));
+        position: absolute;
+        overflow: hidden;
+        @include border(solid, 1, $tabBorder);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .checkout-header {
+        @include flex-center-column;
+        background: $white;
+
+        .title {
+            @include faqtitle-font-style;
+            color: $textPrimary;
+        }
+
+        .checkouttext {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+        }
+    }
+}
+
+.form-select {
+    height: length(250);
+    max-height: length(250);
+    overflow-y: scroll;
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $filterBorder;
+    }
+}

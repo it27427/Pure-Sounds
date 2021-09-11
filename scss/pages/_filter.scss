@@ -1,5 +1,5 @@
 .filter-head {
-    margin-top: length(72);
+    // margin-top: length(72);
     padding: length(16) length(30);
     position: relative;
     background: $locationBg;
@@ -143,6 +143,8 @@
                 .accordion-collapse {
                     .accordion-body {
                         padding: 0;
+                        @include flex-column;
+                        gap: length(16);
 
                         .sorting-buttons {
                             @include flex-center;
@@ -157,11 +159,11 @@
                                 @include flex-center-between;
                                 flex-wrap: wrap;
                                 gap: length(14);
-                                height: length(235);
+                                max-height: length(235);
                                 overflow: hidden;
 
                                 &.show {
-                                    height: 100%;
+                                    max-height: 100%;
                                 }
                             }
 
@@ -188,11 +190,11 @@
                                 @include flex-center-between;
                                 flex-wrap: wrap;
                                 gap: length(14);
-                                height: length(530);
+                                max-height: length(530);
                                 overflow: hidden;
 
                                 &.show {
-                                    height: 100%;
+                                    max-height: 100%;
                                 }
                             }
 
@@ -272,18 +274,15 @@
 
                             .accordion-collapse {
                                 .accordion-body {
-                                    @include flex-column;
-                                    gap: length(16);
-
                                     .checkmarks {
                                         @include flex-column;
                                         gap: length(20);
-                                        height: length(464);
+                                        max-height: length(464);
                                         overflow: hidden;
                                         padding-left: length(24);
 
                                         &.show {
-                                            height: 100%;
+                                            max-height: 100%;
                                         }
 
                                         .checkmark {
@@ -298,21 +297,21 @@
                                             }
                                         }
                                     }
-
-                                    .btn-seeall {
-                                        display: inline-block;
-                                        text-align: left;
-                                        max-width: 40%;
-                                        @include transparent-button;
-                                        @include text-20-14-medium-basefont;
-                                        color: $accessActiveBg;
-                                        @include transition(color $time ease);
-        
-                                        @include hover {
-                                            color: $accessActiveHoverBg;
-                                        }
-                                    }
                                 }
+                            }
+                        }
+
+                        .btn-seeall {
+                            display: inline-block;
+                            text-align: left;
+                            max-width: 40%;
+                            @include transparent-button;
+                            @include text-20-14-medium-basefont;
+                            color: $accessActiveBg;
+                            @include transition(color $time ease);
+
+                            @include hover {
+                                color: $accessActiveHoverBg;
                             }
                         }
                     }

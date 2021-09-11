@@ -1,3 +1,38 @@
+.btn-annual {
+    display: inline-block;
+    text-align: center;
+    padding: length(14) length(38);
+    @include radius(4);
+    @include text-20-14-semibold-basefont;
+}
+
+.btn-access {
+    @include border(solid, 1, $bgnBorder);
+    @include transition(background $time ease);
+    color: $textPrimary;
+
+    @include hover {
+        background: $accessBtnBg;
+    }
+
+    &:focus {
+        @include setBgColor($lightColor, $textPrimary);
+    }
+}
+
+.btn-buy {
+    @include setBgColor($accessActiveBg, $white);
+    @include transition(all $time ease);
+
+    @include hover {
+        @include setBgColor($accessActiveHoverBg, $white);
+    }
+
+    &:focus {
+        @include setBgColor($accessActiveFocusBg, $white);
+    }
+}
+
 .btn-sound {
     display: inline-block;
     text-align: center;
