@@ -1,0 +1,81 @@
+.browsesound {
+    @include flex-center;
+    @include border-single(bottom, solid, 1, $noticeBg);
+    padding: length(64) length(30) length(72);
+
+    @include breakpoint(phone768) {
+        padding: length(20) length(16);
+    }
+
+    &-content {
+        @include flex-center;
+
+        .browse-title {
+            @include h1-font-style;
+            color: $textPrimary;
+
+            @include breakpoint(laptop1100) {
+                @include titletext-font-style;
+            }
+
+            @include breakpoint(tablet991) {
+                @include h2-font-style;
+            }
+        }
+    }
+}
+
+.browsemain {
+    padding: length(48) length(0) length(80);
+
+    &-content {
+        @include flex-center-column;
+
+        .browsemain-title {
+            padding: length(16);
+            @include text-20-16-medium-basefont;
+            color: $textGray-1;
+        }
+
+        .browsecategories {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .browsecategory {
+                width: calc(25% - 2.75rem);
+                @include flex-column;
+                margin-bottom: length(44);
+                gap: length(20);
+
+                .categorylist {
+                    @include list-vertical;
+                    gap: length(20);
+                    max-height: length(110);
+                    overflow: hidden;
+
+                    &.shown {
+                        max-height: 100%;
+                    }
+                }
+
+                .view-btn {
+                    @include transparent-button;
+                    display: inline-block;
+                    text-align: left;
+                    color: $accessActiveBg;
+                    @include transition(color $time ease);
+
+                    @include hover {
+                        color: $accessActiveHoverBg;
+                    }
+
+                    &:focus {
+                        color: $accessActiveFocusBg;
+                    }
+                }
+            }
+        }
+    }
+}
