@@ -7,6 +7,7 @@
 .checkout-content {
     @include flex-center;
     background: $filterBg;
+    min-height: calc(100vh - 20.25rem);
 }
 
 .checkoutbox {
@@ -60,13 +61,517 @@
     }
 }
 
-.form-select {
-    height: length(250);
-    max-height: length(250);
-    overflow-y: scroll;
+.checkout-form {
+    .formrow {
+        @include flex-center-vert;
+        gap: length(26);
+
+        .formcol {
+            width: 50%;
+            @include flex-column;
+            gap: length(8);
+            height: length(78);
+
+            .form-floating {
+                .formlabel {
+                    @include text-14-14-normal-basefont;
+                    margin-top: length(5);
+                    color: $textGray-1;
+
+                    .required {
+                        color: $danger;
+                    }
+                }
+
+                .form-select,
+                .form-control {
+                    @include text-14-14-normal-basefont;
+                    color: $textPrimary;
+
+                    &:focus {
+                        ~ .formlabel {
+                            @include text-12-12-normal-basefont;
+                        }
+                    }
+                }
+            }
+
+            .error-message {
+                @include text-12-12-normal-basefont;
+                color: $danger;
+                // margin-left: length(13);
+                display: none;
+            }
+
+            &.error {
+                .form-floating {
+                    .form-select,
+                    .form-control {
+                        border-color: $danger;
+                    }
+
+                    .formlabel {
+                        color: $danger;
+                    }
+                }
+
+                .error-message {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.form-select,
+.form-control {
+    @include border(solid, 1, $searchBorder);
+
+    &::placeholder {
+        color: $textGray-1;
+    }
+
     &:focus {
         box-shadow: none;
         outline: none;
-        border-color: $filterBorder;
+        border-color: $darklinkhovercolor;
     }
+}
+
+.credit-debit-paypal-info {
+    margin: length(20) length(0) length(0);
+    @include flex-column;
+    gap: length(24);
+
+    .nav-tabs {
+        margin: length(0) length(-56);
+        padding: length(0) length(56);
+        @include border-single(bottom, solid, 1, $searchBorder);
+
+        .nav-item {
+            width: 50%;
+        }
+
+        .nav-link {
+            margin-bottom: 0;
+            background: $white;
+            border: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            @include border-single(bottom, solid, 2, transparent);
+            width: 100%;
+            @include text-14-14-semibold-basefont;
+            color: $textPrimary;
+            padding: length(12) length(0);
+
+            &.active {
+                border-color: $textPrimary;
+            }
+        }
+    }
+}
+
+.creditdebit-form {
+    @include flex-column;
+    gap: length(20);
+
+    .formrow {
+        @include flex-center-vert;
+        gap: length(26);
+        height: length(48);
+        margin-bottom: length(20);
+
+        .formcol {
+            width: 50%;
+            @include flex-column;
+            gap: length(8);
+            height: length(48);
+
+            .form-floating {
+                height: length(48);
+
+                .formlabel {
+                    @include text-14-14-normal-basefont;
+                    margin-top: length(5);
+                    color: $textGray-1;
+
+                    .required {
+                        color: $danger;
+                    }
+                }
+
+                .formlabel {
+                    margin-top: 0;
+                }
+
+                .form-control {
+                    @include text-14-14-normal-basefont;
+                    color: $textPrimary;
+                    height: length(48);
+                    padding: length(8) length(12);
+
+                    &:focus {
+
+                        ~ .formlabel {
+                            @include text-12-12-normal-basefont;
+                        }
+                    }
+                }
+            }
+
+            .error-message {
+                @include text-12-12-normal-basefont;
+                color: $danger;
+                display: none;
+            }
+
+            &.error {
+                .form-floating {
+                    .form-control {
+                        border-color: $danger;
+                    }
+
+                    .formlabel {
+                        color: $danger;
+                    }
+                }
+
+                .error-message {
+                    display: block;
+                }
+            }
+        }
+
+        .cardbox {
+            @include flex-column;
+            gap: length(8);
+            @include border(solid, 1, $searchBorder);
+            width: 100%;
+            @include radius(4);
+            height: length(48);
+
+            .error-message {
+                @include text-12-12-normal-basefont;
+                color: $danger;
+                display: none;
+            }
+
+            .inputbox {
+                padding: length(8) length(12);
+
+                .cardnumber {
+                    @include flex-center-vert;
+                    gap: length(8);
+                    width: 60%;
+
+                    .cardicon {
+                        width: length(48);
+                        height: length(25);
+                        @include flex-center;
+                    
+                        svg {
+                            height: 100%;
+                        }
+                    }
+
+                    .inputfield {
+                        width: calc(100% - 3.5rem);
+                        @include text-14-14-normal-basefont;
+                        color: $inputText;
+                        text-align: left;
+                        padding: length(8) length(0);
+                    }
+                }
+
+                .inputfield {
+                    width: 20%;
+                    text-align: center;
+                    @include text-14-14-normal-basefont;
+                    color: $inputText;
+                    padding: length(8) length(12);
+                }
+            }
+
+            &.error {
+                border-color: $danger;
+
+                .inputbox {
+                    .cardnumber {
+                        .inputfield {
+                            color: $danger;
+                        }
+                    }
+                    
+                    .inputfield {
+                        color: $danger;
+                    }
+                }
+
+                .error-message {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin: length(24) length(0);
+        @include radius(4);
+        @include setBgColor($accessActiveBg, $white);
+        padding: length(14);
+        @include transition(background $time ease);
+
+        @include hover {
+            background: $accessActiveHoverBg;
+        }
+
+        &:focus {
+            background: $accessActiveFocusBg;
+        }
+    }
+}
+
+.paypal-form {
+    @include flex-column;
+    gap: length(20);
+
+    .form-title {
+        @include text-14-14-normal-basefont;
+        color: $textGray-1;
+        text-align: center;
+        padding: length(10);
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin: length(24) length(0);
+        @include radius(4);
+        @include setBgColor($paypalBg, $white);
+        padding: length(14);
+        @include transition(background $time ease);
+        box-shadow: $box-shadow-4;
+
+        @include hover {
+            background: $paypalHoverBg;
+        }
+
+        &:focus {
+            background: $paypalFocusBg;
+        }
+    }
+}
+
+.invoice-promo {
+    @include flex-center-between;
+
+    .btn-invoice,
+    .btn-promo {
+        @include transparent-button;
+        @include text-12-12-normal-basefont;
+        color: $textGray-1;
+    }
+}
+
+.promocode {
+    gap: length(8);
+    display: none;
+
+    &.show {
+        @include flex-column;
+    }
+
+    .form-floating {
+        height: length(48);
+
+        .formlabel {
+            @include text-14-14-normal-basefont;
+            margin-top: length(5);
+            color: $textGray-1;
+
+            .required {
+                color: $danger;
+            }
+        }
+
+        .formlabel {
+            margin-top: 0;
+        }
+
+        .form-control {
+            @include text-14-14-normal-basefont;
+            color: $textPrimary;
+            height: length(48);
+            padding: length(8) length(12);
+
+            &:focus {
+                ~ .formlabel {
+                    @include text-12-12-normal-basefont;
+                }
+            }
+        }
+    }
+
+    .error-message {
+        @include text-12-12-normal-basefont;
+        color: $danger;
+        display: none;
+    }
+
+    &.error {
+        .form-floating {
+            .form-control {
+                border-color: $danger;
+            }
+
+            .formlabel {
+                color: $danger;
+            }
+        }
+
+        .error-message {
+            display: block;
+        }
+    }
+}
+
+.invoicebox {
+    gap: length(20);
+    display: none;
+
+    &.show {
+        @include flex-column;
+    }
+
+    .inputbox {
+        width: 100%;
+        @include flex-column;
+        gap: length(8);
+        align-items: flex-start;
+
+        .form-floating {
+            height: length(48);
+            width: 100%;
+
+            .formlabel {
+                @include text-14-14-normal-basefont;
+                margin-top: length(5);
+                color: $textGray-1;
+
+                .required {
+                    color: $danger;
+                }
+            }
+
+            .formlabel {
+                margin-top: 0;
+            }
+
+            .form-control {
+                @include text-14-14-normal-basefont;
+                color: $textPrimary;
+                height: length(48);
+                padding: length(8) length(12);
+
+                &:focus {
+                    ~ .formlabel {
+                        @include text-12-12-normal-basefont;
+                    }
+                }
+            }
+        }
+
+        .error-message {
+            @include text-12-12-normal-basefont;
+            color: $danger;
+            display: none;
+        }
+    
+        &.error {
+            .form-floating {
+                .form-control {
+                    border-color: $danger;
+                }
+    
+                .formlabel {
+                    color: $danger;
+                }
+            }
+    
+            .error-message {
+                display: block;
+            }
+        }
+    }
+
+    .inputrow {
+        @include flex-center-vert;
+        gap: length(26);
+
+        .inputcol {
+            width: 50%;
+            @include flex-column;
+            gap: length(8);
+            height: length(48);
+
+            .form-floating {
+                height: length(48);
+
+                .formlabel {
+                    @include text-14-14-normal-basefont;
+                    margin-top: length(5);
+                    color: $textGray-1;
+
+                    .required {
+                        color: $danger;
+                    }
+                }
+
+                .formlabel {
+                    margin-top: 0;
+                }
+
+                .form-control {
+                    @include text-14-14-normal-basefont;
+                    color: $textPrimary;
+                    height: length(48);
+                    padding: length(8) length(12);
+
+                    &:focus {
+
+                        ~ .formlabel {
+                            @include text-12-12-normal-basefont;
+                        }
+                    }
+                }
+            }
+
+            .error-message {
+                @include text-12-12-normal-basefont;
+                color: $danger;
+                display: none;
+            }
+
+            &.error {
+                .form-floating {
+                    .form-control {
+                        border-color: $danger;
+                    }
+
+                    .formlabel {
+                        color: $danger;
+                    }
+                }
+
+                .error-message {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.paymentcards {
+    @include flex-center;
+    gap: length(8);
 }
