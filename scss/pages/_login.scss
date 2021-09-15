@@ -164,10 +164,55 @@
     }
 }
 
+.login-form,
+.reset-form,
+.register-form {
+    .input-box {
+        @include flex-column;
+        gap: length(8);
+        width: 100%;
+
+        .error-message {
+            @include text-14-14-medium-basefont;
+            color: $danger;
+            display: none;
+        }
+
+        .signingup-text {
+            @include flex-column;
+            gap: length(6);
+
+            .text {
+                @include text-12-12-medium-basefont;
+                color: $formText;
+            }
+        }
+
+        &.error {
+            .form-floating {
+                .form-control {
+                    border-color: $danger;
+                }
+            }
+
+            .error-message {
+                display: block;
+            }
+
+            .form-check {
+                &-label {
+                    &::before {
+                        border-color: $danger;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .form-check {
     @include transition(all $time ease);
-    padding-left: 0;
-    width: 88%;
+    padding-left: length(24);
 
     &-input {
         opacity: 0;

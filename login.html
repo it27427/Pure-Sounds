@@ -41,15 +41,23 @@
 
                 <!-- LOGIN FORM START -->
                 <form class="login-form">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
-                        <label class="formlabel" for="loginEmail">Email address <span class="required">*</span></label>
+                    <div class="input-box">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
+                            <label class="formlabel" for="loginEmail">Email address <span class="required">*</span></label>
+                        </div>
+
+                        <p class="error-message">This field is required</p>
                     </div>
 
-                    <div class="form-floating">
-                        <input type="password" class="form-control passinput" id="loginPassword" placeholder="Password">
-                        <label class="formlabel passlabel" for="loginPassword">Password <span class="required">*</span></label>
-                        <a href="forgot-password.html" class="forgot-text">Forgot Password?</a>
+                    <div class="input-box">
+                        <div class="form-floating">
+                            <input type="password" class="form-control passinput" id="loginPassword" placeholder="Password">
+                            <label class="formlabel passlabel" for="loginPassword">Password <span class="required">*</span></label>
+                            <a href="forgot-password.html" class="forgot-text">Forgot Password?</a>
+                        </div>
+                        
+                        <p class="error-message">This field is required</p>
                     </div>
 
                     <div class="submit-form">

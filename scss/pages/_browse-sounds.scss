@@ -32,7 +32,7 @@
         @include flex-center-column;
 
         .browsemain-title {
-            padding: length(16);
+            padding: length(0) length(0) length(48);
             @include text-20-16-medium-basefont;
             color: $textGray-1;
         }
@@ -43,17 +43,52 @@
             justify-content: space-between;
             flex-wrap: wrap;
 
+            @include breakpoint(phone500) {
+                justify-content: center;
+                gap: length(40);
+            }
+
             .browsecategory {
                 width: calc(25% - 2.75rem);
                 @include flex-column;
                 margin-bottom: length(44);
                 gap: length(20);
 
+                @include breakpoint(tablet991) {
+                    width: 40%;
+                }
+
+                .category-title {
+                    .title {
+                        @include text-28-24-semibold-basefont;
+                        color: $black;
+                        @include transition(color $time ease);
+
+                        @include breakpoint(phone500) {
+                            @include text-18-16-semibold-basefont;
+                        }
+
+                        @include hover {
+                            color: $textGray-2;
+                        }
+                    }
+                }
+
                 .categorylist {
                     @include list-vertical;
                     gap: length(20);
                     max-height: length(110);
                     overflow: hidden;
+
+                    .categorylist-link {
+                        @include text-20-16-normal-basefont;
+                        color: $textGray-1;
+                        @include transition(color $time ease);
+
+                        @include hover {
+                            color: $textPrimary;
+                        }
+                    }
 
                     &.shown {
                         max-height: 100%;
@@ -64,6 +99,7 @@
                     @include transparent-button;
                     display: inline-block;
                     text-align: left;
+                    @include text-20-16-normal-basefont;
                     color: $accessActiveBg;
                     @include transition(color $time ease);
 

@@ -14,6 +14,7 @@
                 svg {
                     width: length(24);
                     @include square(length(24));
+                    margin-left: length(8);
                 }
 
                 &-text {
@@ -52,16 +53,16 @@
             .mobile-nav {
                 @include flex-column;
                 gap: length(12);
-                padding: length(0) length(8);
+                padding: length(0) length(24);
 
                 .mobilemenu {
                     @include flex-column;
                     gap: length(18);
 
                     .divider {
-                        width: 100%;
                         height: length(1);
                         background: rgba($white, 0.2);
+                        margin: 0 length(-24);
                     }
 
                     .loggedmenu {

@@ -1,19 +1,13 @@
-const viewAll = document.querySelectorAll('.view-btn');
+const viewAll = Array.from(document.querySelectorAll('.view-btn'));
 
 for(i of viewAll) {
-    i.addEventListener('click', () => {
-        const listElements = document.querySelectorAll('.categorylist');
+    i.addEventListener('click', (e) => {
+        let prevSibling = e.currentTarget.previousElementSibling;
 
-        for(list of listElements) {
-            if(list.classList.contains('shown')) {
-                list.classList.remove('shown');
-            } else {
-                list.classList.add('shown');
-            }
+        if(prevSibling.classList.contains('shown')) {
+            prevSibling.classList.remove('shown');
+        } else {
+            prevSibling.classList.add('shown');
         }
     });
 }
-
-
-
-console.log(viewAll);
