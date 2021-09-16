@@ -422,6 +422,45 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
 }
 
 /*------------------------------------*\
+    // 24-16 basefont
+\*------------------------------------*/
+@mixin text-24-20-normal-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('normal'),
+		line-height(24, size('big'))
+  	);
+}
+
+@mixin text-24-20-medium-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('medium'),
+		line-height(24, size('big'))
+  	);
+}
+
+@mixin text-24-20-semibold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('semibold'),
+		line-height(24, size('big'))
+  	);
+}
+
+@mixin text-24-20-bold-basefont {
+  	@include font(family($HelveticaNeueLTPro),
+		style('normal'),
+		size('big'),
+		weight('bold'),
+		line-height(24, size('big'))
+  	);
+}
+
+/*------------------------------------*\
     // 28-16 basefont
 \*------------------------------------*/
 @mixin text-28-16-normal-basefont {

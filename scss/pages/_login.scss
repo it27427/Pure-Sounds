@@ -166,7 +166,11 @@
 
 .login-form,
 .reset-form,
-.register-form {
+.register-form,
+.edit-profile-form,
+.delete-form,
+.vat-form,
+.address-form {
     .input-box {
         @include flex-column;
         gap: length(8);
@@ -190,7 +194,8 @@
 
         &.error {
             .form-floating {
-                .form-control {
+                .form-control,
+                .form-select {
                     border-color: $danger;
                 }
             }
@@ -207,6 +212,21 @@
                 }
             }
         }
+    }
+}
+
+.edit-profile-form,
+.delete-form,
+.vat-form,
+.address-form {
+    @include flex-column;
+    gap: length(20);
+
+    .editform-submit,
+    .deleteform-submit,
+    .vat-submit,
+    .address-submit {
+        margin-top: length(12);
     }
 }
 
@@ -294,5 +314,30 @@
             opacity: 0;
             @include transition(opacity $time ease);
         }
+    }
+}
+
+.form-floating {
+    .form-control,
+    .formlabel {
+        @include text-14-14-medium-basefont;
+    }
+
+    .formlabel {
+        color: $textGray-1;
+        margin-top: length(5);
+
+        .required {
+            color: $danger;
+        }
+    }
+}
+
+.form-select {
+    @include text-14-14-medium-basefont;
+    padding: length(16) length(12);
+
+    .option {
+        font: inherit;
     }
 }

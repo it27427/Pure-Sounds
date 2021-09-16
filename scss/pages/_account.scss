@@ -1,0 +1,514 @@
+.account {
+    @include flex-center;
+    @include border-single(bottom, solid, 1, $noticeBg);
+    padding: length(64) length(30) length(72);
+
+    @include breakpoint(phone768) {
+        padding: length(20) length(16);
+    }
+
+    &-content {
+        @include flex-center;
+
+        .account-title {
+            @include h1-font-style;
+            color: $textPrimary;
+
+            @include breakpoint(laptop1100) {
+                @include titletext-font-style;
+            }
+
+            @include breakpoint(tablet991) {
+                @include h2-font-style;
+            }
+        }
+    }
+}
+
+.account-main {
+    background: $searchBg;
+    padding: length(40) length(0) length(64);
+
+    &-content {
+        @include flex-center-column;
+        gap: length(24);
+        max-width: length(570);
+        margin: 0 auto;
+    }
+}
+
+.account-nav {
+    &-content {
+        @include flex-center;
+
+        .account-navigation {
+            padding: length(12) length(0);
+            @include flex-center;
+
+            .accountlist {
+                @include list-horizontal;
+                gap: length(4);
+            
+                @include breakpoint(phone768) {
+                    gap: length(1);
+                }
+
+                .accountlist-link {
+                    @include text-24-16-normal-basefont;
+                    padding: length(12) length(32);
+                    display: inline-block;
+                    @include setBgColor($white, $textPrimary);
+                    @include transition(background $time ease-in-out);
+                    @include radius(4);
+                    text-align: center;
+            
+                    @include breakpoint(phone768) {
+                        padding: length(12);
+                        @include text-20-14-normal-basefont;
+                    }
+            
+                    @include breakpoint(phone480) {
+                        @include text-12-12-normal-basefont;
+                    }
+
+                    &:hover:not(.active) {
+                        @include setBgColor($accessBtnBg, $textPrimary);
+                    }
+                    
+                    &.active {
+                        @include setBgColor($accessBtnBg, $textPrimary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile-overview,
+.edit-profile-information,
+.delete-account {
+    padding: length(32) length(40);
+    @include radius(4);
+    background: $white;
+    width: 100%;
+    @include flex-column;
+    gap: length(40);
+
+    @include breakpoint(phone768) {
+        padding: length(24) length(32);
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+.profile-overview {
+    .overview-title {
+        @include text-24-20-bold-basefont;
+        color: $textPrimary;
+    }
+}
+
+.overviewbox {
+    display: flex;
+    gap: length(67);
+
+    @include breakpoint(phone768) {
+        flex-direction: column;
+        gap: length(16);
+    }
+
+    .overview {
+        width: calc(100% - 8.75rem);
+        @include flex-column;
+        gap: length(27);
+
+        @include breakpoint(phone768) {
+            width: 100%;
+            gap: length(10);
+        }
+
+        .account-type {
+            @include text-24-16-semibold-basefont;
+            color: $textPrimary;
+        }
+
+        .overview-text {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+
+            @include breakpoint(phone480) {
+                @include text-20-14-normal-basefont;
+            }
+        }
+    }
+
+    .overviewbutton {
+        .btn-access {
+            width: length(140);
+            height: length(44);
+            @include flex-center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.edit-info,
+.delete-info {
+    @include flex-column;
+    gap: length(8);
+}
+
+.edit-info {
+    .edit-profile-title {
+        @include text-24-20-bold-basefont;
+        color: $textPrimary;
+    }
+
+    .edit-profile-text {
+        @include text-20-14-normal-basefont;
+        color: $textGray-1;
+    }
+}
+
+.delete-info {
+    .delete-title {
+        @include text-24-20-bold-basefont;
+        color: $textPrimary;
+    }
+
+    .delete-text {
+        @include text-20-14-normal-basefont;
+        color: $textGray-1;
+    }
+}
+
+.favorite-main {
+    background: $searchBg;
+    padding: length(40) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(8);
+        padding: length(0) length(40);
+
+        @include breakpoint(phone500) {
+            padding: length(0) length(20);
+        }
+
+        .favorite-title {
+            @include text-24-20-bold-basefont;
+            color: $textPrimary;
+        }
+
+        .favorite-text {
+            @include text-20-14-normal-basefont;
+            color: $textGray-1;
+
+            @include breakpoint(phone500) {
+                @include text-12-12-normal-basefont;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.favorite-list {
+    background: $white;
+    padding: length(40) length(0) length(80);
+
+    &-content {
+        .downloads-content {
+            padding: length(40) length(0);
+            @include flex-center-column;
+            gap: length(17);
+
+            @include breakpoint(phone500) {
+                padding: length(20) length(10);
+            }
+
+            .downloads-icon {
+                margin-bottom: length(7);
+            }
+
+            .downloads-title {
+                @include text-32-24-semibold-basefont;
+                color: $textPrimary;
+                text-align: center;
+
+                @include breakpoint(phone500) {
+                    @include text-24-20-semibold-basefont;
+                }
+            }
+
+            .textbox {
+                max-width: length(340);
+                margin: 0 auto;
+
+                @include breakpoint(phone500) {
+                    max-width: 100%;
+                }
+
+                .downloads-text {
+                    @include text-20-14-normal-basefont;
+                    color: $textGray-1;
+                    text-align: center;
+
+                    @include breakpoint(phone500) {
+                        @include text-12-12-normal-basefont;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+        .filter-playlist {
+            .playlist {
+                &-item {
+                    .playlist-top {
+                        border-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.billing-main {
+    background: $searchBg;
+    padding: length(40) length(0);
+    @include flex-center;
+
+    @include breakpoint(tablet991) {
+        padding: length(20) length(0) length(40);
+    }
+
+    &-content {
+        display: flex;
+        gap: length(40);
+        max-width: length(780);
+        margin-left: length(160);
+        margin-right: auto;
+
+        @include breakpoint(desktop1400) {
+            margin-left: length(70);
+        }
+
+        @include breakpoint(desktop1200) {
+            margin-left: length(-20);
+        }
+
+        @include breakpoint(tablet991) {
+            flex-direction: column;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            gap: length(20);
+        }
+
+        .billing-sidebar {
+            width: length(170);
+
+            @include breakpoint(tablet991) {
+                width: 100%;
+            }
+
+            .billinglist {
+                @include list-vertical;
+
+                @include breakpoint(tablet991) {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: length(4);
+                }
+
+                .billinglist-link {
+                    display: inline-block;
+                    width: 100%;
+                    padding: length(14) length(16);
+                    @include radius(4);
+                    @include text-20-14-normal-basefont;
+                    @include setBgColor(transparent, $textPrimary);
+                    @include transition(background $time ease-in-out);
+
+                    @include breakpoint(tablet991) {
+                        padding: length(6);
+                    }
+
+                    @include hover {
+                        @include setBgColor($tabBorder, $textPrimary);
+
+                        @include breakpoint(tablet991) {
+                            background: transparent;
+                        }
+                    }
+
+                    &.active {
+                        @include setBgColor($white, $textPrimary);
+                        font-weight: bold;
+
+                        @include breakpoint(tablet991) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .billing-invoices {
+            @include flex-column;
+            gap: length(24);
+            max-width: length(570);
+
+            @include breakpoint(tablet991) {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+
+            @include breakpoint(phone768) {
+                max-width: 100%;
+            }
+
+            .billing-information,
+            .payment-information,
+            .invoices-information,
+            .company-address,
+            .vat-informations {
+                padding: length(32) length(40);
+                @include radius(4);
+                background: $white;
+                width: 100%;
+                @include flex-column;
+                gap: length(40);
+            
+                @include breakpoint(phone768) {
+                    padding: length(24) length(32);
+                    width: 95%;
+                    margin: 0 auto;
+                }
+            }
+
+            .billing-information {
+                .billing-info {
+                    @include flex-column;
+                    gap: length(8);
+
+                    &-title {
+                        @include text-24-20-bold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    &-text {
+                        @include text-20-14-normal-basefont;
+                        color: $textGray-1;
+    
+                        @include breakpoint(phone500) {
+                            @include text-12-12-normal-basefont;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+
+            .payment-information {
+                .payment-info {
+                    @include flex-column;
+                    gap: length(8);
+                    
+                    &-title {
+                        @include text-24-20-bold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    &-text {
+                        @include text-20-14-normal-basefont;
+                        color: $textGray-1;
+    
+                        @include breakpoint(phone500) {
+                            @include text-12-12-normal-basefont;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+
+                .paymenttext {
+                    @include text-20-14-normal-basefont;
+                    color: $textGray-1;
+
+                    @include breakpoint(phone500) {
+                        @include text-12-12-normal-basefont;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            .invoices-information {
+                .invoices-info {
+                    @include flex-column;
+                    gap: length(8);
+                    
+                    &-title {
+                        @include text-24-20-bold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    &-text {
+                        @include text-20-14-normal-basefont;
+                        color: $textGray-1;
+    
+                        @include breakpoint(phone500) {
+                            @include text-12-12-normal-basefont;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+
+            .company-address {
+                padding: length(40);
+
+                .address-info {
+                    @include flex-column;
+                    gap: length(8);
+
+                    &-title {
+                        @include text-24-20-bold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    &-text {
+                        @include text-20-14-normal-basefont;
+                        color: $textGray-1;
+    
+                        @include breakpoint(phone500) {
+                            @include text-12-12-normal-basefont;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+
+            .vat-informations {
+                .vat-info {
+                    @include flex-column;
+                    gap: length(8);
+
+                    &-title {
+                        @include text-24-20-bold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    &-text {
+                        @include text-20-14-normal-basefont;
+                        color: $textGray-1;
+    
+                        @include breakpoint(phone500) {
+                            @include text-12-12-normal-basefont;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

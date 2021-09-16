@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Sounds | Browse Sounds</title>
+    <title>Pure Sounds | Billing Overview</title>
     <!-- SITE FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- FONT AWESOME CDN -->
@@ -374,412 +374,199 @@
     </div>
     <!-- HOME HEADER SECTION END -->
 
-    <!-- BROWSE SOUND BANNER START -->
-    <section class="browsesound">
+    <!-- ACCOUNT BANNER START -->
+    <section class="account">
         <div class="container">
-            <div class="browsesound-content">
-                <h1 class="browse-title">Browse Sounds</h1>
+            <div class="account-content">
+                <h1 class="account-title">My Account</h1>
             </div>
         </div>
     </section>
-    <!-- BROWSE SOUND BANNER END -->
+    <!-- ACCOUNT BANNER END -->
 
-    <!-- BROWSE CATEGORY SECTION START -->
-    <main class="browsemain">
+    <!-- ACCOUNE NAV SECTION START -->
+    <section class="account-nav">
         <div class="container">
-            <div class="browsemain-content">
-                <p class="browsemain-title">Start by looking at our categories below</p>
+            <div class="account-nav-content">
+                <nav class="account-navigation">
+                    <ul class="accountlist">
+                        <li class="accountlist-item">
+                            <a href="profile.html" class="accountlist-link">Profile</a>
+                        </li>
+                        <li class="accountlist-item">
+                            <a href="favorites.html" class="accountlist-link">Favorites</a>
+                        </li>
+                        <li class="accountlist-item">
+                            <a href="downloads.html" class="accountlist-link">Downloads</a>
+                        </li>
+                        <li class="accountlist-item">
+                            <a href="billing.html" class="accountlist-link active">Billing & Invoices</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- ACCOUNE NAV SECTION END -->
 
-                <div class="browsecategories">
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Animals</a>
-                        </h2>
+    <!-- BILLING-MAIN SECTION START -->
+    <main class="billing-main">
+        <div class="container">
+            <div class="billing-main-content">
+                <!-- BILLING-INVOICES SIDEBAR START -->
+                <aside class="billing-sidebar">
+                    <ul class="billinglist">
+                        <li class="billinglist-item">
+                            <a href="billing.html" class="billinglist-link">Overview</a>
+                        </li>
+                        <li class="billinglist-item">
+                            <a href="info.html" class="billinglist-link active">Billing Information</a>
+                        </li>
+                    </ul>
+                </aside>
+                <!-- BILLING-INVOICES END START -->
 
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Birds</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Dinosaurs</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Domestic Animals</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Farm Animals</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Horses/ Donkeys</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Insects</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Ocean Creatures</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Animals</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Reptiles</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Waterfowl And Amphibians</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Wild Animals</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
+                <!-- BILLING INVOICES START -->
+                <div class="billing-invoices">
+                    <!-- COMPANY ADDRESS INFORMATIONS START -->
+                    <div class="company-address">
+                        <div class="address-info">
+                            <h3 class="address-info-title">Company Address</h3>
+                            <p class="address-info-text">This address will appear on your Invoices/Receipts</p>
+                        </div>
+
+                        <form class="address-form">
+                            <div class="input-box error">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="contactPerson" placeholder="Contact Person">
+                                    <label class="formlabel" for="contactPerson">Contact Person <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressLine1" placeholder="Address, Line 1">
+                                    <label class="formlabel" for="addressLine1">Address, Line 1 <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressLine2" placeholder="Address, Line 2">
+                                    <label class="formlabel" for="addressLine2">Address, Line 2 <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressCity" placeholder="City">
+                                    <label class="formlabel" for="addressCity">City <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressState" placeholder="State/Province">
+                                    <label class="formlabel" for="addressState">State/Province <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressPostalCode" placeholder="Postal Code">
+                                    <label class="formlabel" for="addressPostalCode">Postal Code <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="input-box error">
+                                <div class="form-floating">
+                                    <select class="form-select" id="selectAddressCountry" aria-label="Select Address Country">
+                                        <option selected>Select Country</option>
+                                        <option value="1">Bangladesh</option>
+                                        <option value="2">Honduras</option>
+                                        <option value="3">Åland Islands</option>
+                                        <option value="4">Albania</option>
+                                        <option value="5">Algeria</option>
+                                        <option value="6">American Samoa</option>
+                                        <option value="7">Andorra</option>
+                                        <option value="8">Angola</option>
+                                        <option value="9">Anguilla</option>
+                                        <option value="10">Antarctica</option>
+                                        <option value="11">Antigua and Barbuda</option>
+                                        <option value="12">Argentina</option>
+                                        <option value="13">Armenia</option>
+                                        <option value="14">Aruba</option>
+                                        <option value="15">Australia</option>
+                                        <option value="16">Austria</option>
+                                        <option value="17">Azerbaijan</option>
+                                        <option value="18">Bahamas</option>
+                                        <option value="19">Bahrain</option>
+                                    </select>
+        
+                                    <label for="selectAddressCountry" class="formlabel">Country <span class="required">*</span></label>
+                                </div>
+                                <p class="error-message">You must have fill this field</p>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressCompany" placeholder="Company">
+                                    <label class="formlabel" for="addressCompany">Company <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="address-submit">
+                                <button type="button" class="btn-access btn-annual">Save Company Address</button>
+                            </div>
+                        </form>
                     </div>
+                    <!-- COMPANY ADDRESS INFORMATIONS END -->
 
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Comic & Film Fx</a>
-                        </h2>
+                    <!-- VAT INFORMATIONS START -->
+                    <div class="vat-informations">
+                        <div class="vat-info">
+                            <h3 class="vat-info-title">VAT Number</h3>
+                            <p class="vat-info-text">
+                                Add a VAT number to be included in your invoices. Please note that VAT numbers are only available for companies located in the EU.
+                            </p>
+                        </div>
 
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Alarms</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Balloon</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Bells/ Chimes</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Boing/ Doing/ Spring</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Break/ Rip</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Cloth</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Goop/ Plop/ Splat</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Hit/ Knock/ Stab</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Impact/ Crash</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Comic & Film Fx</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Paper</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Rattle/ Shake</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Rustle/ Crumble</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Scrape</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Squeak/ Creak</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Weapons</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Whoosh/ Swish</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
+                        <form class="vat-form">
+                            <div class="input-box error">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="vatNumber" placeholder="VAT Number">
+                                    <label class="formlabel" for="vatNumber">VAT Number <span class="required">*</span></label>
+                                </div>
+                                
+                                <p class="error-message">This field is required</p>
+                            </div>
+
+                            <div class="vat-submit">
+                                <button type="button" class="btn-access btn-annual">Save VAT Information</button>
+                            </div>
+                        </form>
                     </div>
-
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Exteriors</a>
-                        </h2>
-
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Beach</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Cafe/ Restaurant</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">City</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Countryside</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Forest</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Market</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Exteriors</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">River/ Lake/ Wetland</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">School</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Stations</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Street</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Town</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
-                    </div>
-
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">House</a>
-                        </h2>
-
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Bathroom</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Buttons and Switches</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Clocks</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Doors/ Windows</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Electric Appliances</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Kitchen</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Objects</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Telephone</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
-                    </div>
-
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Human</a>
-                        </h2>
-
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Applause</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Babies</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Bodily Functions</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Body Damage</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Body Fall</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Children</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Crowds</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Footsteps</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Mouth</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Human</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Speech</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
-                    </div>
-
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Industry and Machines</a>
-                        </h2>
-
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Air Condition</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Cameras</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Communications</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Computers</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Elevators</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Escalators</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Machines</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Medical</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Industry and Machines</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Rollercoaster</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Tools</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Toys</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
-                    </div>
-
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Interiors</a>
-                        </h2>
-
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Airport</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Bank</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Bar</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Cafe</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Circus</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Gamehall</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Hospital</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">House/ Apartment</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Mall</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Museum</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Office</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Interiors</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Places of Worship</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Post Office</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Restaurant</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Station</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Supermarket</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
-                    </div>
-
-                    <div class="browsecategory">
-                        <h2 class="category-title">
-                            <a href="filter.html" class="title">Multimedia</a>
-                        </h2>
-
-                        <ul class="categorylist">
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Alerts</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Beeps</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Bubbles/ Pops</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Minimize/ Maximize</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Musical Tones</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Navigation</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Other Buttons</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Power Down</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Power Up</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Rollovers</a>
-                            </li>
-                            <li class="categorylist-item">
-                                <a href="filter.html" class="categorylist-link">Start-Up</a>
-                            </li>
-                        </ul>
-                        
-                        <button class="view-btn">View All</button>
-                    </div>
+                    <!-- VAT INFORMATIONS END -->
                 </div>
+                <!-- BILLING INVOICES END -->
             </div>
         </div>
     </main>
-    <!-- BROWSE CATEGORY SECTION END -->
+    <!-- BILLING-MAIN SECTION END -->
 
     <!-- FOOTER SECTION START -->
     <footer class="footer">
@@ -892,6 +679,5 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- CUSTOM SCRIPT FILE -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/viewall.js"></script>
 </body>
 </html>

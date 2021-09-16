@@ -218,3 +218,68 @@
         }
     }
 }
+
+.delete-modal {
+    .modal-dialog {
+        .modal-content {
+            @include radius(4);
+            padding: length(56);
+
+            @include breakpoint(phone575) {
+                padding: length(56) length(32);
+            }
+
+            .modal-header {
+                padding: 0;
+            }
+
+            .modal-body {
+                @include flex-center-column;
+
+                .delete-info {
+                    @include flex-center-column;
+                    gap: length(16);
+                    margin-bottom: length(32);
+                    text-align: center;
+                    
+                    .title {
+                        @include text-28-24-semibold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    .text {
+                        @include text-20-14-medium-basefont;
+                        color: $textGray-1;
+
+                        @include breakpoint(phone575) {
+                            @include text-12-12-medium-basefont;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+
+                .delete-form {
+                    margin-bottom: length(12);
+
+                    .deleteform-submit {
+                        .btn-delete {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .delete-text {
+                    @include text-14-14-medium-basefont;
+                    color: $danger;
+                }
+            }
+        }
+    }
+}
+
+.btn-close {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}

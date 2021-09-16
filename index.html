@@ -117,23 +117,6 @@
                                     <!-- LOGGED IN MENU END -->
                                 </div>
 
-                                <!-- LOGIN-REGISTER MODAL LIST START -->
-                                <ul class="mobilelogin-register-modal-list">
-                                    <!-- CLICK FOR LOGIN -->
-                                    <li class="mobilelogin-register-modal-list-item">
-                                        <button type="button" class="mobilelogin-register-modal-list-link" data-bs-toggle="modal" data-bs-target="#pureSoundLoginModal">
-                                            Login
-                                        </button>
-                                    </li>
-                                    <!-- CLICK FOR REGISTER -->
-                                    <li class="mobilelogin-register-modal-list-item">
-                                        <button type="button" class="mobilelogin-register-modal-list-link" data-bs-toggle="modal" data-bs-target="#pureSoundRegisterModal">
-                                            Register
-                                        </button>
-                                    </li>
-                                </ul>
-                                <!-- LOGIN-REGISTER MODAL LIST END -->
-
                                 <!-- LOGIN REGISTER PAGE LINK -->
                                 <ul class="mobilelogin-register-list">
                                     <!-- CLICK FOR LOGIN -->
@@ -277,25 +260,6 @@
                     </ul>
                     <!-- MAIN MENU END -->
 
-                    <!-- LOGIN-REGISTER MODAL LIST START -->
-                    <ul class="login-register-modal-list">
-                        <!-- CLICK FOR LOGIN -->
-                        <li class="login-register-modal-list-item">
-                            <button type="button" class="login-register-modal-list-link" data-bs-toggle="modal" data-bs-target="#pureSoundLoginModal">
-                                Login
-                            </button>
-                        </li>
-                        <!-- DIVIDER -->
-                        <li class="login-register-list-item">/</li>
-                        <!-- CLICK FOR REGISTER -->
-                        <li class="login-register-modal-list-item">
-                            <button type="button" class="login-register-modal-list-link" data-bs-toggle="modal" data-bs-target="#pureSoundRegisterModal">
-                                Register
-                            </button>
-                        </li>
-                    </ul>
-                    <!-- LOGIN-REGISTER MODAL LIST END -->
-
                     <!-- LOGIN REGISTER PAGE LINK -->
                     <ul class="login-register-list">
                         <!-- CLICK FOR LOGIN -->
@@ -341,7 +305,7 @@
             <!-- MOBILE SEARCH BOX START -->
             <div class="responsive-search-box">
                 <form class="responsive-search-form">
-                    <button class="btn-search">
+                    <button type="button" class="btn-search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c1c1c1" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
@@ -982,8 +946,8 @@
     </footer>
     <!-- FOOTER SECTION END -->
         
-    <!-- LOGIN MODAL -->
-    <div class="modal fade login-modal" id="pureSoundLoginModal" aria-hidden="true" aria-labelledby="pureSoundLoginModalLabel" tabindex="-1">
+    <!-- PAGELOAD MODAL -->
+    <div class="modal fade pageload-modal" id="pageLoadModal" aria-hidden="true" aria-labelledby="pageLoadModalModalLabel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1001,91 +965,12 @@
                 </div>
 
                 <div class="modal-body">
-                    <form class="login-form">
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
-                            <label class="formlabel" for="loginEmail">Email address <span class="required">*</span></label>
-                        </div>
-
-                        <div class="form-floating">
-                            <input type="password" class="form-control passinput" id="loginPassword" placeholder="Password">
-                            <label class="formlabel passlabel" for="loginPassword">Password <span class="required">*</span></label>
-                            <a href="forgot-password.html" class="forgot-text">Forgot Password?</a>
-                        </div>
-
-                        <div class="submit-form">
-                            <button class="btn-submit">Log in</button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="modal-footer">
-                    <p class="form-text">
-                        Don't have any account? <button class="btn-modal" type="button" data-bs-target="#pureSoundRegisterModal" data-bs-toggle="modal" data-bs-dismiss="modal">Create a new account</button>
-                    </p>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <!-- LOGIN MODAL END -->
-
-    <!-- REGISTER MODAL START -->
-    <div class="modal fade register-modal" id="pureSoundRegisterModal" aria-hidden="true" aria-labelledby="pureSoundRegisterModalLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <figure class="modal-icon">
-                        <img src="assets/images/logo-icon.svg" alt="logo-icon">
-                    </figure>
-
-                    <h5 class="modal-title">Create an account for free</h5>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <form class="register-form">
-                        <div class="form-floating">
-                            <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com">
-                            <label class="formlabel" for="registerEmail">Email address <span class="required">*</span></label>
-                        </div>
-
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="registerPassword" placeholder="Password">
-                            <label class="formlabel" for="registerPassword">Password <span class="required">*</span></label>
-                        </div>
-
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirm Password">
-                            <label class="formlabel" for="registerConfirmPassword">Confirm Password <span class="required">*</span></label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="termsCheck1">
-                            <label class="form-check-label" for="termsCheck1">
-                                <p class="labeltext">I agree to the <a href="terms-use.html" class="formlink" target="_blank">Terms of Service</a> and <a href="privacy-policy.html" class="formlink" target="_blank">Privacy Policy</a></p>
-                            </label>
-                        </div>
-
-                        <div class="submit-form">
-                            <button class="btn-submit">Create Account</button>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <p class="form-text">
-                        Already have an account? <button type="button" class="btn-modal" data-bs-target="#pureSoundLoginModal" data-bs-toggle="modal" data-bs-dismiss="modal">Login here</button>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- REGISTER MODAL END -->
+    <!-- PAGELOAD MODAL END -->
 
     <!-- BOOTSTRAP SCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>

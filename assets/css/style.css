@@ -286,6 +286,9 @@
     // 24-16 basefont
 \*------------------------------------*/
 /*------------------------------------*\
+    // 24-16 basefont
+\*------------------------------------*/
+/*------------------------------------*\
     // 28-16 basefont
 \*------------------------------------*/
 /*------------------------------------*\
@@ -1782,6 +1785,8 @@ h1 {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.42857;
+  background: white;
+  color: #333333;
 }
 
 .btn-access {
@@ -1798,6 +1803,23 @@ h1 {
 .btn-access:focus {
   background: #eeeeee;
   color: #333333;
+}
+
+.btn-delete {
+  border: solid 0.0625rem #dc3545;
+  -webkit-transition: background 350ms ease;
+  transition: background 350ms ease;
+  color: #dc3545;
+}
+
+.btn-delete:not([disabled]):hover {
+  background: #f5f5f5;
+  color: #dc3545;
+}
+
+.btn-delete:focus {
+  background: #eeeeee;
+  color: #dc3545;
 }
 
 .btn-buy {
@@ -2911,6 +2933,109 @@ h1 {
   .register-form .form-check {
     margin-left: 1rem;
   }
+}
+
+.delete-modal .modal-dialog .modal-content {
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 3.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .delete-modal .modal-dialog .modal-content {
+    padding: 3.5rem 2rem;
+  }
+}
+
+.delete-modal .modal-dialog .modal-content .modal-header {
+  padding: 0;
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body .delete-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body .delete-info .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.16667;
+  color: #333333;
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body .delete-info .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .delete-modal .modal-dialog .modal-content .modal-body .delete-info .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body .delete-form {
+  margin-bottom: 0.75rem;
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body .delete-form .deleteform-submit .btn-delete {
+  width: 100%;
+}
+
+.delete-modal .modal-dialog .modal-content .modal-body .delete-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #dc3545;
+}
+
+.btn-close:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .irs--round .irs-bar {
@@ -4040,6 +4165,907 @@ h1 {
   text-align: center;
 }
 
+.account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 0.0625rem #dfdfdf;
+  padding: 4rem 1.875rem 4.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .account {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.account-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.account-content .account-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.23077;
+  color: #333333;
+}
+
+@media screen and (max-width: 68.75rem) {
+  .account-content .account-title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 2.625rem;
+    font-weight: normal;
+    line-height: 1.14286;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .account-content .account-title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35714;
+  }
+}
+
+.account-main {
+  background: #f3f3f3;
+  padding: 2.5rem 0rem 4rem;
+}
+
+.account-main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  max-width: 35.625rem;
+  margin: 0 auto;
+}
+
+.account-nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.account-nav-content .account-navigation {
+  padding: 0.75rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.account-nav-content .account-navigation .accountlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .account-nav-content .account-navigation .accountlist {
+    gap: 0.0625rem;
+  }
+}
+
+.account-nav-content .account-navigation .accountlist .accountlist-link {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  background: white;
+  color: #333333;
+  -webkit-transition: background 350ms ease-in-out;
+  transition: background 350ms ease-in-out;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .account-nav-content .account-navigation .accountlist .accountlist-link {
+    padding: 0.75rem;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.42857;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .account-nav-content .account-navigation .accountlist .accountlist-link {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.account-nav-content .account-navigation .accountlist .accountlist-link:hover:not(.active) {
+  background: #f5f5f5;
+  color: #333333;
+}
+
+.account-nav-content .account-navigation .accountlist .accountlist-link.active {
+  background: #f5f5f5;
+  color: #333333;
+}
+
+.profile-overview,
+.edit-profile-information,
+.delete-account {
+  padding: 2rem 2.5rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .profile-overview,
+  .edit-profile-information,
+  .delete-account {
+    padding: 1.5rem 2rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.profile-overview .overview-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.overviewbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4.1875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .overviewbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.overviewbox .overview {
+  width: calc(100% - 8.75rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .overviewbox .overview {
+    width: 100%;
+    gap: 0.625rem;
+  }
+}
+
+.overviewbox .overview .account-type {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.overviewbox .overview .overview-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #828282;
+}
+
+@media screen and (max-width: 30rem) {
+  .overviewbox .overview .overview-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.42857;
+  }
+}
+
+.overviewbox .overviewbutton .btn-access {
+  width: 8.75rem;
+  height: 2.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.edit-info,
+.delete-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-info .edit-profile-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.edit-info .edit-profile-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+.delete-info .delete-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.delete-info .delete-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+.favorite-main {
+  background: #f3f3f3;
+  padding: 2.5rem 0rem;
+}
+
+.favorite-main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  padding: 0rem 2.5rem;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .favorite-main-content {
+    padding: 0rem 1.25rem;
+  }
+}
+
+.favorite-main-content .favorite-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.favorite-main-content .favorite-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .favorite-main-content .favorite-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.favorite-list {
+  background: white;
+  padding: 2.5rem 0rem 5rem;
+}
+
+.favorite-list-content .downloads-content {
+  padding: 2.5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.0625rem;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .favorite-list-content .downloads-content {
+    padding: 1.25rem 0.625rem;
+  }
+}
+
+.favorite-list-content .downloads-content .downloads-icon {
+  margin-bottom: 0.4375rem;
+}
+
+.favorite-list-content .downloads-content .downloads-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.33333;
+  color: #333333;
+  text-align: center;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .favorite-list-content .downloads-content .downloads-title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.favorite-list-content .downloads-content .textbox {
+  max-width: 21.25rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .favorite-list-content .downloads-content .textbox {
+    max-width: 100%;
+  }
+}
+
+.favorite-list-content .downloads-content .textbox .downloads-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+  text-align: center;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .favorite-list-content .downloads-content .textbox .downloads-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.favorite-list-content .filter-playlist .playlist-item .playlist-top {
+  border-top: 0;
+}
+
+.billing-main {
+  background: #f3f3f3;
+  padding: 2.5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main {
+    padding: 1.25rem 0rem 2.5rem;
+  }
+}
+
+.billing-main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+  max-width: 48.75rem;
+  margin-left: 10rem;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 87.5rem) {
+  .billing-main-content {
+    margin-left: 4.375rem;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .billing-main-content {
+    margin-left: -1.25rem;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.25rem;
+  }
+}
+
+.billing-main-content .billing-sidebar {
+  width: 10.625rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content .billing-sidebar {
+    width: 100%;
+  }
+}
+
+.billing-main-content .billing-sidebar .billinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content .billing-sidebar .billinglist {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.25rem;
+  }
+}
+
+.billing-main-content .billing-sidebar .billinglist .billinglist-link {
+  display: inline-block;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  background: transparent;
+  color: #333333;
+  -webkit-transition: background 350ms ease-in-out;
+  transition: background 350ms ease-in-out;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content .billing-sidebar .billinglist .billinglist-link {
+    padding: 0.375rem;
+  }
+}
+
+.billing-main-content .billing-sidebar .billinglist .billinglist-link:not([disabled]):hover {
+  background: #ececec;
+  color: #333333;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content .billing-sidebar .billinglist .billinglist-link:not([disabled]):hover {
+    background: transparent;
+  }
+}
+
+.billing-main-content .billing-sidebar .billinglist .billinglist-link.active {
+  background: white;
+  color: #333333;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content .billing-sidebar .billinglist .billinglist-link.active {
+    background: transparent;
+  }
+}
+
+.billing-main-content .billing-invoices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  max-width: 35.625rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .billing-main-content .billing-invoices {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .billing-main-content .billing-invoices {
+    max-width: 100%;
+  }
+}
+
+.billing-main-content .billing-invoices .billing-information,
+.billing-main-content .billing-invoices .payment-information,
+.billing-main-content .billing-invoices .invoices-information,
+.billing-main-content .billing-invoices .company-address,
+.billing-main-content .billing-invoices .vat-informations {
+  padding: 2rem 2.5rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .billing-main-content .billing-invoices .billing-information,
+  .billing-main-content .billing-invoices .payment-information,
+  .billing-main-content .billing-invoices .invoices-information,
+  .billing-main-content .billing-invoices .company-address,
+  .billing-main-content .billing-invoices .vat-informations {
+    padding: 1.5rem 2rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.billing-main-content .billing-invoices .billing-information .billing-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.billing-main-content .billing-invoices .billing-information .billing-info-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.billing-main-content .billing-invoices .billing-information .billing-info-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .billing-main-content .billing-invoices .billing-information .billing-info-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.billing-main-content .billing-invoices .payment-information .payment-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.billing-main-content .billing-invoices .payment-information .payment-info-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.billing-main-content .billing-invoices .payment-information .payment-info-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .billing-main-content .billing-invoices .payment-information .payment-info-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.billing-main-content .billing-invoices .payment-information .paymenttext {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .billing-main-content .billing-invoices .payment-information .paymenttext {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.billing-main-content .billing-invoices .invoices-information .invoices-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.billing-main-content .billing-invoices .invoices-information .invoices-info-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.billing-main-content .billing-invoices .invoices-information .invoices-info-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .billing-main-content .billing-invoices .invoices-information .invoices-info-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.billing-main-content .billing-invoices .company-address {
+  padding: 2.5rem;
+}
+
+.billing-main-content .billing-invoices .company-address .address-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.billing-main-content .billing-invoices .company-address .address-info-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.billing-main-content .billing-invoices .company-address .address-info-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .billing-main-content .billing-invoices .company-address .address-info-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
+.billing-main-content .billing-invoices .vat-informations .vat-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.billing-main-content .billing-invoices .vat-informations .vat-info-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.billing-main-content .billing-invoices .vat-informations .vat-info-text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #828282;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .billing-main-content .billing-invoices .vat-informations .vat-info-text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+  }
+}
+
 .filter-head {
   padding: 1rem 1.875rem;
   position: relative;
@@ -4638,7 +5664,23 @@ h1 {
   }
 }
 
-.filter-content .filter-playlist .playlist {
+.filter-content .filter-pagination-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem 2.5rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .filter-content .filter-pagination-bottom {
+    padding: 1rem;
+  }
+}
+
+.filter-playlist .playlist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4648,7 +5690,7 @@ h1 {
           flex-direction: column;
 }
 
-.filter-content .filter-playlist .playlist-item {
+.filter-playlist .playlist-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4658,7 +5700,7 @@ h1 {
           flex-direction: column;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top {
+.filter-playlist .playlist-item .playlist-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4672,7 +5714,7 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top {
+  .filter-playlist .playlist-item .playlist-top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4684,7 +5726,7 @@ h1 {
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox {
+.filter-playlist .playlist-item .playlist-top .playbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4696,18 +5738,18 @@ h1 {
 }
 
 @media screen and (max-width: 87.5rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .playbox {
+  .filter-playlist .playlist-item .playlist-top .playbox {
     width: 40%;
   }
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .playbox {
+  .filter-playlist .playlist-item .playlist-top .playbox {
     width: 100%;
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4719,12 +5761,12 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist {
+  .filter-playlist .playlist-item .playlist-top .playbox .playinglist {
     width: calc(100% - 8.75rem);
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn {
   background: transparent;
   border: none;
   height: 3.375rem;
@@ -4736,50 +5778,50 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn {
+  .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn {
     height: 2.5rem;
     width: 2.5rem;
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn:focus {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn:focus {
   outline: none;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn:not([disabled]):hover {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn:not([disabled]):hover {
   background: #f2f2f2;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn .play {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn .play {
   display: none;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn.playing .play {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn.playing .play {
   display: block;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn.playing .pause {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .play-btn.playing .pause {
   display: none;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .soundtrack {
+.filter-playlist .playlist-item .playlist-top .playbox .playinglist .soundtrack {
   width: calc(100% - 4.875rem);
   overflow: hidden;
   height: 2.75rem;
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .playbox .playinglist .soundtrack {
+  .filter-playlist .playlist-item .playlist-top .playbox .playinglist .soundtrack {
     width: calc(100% - 4rem);
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .playbox .track-download {
+.filter-playlist .playlist-item .playlist-top .playbox .track-download {
   display: none;
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .playbox .track-download {
+  .filter-playlist .playlist-item .playlist-top .playbox .track-download {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4789,7 +5831,7 @@ h1 {
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox {
+.filter-playlist .playlist-item .playlist-top .descriptionbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4800,18 +5842,18 @@ h1 {
 }
 
 @media screen and (max-width: 87.5rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox {
+  .filter-playlist .playlist-item .playlist-top .descriptionbox {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox {
+  .filter-playlist .playlist-item .playlist-top .descriptionbox {
     width: 100%;
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations {
+.filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4827,12 +5869,12 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations {
+  .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations {
     padding-left: 0rem;
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .description .text {
+.filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .description .text {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -4842,12 +5884,24 @@ h1 {
   color: #333333;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .durations {
+@media screen and (max-width: 31.25rem) {
+  .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .description .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+  }
+}
+
+.filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .durations {
   min-width: 2.5rem;
   max-width: 3.75rem;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .durations-length {
+.filter-playlist .playlist-item .playlist-top .descriptionbox .title-durations .durations-length {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -4856,7 +5910,7 @@ h1 {
   color: #333333;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .download-collapse {
+.filter-playlist .playlist-item .playlist-top .descriptionbox .download-collapse {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4869,7 +5923,7 @@ h1 {
           align-items: center;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .download-collapse .descriptioncollapse {
+.filter-playlist .playlist-item .playlist-top .descriptionbox .download-collapse .descriptioncollapse {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4881,7 +5935,7 @@ h1 {
           justify-content: center;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-top .descriptionbox .download-collapse .descriptioncollapse .btn-collapse {
+.filter-playlist .playlist-item .playlist-top .descriptionbox .download-collapse .descriptioncollapse .btn-collapse {
   height: 3rem;
   width: 3rem;
   display: -webkit-box;
@@ -4895,7 +5949,7 @@ h1 {
           justify-content: center;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-bottom {
+.filter-playlist .playlist-item .playlist-bottom {
   padding: 1.25rem 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4909,16 +5963,16 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-bottom {
+  .filter-playlist .playlist-item .playlist-bottom {
     padding: 1.25rem 1rem;
     gap: 1rem;
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-bottom .category,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .tags,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .library,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .quality {
+.filter-playlist .playlist-item .playlist-bottom .category,
+.filter-playlist .playlist-item .playlist-bottom .tags,
+.filter-playlist .playlist-item .playlist-bottom .library,
+.filter-playlist .playlist-item .playlist-bottom .quality {
   min-width: 20%;
   width: 25%;
   display: -webkit-box;
@@ -4932,18 +5986,18 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .category,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .tags,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .library,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .quality {
+  .filter-playlist .playlist-item .playlist-bottom .category,
+  .filter-playlist .playlist-item .playlist-bottom .tags,
+  .filter-playlist .playlist-item .playlist-bottom .library,
+  .filter-playlist .playlist-item .playlist-bottom .quality {
     width: calc(50% - 1rem);
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-bottom .category .title,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .tags .title,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .library .title,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .quality .title {
+.filter-playlist .playlist-item .playlist-bottom .category .title,
+.filter-playlist .playlist-item .playlist-bottom .tags .title,
+.filter-playlist .playlist-item .playlist-bottom .library .title,
+.filter-playlist .playlist-item .playlist-bottom .quality .title {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 1rem;
@@ -4952,15 +6006,15 @@ h1 {
   color: #333333;
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-bottom .category .categorylinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .category .taglinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .category .librarylinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .tags .categorylinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .tags .taglinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .tags .librarylinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .library .categorylinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .library .taglinks .playlistlink,
-.filter-content .filter-playlist .playlist-item .playlist-bottom .library .librarylinks .playlistlink {
+.filter-playlist .playlist-item .playlist-bottom .category .categorylinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .category .taglinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .category .librarylinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .tags .categorylinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .tags .taglinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .tags .librarylinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .library .categorylinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .library .taglinks .playlistlink,
+.filter-playlist .playlist-item .playlist-bottom .library .librarylinks .playlistlink {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -4970,15 +6024,15 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .category .categorylinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .category .taglinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .category .librarylinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .tags .categorylinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .tags .taglinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .tags .librarylinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .library .categorylinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .library .taglinks .playlistlink,
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .library .librarylinks .playlistlink {
+  .filter-playlist .playlist-item .playlist-bottom .category .categorylinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .category .taglinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .category .librarylinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .tags .categorylinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .tags .taglinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .tags .librarylinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .library .categorylinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .library .taglinks .playlistlink,
+  .filter-playlist .playlist-item .playlist-bottom .library .librarylinks .playlistlink {
     font-family: "Helvetica";
     font-style: normal;
     font-size: 0.75rem;
@@ -4987,7 +6041,7 @@ h1 {
   }
 }
 
-.filter-content .filter-playlist .playlist-item .playlist-bottom .quality .qualitytext {
+.filter-playlist .playlist-item .playlist-bottom .quality .qualitytext {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -4997,28 +6051,12 @@ h1 {
 }
 
 @media screen and (max-width: 48rem) {
-  .filter-content .filter-playlist .playlist-item .playlist-bottom .quality .qualitytext {
+  .filter-playlist .playlist-item .playlist-bottom .quality .qualitytext {
     font-family: "Helvetica";
     font-style: normal;
     font-size: 0.75rem;
     font-weight: normal;
     line-height: 1;
-  }
-}
-
-.filter-content .filter-pagination-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 1rem 2.5rem;
-}
-
-@media screen and (max-width: 48rem) {
-  .filter-content .filter-pagination-bottom {
-    padding: 1rem;
   }
 }
 
@@ -6222,7 +7260,11 @@ input[type=time]::-webkit-clear-button {
 
 .login-form .input-box,
 .reset-form .input-box,
-.register-form .input-box {
+.register-form .input-box,
+.edit-profile-form .input-box,
+.delete-form .input-box,
+.vat-form .input-box,
+.address-form .input-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6236,7 +7278,11 @@ input[type=time]::-webkit-clear-button {
 
 .login-form .input-box .error-message,
 .reset-form .input-box .error-message,
-.register-form .input-box .error-message {
+.register-form .input-box .error-message,
+.edit-profile-form .input-box .error-message,
+.delete-form .input-box .error-message,
+.vat-form .input-box .error-message,
+.address-form .input-box .error-message {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -6248,7 +7294,11 @@ input[type=time]::-webkit-clear-button {
 
 .login-form .input-box .signingup-text,
 .reset-form .input-box .signingup-text,
-.register-form .input-box .signingup-text {
+.register-form .input-box .signingup-text,
+.edit-profile-form .input-box .signingup-text,
+.delete-form .input-box .signingup-text,
+.vat-form .input-box .signingup-text,
+.address-form .input-box .signingup-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6261,7 +7311,11 @@ input[type=time]::-webkit-clear-button {
 
 .login-form .input-box .signingup-text .text,
 .reset-form .input-box .signingup-text .text,
-.register-form .input-box .signingup-text .text {
+.register-form .input-box .signingup-text .text,
+.edit-profile-form .input-box .signingup-text .text,
+.delete-form .input-box .signingup-text .text,
+.vat-form .input-box .signingup-text .text,
+.address-form .input-box .signingup-text .text {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -6271,21 +7325,73 @@ input[type=time]::-webkit-clear-button {
 }
 
 .login-form .input-box.error .form-floating .form-control,
+.login-form .input-box.error .form-floating .form-select,
 .reset-form .input-box.error .form-floating .form-control,
-.register-form .input-box.error .form-floating .form-control {
+.reset-form .input-box.error .form-floating .form-select,
+.register-form .input-box.error .form-floating .form-control,
+.register-form .input-box.error .form-floating .form-select,
+.edit-profile-form .input-box.error .form-floating .form-control,
+.edit-profile-form .input-box.error .form-floating .form-select,
+.delete-form .input-box.error .form-floating .form-control,
+.delete-form .input-box.error .form-floating .form-select,
+.vat-form .input-box.error .form-floating .form-control,
+.vat-form .input-box.error .form-floating .form-select,
+.address-form .input-box.error .form-floating .form-control,
+.address-form .input-box.error .form-floating .form-select {
   border-color: #dc3545;
 }
 
 .login-form .input-box.error .error-message,
 .reset-form .input-box.error .error-message,
-.register-form .input-box.error .error-message {
+.register-form .input-box.error .error-message,
+.edit-profile-form .input-box.error .error-message,
+.delete-form .input-box.error .error-message,
+.vat-form .input-box.error .error-message,
+.address-form .input-box.error .error-message {
   display: block;
 }
 
 .login-form .input-box.error .form-check-label::before,
 .reset-form .input-box.error .form-check-label::before,
-.register-form .input-box.error .form-check-label::before {
+.register-form .input-box.error .form-check-label::before,
+.edit-profile-form .input-box.error .form-check-label::before,
+.delete-form .input-box.error .form-check-label::before,
+.vat-form .input-box.error .form-check-label::before,
+.address-form .input-box.error .form-check-label::before {
   border-color: #dc3545;
+}
+
+.edit-profile-form,
+.delete-form,
+.vat-form,
+.address-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.edit-profile-form .editform-submit,
+.edit-profile-form .deleteform-submit,
+.edit-profile-form .vat-submit,
+.edit-profile-form .address-submit,
+.delete-form .editform-submit,
+.delete-form .deleteform-submit,
+.delete-form .vat-submit,
+.delete-form .address-submit,
+.vat-form .editform-submit,
+.vat-form .deleteform-submit,
+.vat-form .vat-submit,
+.vat-form .address-submit,
+.address-form .editform-submit,
+.address-form .deleteform-submit,
+.address-form .vat-submit,
+.address-form .address-submit {
+  margin-top: 0.75rem;
 }
 
 .form-check {
@@ -6403,6 +7509,37 @@ input[type=time]::-webkit-clear-button {
   opacity: 0;
   -webkit-transition: opacity 350ms ease;
   transition: opacity 350ms ease;
+}
+
+.form-floating .form-control,
+.form-floating .formlabel {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.form-floating .formlabel {
+  color: #828282;
+  margin-top: 0.3125rem;
+}
+
+.form-floating .formlabel .required {
+  color: #dc3545;
+}
+
+.form-select {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1rem 0.75rem;
+}
+
+.form-select .option {
+  font: inherit;
 }
 
 .pricing-plans {

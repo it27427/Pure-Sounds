@@ -4,6 +4,7 @@
     padding: length(14) length(38);
     @include radius(4);
     @include text-20-14-semibold-basefont;
+    @include setBgColor($white, $textPrimary);
 }
 
 .btn-access {
@@ -17,6 +18,20 @@
 
     &:focus {
         @include setBgColor($lightColor, $textPrimary);
+    }
+}
+
+.btn-delete {
+    @include border(solid, 1, $danger);
+    @include transition(background $time ease);
+    color: $danger;
+
+    @include hover {
+        @include setBgColor($accessBtnBg, $danger);
+    }
+
+    &:focus {
+        @include setBgColor($lightColor, $danger);
     }
 }
 
