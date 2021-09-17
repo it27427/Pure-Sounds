@@ -5,7 +5,6 @@
     left: 0;
     @include transition(all $time ease);
     background: $black;
-    // box-shadow: $header-box-shadow;
     z-index: 250;
 
     &.shadowless {

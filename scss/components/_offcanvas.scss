@@ -91,6 +91,20 @@
                         }
                     }
                 }
+
+                .change-language {
+                    .form-select {
+                        @include text-20-14-normal-basefont;
+                        color: $textPrimary;
+                        padding: length(6) length(30) length(6) length(12);
+                        max-width: 30%;
+                
+                        option {
+                            font: inherit;
+                            color: inherit;
+                        }
+                    }
+                }
             }
             
             .mobile-menu-list,

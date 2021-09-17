@@ -1226,6 +1226,31 @@ h1 {
   color: #333333;
 }
 
+.change-language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.change-language .form-select {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #333333;
+  padding: 0.375rem 1.875rem 0.375rem 0.75rem;
+}
+
+.change-language .form-select option {
+  font: inherit;
+  color: inherit;
+}
+
 .dark-header-wrapper {
   position: -webkit-sticky;
   position: sticky;
@@ -3510,6 +3535,22 @@ h1 {
 
 .mobile-menu-sidebar .mobmenu .offcanvas-body .mobile-nav .mobilemenu .loggedmenu .profilemenu-link.active {
   color: #2d4a41;
+}
+
+.mobile-menu-sidebar .mobmenu .offcanvas-body .mobile-nav .change-language .form-select {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #333333;
+  padding: 0.375rem 1.875rem 0.375rem 0.75rem;
+  max-width: 30%;
+}
+
+.mobile-menu-sidebar .mobmenu .offcanvas-body .mobile-nav .change-language .form-select option {
+  font: inherit;
+  color: inherit;
 }
 
 .mobile-menu-sidebar .mobmenu .offcanvas-body .mobile-menu-list,

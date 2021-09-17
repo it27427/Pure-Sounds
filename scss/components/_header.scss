@@ -435,3 +435,19 @@
         }
     }
 }
+
+.change-language {
+    @include flex-center-vert;
+    gap: length(4);
+
+    .form-select {
+        @include text-20-14-normal-basefont;
+        color: $textPrimary;
+        padding: length(6) length(30) length(6) length(12);
+
+        option {
+            font: inherit;
+            color: inherit;
+        }
+    }
+}
