@@ -1,27 +1,3 @@
-
-// JOB COUNTER
-const counters = document.querySelectorAll('.counter-title');
-const speed = 20000;
-
-counters.forEach(counter => {
-    const updateCount = () => {
-        const target = +counter.getAttribute('data-targets');
-        const count = +counter.innerText;
-
-        const inc = target / speed;
-
-        if(count < target) {
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 1);
-        } else {
-            count.innerText = target;
-        }
-    }
-
-    updateCount();
-});
-
-
 const searchForm = document.querySelector('.search-form');
 const searchField = document.querySelector('#search-field');
 const searchBox = document.querySelector('.responsive-search-box');
@@ -88,17 +64,6 @@ function showSearchBox() {
     }
 }
 
-const dropdownLink = document.querySelector('.dropdown-link');
-const dropdownMenu = document.querySelector('.dropdownmain');
-
-dropdownLink.addEventListener('mouseover', () => {
-
-    if(dropdownMenu.classList.contains('show')) {
-        dropdownMenu.classList.remove('show');
-    } else {
-        dropdownMenu.classList.add('show');
-    }
-});
 
 
 
@@ -111,18 +76,6 @@ window.addEventListener('click', e => {
     // } else {
     //     return false;
     // }
-    
-    if(e.target !== dropdownMenu) {
-        dropdownMenu.classList.remove('show');
-    } else {
-        return false;
-    }
-
-    if(e.target === dropdownMenu) {
-        dropdownMenu.classList.add('show');
-    } else {
-        return false;
-    }
 
     if(e.target !== headerOverlay) {
         headerOverlay.classList.remove('show');
