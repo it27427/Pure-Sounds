@@ -1,0 +1,127 @@
+.contact {
+    background: $searchboxBg;
+    padding: length(56) length(0) length(112);
+
+    &-content {
+        @include flex-center;
+
+        .contact-info {
+            max-width: length(800);
+            background: $white;
+            box-shadow: $header-box-shadow;
+            padding: length(28) length(30);
+            @include flex-column;
+            gap: length(28);
+
+            .contact-title {
+                @include hometitle-mobile-font-style;
+                color: $textPrimary;
+
+                @include breakpoint(phone768) {
+                    @include text-28-24-bold-basefont;
+                }
+            }
+
+            .contact-form {
+                .form-info {
+                    @include flex-column;
+                    gap: length(28);
+
+                    .inputbox {
+                        @include flex-column;
+                        align-items: flex-start;
+                        gap: length(8);
+
+                        .inputfield {
+                            width: 100%;
+                            @include flex-column;
+                            align-items: flex-start;
+                            gap: length(4);
+    
+                            .form-label {
+                                width: 100%;
+                                @include text-24-16-semibold-basefont;
+                                color: $textPrimary;
+
+                                .required {
+                                    color: $danger;
+                                }
+                            }
+
+                            .form-control {
+                                color: $contactText;
+                                @include border(solid, 1, $contactBorder);
+                                @include transition(border $time ease);
+
+                                &:focus {
+                                    border-color: $textPrimary;
+                                }
+                            }
+                        }
+
+                        .errorbox {
+                            position: relative;
+                            @include radius(4);
+                            padding: length(5);
+                            line-height: length(14);
+                            @include setBgColor($errorBg, $danger);
+                            @include border(solid, 1, $danger-border);
+                            width: 100%;
+                            display: none;
+
+                            .error-message {
+                                @include text-12-12-normal-basefont;
+                                color: inherit;
+                            }
+
+                            &::before {
+                                @include border(solid, 1, $danger-border);
+                                @include circle;
+                                color: $danger;
+                                content: "!";
+                                display: inline-block;
+                                font-family: sans-serif;
+                                font-size: length(8);
+                                font-weight: normal;
+                                line-height: length(12);
+                                margin: length(-2) length(5) 0 0;
+                                text-align: center;
+                                vertical-align: middle;
+                                @include square(length(12));
+                            }
+                        }
+
+                        &.error {
+                            .errorbox {
+                                @include flex-center-vert;
+                            }
+                        }
+                    }
+                }
+
+                .drag-info {
+                    @include flex-column;
+                    gap: length(28);
+                    margin-bottom: length(48);
+
+                    .text {
+                        margin-top: length(12);
+                        @include text-14-14-normal-basefont;
+                        color: $textPrimary;
+                    }
+                }
+
+                .submit-form {
+                    .btn-send {
+                        @include setBgColor($accessActiveFocusBg, $white);
+                        @include transition(background $time ease);
+
+                        @include hover {
+                            background: $accessActiveHoverBg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

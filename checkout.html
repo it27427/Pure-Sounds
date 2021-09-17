@@ -60,7 +60,7 @@
             <!-- CHECKOUT FORM START -->
             <div class="checkout-form">
                 <div class="formrow">
-                    <div class="formcol error">
+                    <div class="formcol">
                         <div class="form-floating">
                             <select class="form-select" id="selectCountry" aria-label="Select Country">
                                 <option selected>Select Country</option>
@@ -90,7 +90,7 @@
                         <p class="error-message">You must have fill this field</p>
                     </div>
 
-                    <div class="formcol error">
+                    <div class="formcol">
                         <div class="form-floating">
                             <input type="number" class="form-control" id="postalCode" placeholder="Postal Code">
                             <label for="postalCode" class="formlabel">Postal Code <span class="required">*</span></label>
@@ -121,7 +121,7 @@
                     <div class="tab-pane fade show active" id="creditdebit" role="tabpanel" aria-labelledby="home-tab">
                         <div class="creditdebit-form">
                             <div class="formrow">
-                                <div class="formcol error">
+                                <div class="formcol">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="firstName" placeholder="First Name">
                                         <label for="firstName" class="formlabel">First Name <span class="required">*</span></label>
@@ -129,7 +129,7 @@
                                     <p class="error-message">You must have fill this field</p>
                                 </div>
             
-                                <div class="formcol error">
+                                <div class="formcol">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                                         <label for="lastName" class="formlabel">Last Name <span class="required">*</span></label>
@@ -140,7 +140,7 @@
 
                             <!-- CARD NUMBER / DEADLINE / CVV -->
                             <div class="formrow">
-                                <div class="cardbox error">
+                                <div class="cardbox">
                                     <div class="inputbox">
                                         <div class="cardnumber">
                                             <figure class="cardicon">
@@ -193,7 +193,7 @@
                                 <button id="credit-promo-btn" class="btn-promo" type="button">Add Promo Code</button>
                             </div>
 
-                            <div class="promocode error" id="creditpromo">
+                            <div class="promocode" id="creditpromo">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="creditPromoCode" placeholder="Promo Code">
                                     <label for="creditPromoCode" class="formlabel">Promo Code <span class="required">*</span></label>
@@ -202,7 +202,7 @@
                             </div>
 
                             <div class="invoicebox" id="creditinvoicebox">
-                                <div class="inputbox error">
+                                <div class="inputbox">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="creditCompany" placeholder="Company">
                                         <label for="creditCompany" class="formlabel">Company <span class="required">*</span></label>
@@ -210,7 +210,7 @@
                                     <p class="error-message">This field is required</p>
                                 </div>
                                 
-                                <div class="inputbox error">
+                                <div class="inputbox">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="creditAddress1" placeholder="Address, Line 1">
                                         <label for="creditAddress1" class="formlabel">Address, Line 1 <span class="required">*</span></label>
@@ -218,7 +218,7 @@
                                     <p class="error-message">This field is required</p>
                                 </div>
 
-                                <div class="inputbox error">
+                                <div class="inputbox">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="creditAddress2" placeholder="Address, Line 2">
                                         <label for="creditAddress2" class="formlabel">Address, Line 2 <span class="required">*</span></label>
@@ -227,7 +227,7 @@
                                 </div>
 
                                 <div class="inputrow">
-                                    <div class="inputcol error">
+                                    <div class="inputcol">
                                         <div class="inputbox">
                                             <div class="form-floating">
                                                 <input type="text" class="form-control" id="creditCity" placeholder="City">
@@ -237,7 +237,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="inputcol error">
+                                    <div class="inputcol">
                                         <div class="inputbox">
                                             <div class="form-floating">
                                                 <input type="text" class="form-control" id="creditState" placeholder="State/Province">
@@ -262,7 +262,7 @@
                                 <button id="paypal-promo-btn" class="btn-promo" type="button">Add Promo Code</button>
                             </div>
 
-                            <div class="promocode error" id="paypalpromo">
+                            <div class="promocode" id="paypalpromo">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="paypalPromoCode" placeholder="Promo Code">
                                     <label for="paypalPromoCode" class="formlabel">Promo Code <span class="required">*</span></label>
@@ -358,7 +358,7 @@
                         </figure>
                     </div>
 
-                    <button class="btn-submit btn-paypal">
+                    <button class="btn-submit btn-paypal d-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="93" height="23" viewBox="0 0 93 23">
                             <g fill="#FFF">
                                 <path d="M35.21 9.7c-.28 1.81-1.685 1.81-3.043 1.81h-.773l.542-3.38c.033-.204.212-.355.422-.355h.355c.925 0 1.797 0 2.248.52.269.309.351.769.249 1.405zm-.592-4.723h-5.123c-.35 0-.649.25-.703.591l-2.072 12.93c-.02.122.016.246.097.34.081.093.2.146.325.146h2.446c.35 0 .65-.251.703-.592l.56-3.488c.053-.34.351-.592.702-.592h1.622c3.375 0 5.323-1.608 5.831-4.793.23-1.394.01-2.489-.653-3.256-.728-.841-2.02-1.287-3.735-1.287zM46.513 14.341c-.197 1.347-1.385 2.337-2.768 2.306-.713 0-1.281-.225-1.647-.651-.377-.482-.518-1.103-.385-1.697.193-1.344 1.37-2.339 2.749-2.324.618-.033 1.218.209 1.636.658.387.482.539 1.106.415 1.708zm3.42-4.7H47.48c-.21 0-.39.15-.422.355l-.109.675-.171-.244c-.532-.76-1.716-1.013-2.898-1.013-2.711 0-5.027 2.022-5.477 4.857-.234 1.414.099 2.767.914 3.71.748.867 1.818 1.228 3.09 1.228 1.276.013 2.502-.486 3.396-1.382l-.11.67c-.019.122.016.246.097.34.081.093.2.147.325.147h2.21c.35 0 .649-.25.703-.592l1.326-8.265c.02-.122-.015-.245-.096-.339-.081-.093-.2-.147-.325-.147zM63 9.641h-2.466c-.236 0-.457.116-.59.308l-3.399 4.93-1.441-4.738c-.09-.296-.369-.5-.683-.5h-2.424c-.138 0-.268.066-.348.176-.08.11-.102.252-.057.38l2.716 7.845-2.554 3.547c-.092.129-.104.297-.031.437s.22.227.38.227h2.462c.234 0 .452-.112.585-.3l8.2-11.651c.091-.129.102-.296.028-.435-.073-.139-.22-.226-.378-.226zM71.753 9.7c-.28 1.81-1.684 1.81-3.043 1.81h-.772l.543-3.38c.032-.204.21-.355.42-.355h.355c.924 0 1.798 0 2.249.52.269.309.35.769.248 1.405zm-.591-4.723h-5.124c-.35 0-.648.25-.703.591l-2.072 12.93c-.02.122.016.245.097.339.08.093.2.147.324.147h2.63c.245 0 .453-.176.491-.414l.588-3.666c.054-.34.352-.592.702-.592h1.623c3.375 0 5.322-1.608 5.832-4.793.23-1.394.009-2.489-.655-3.256-.727-.841-2.018-1.287-3.733-1.287zM83.056 14.341c-.197 1.347-1.385 2.337-2.768 2.306-.71 0-1.281-.225-1.647-.651-.377-.482-.518-1.103-.385-1.697.193-1.344 1.37-2.338 2.749-2.324.618-.033 1.218.209 1.636.658.388.48.54 1.106.415 1.708zm3.42-4.7h-2.452c-.21 0-.389.15-.42.355l-.11.675-.172-.244c-.531-.76-1.715-1.013-2.897-1.013-2.711 0-5.026 2.022-5.477 4.857-.233 1.414.099 2.767.914 3.71.749.867 1.817 1.228 3.09 1.228 1.276.013 2.502-.486 3.396-1.382l-.11.67c-.02.122.016.246.097.34.082.094.2.148.326.147h2.209c.35 0 .648-.251.703-.592l1.326-8.265c.02-.122-.016-.246-.098-.339-.081-.093-.2-.147-.325-.147zM89.368 5.331L87.266 18.5c-.02.12.015.244.096.338.081.093.2.147.324.147h2.115c.35 0 .65-.251.703-.592L92.578 5.46c.02-.121-.016-.245-.097-.338-.081-.094-.2-.148-.324-.148h-2.368c-.21 0-.388.152-.42.356zM17.266 5.654c-.02.131-.045.267-.072.405-.926 4.683-4.097 6.301-8.146 6.301H6.987c-.494 0-.915.354-.99.835L4.94 19.783l-.298 1.868c-.024.15.02.303.12.418.1.116.246.182.4.182H8.82c.432 0 .8-.31.869-.73l.035-.182.689-4.3.044-.237c.067-.421.436-.732.87-.731h.546c3.543 0 6.316-1.416 7.126-5.513.34-1.712.164-3.14-.732-4.146-.284-.31-.623-.567-1-.758z"/>

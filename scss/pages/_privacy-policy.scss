@@ -1,0 +1,92 @@
+.privacy,
+.terms,
+.licence {
+    @include flex-center;
+    padding: length(64) length(30) length(72);
+
+    @include breakpoint(phone768) {
+        padding: length(20) length(16);
+    }
+
+    &-content {
+        @include flex-center;
+
+        .privacy-title,
+        .terms-title,
+        .licence-title {
+            @include h1-font-style;
+            color: $textPrimary;
+            text-align: center;
+
+            @include breakpoint(laptop1100) {
+                @include titletext-font-style;
+            }
+
+            @include breakpoint(tablet991) {
+                @include h2-font-style;
+            }
+
+            @include breakpoint(phone575) {
+                @include text-28-24-bold-basefont;
+                margin-bottom: length(32);
+            }
+        }
+    }
+}
+
+.privacy-policy {
+    @include flex-column;
+    gap: length(16);
+
+    .privacy-details {
+        @include flex-column;
+        gap: length(10);
+
+        .privacylist {
+            &-item {
+                list-style: none;
+                @include text-24-16-normal-basefont;
+                color: $textGray-1;
+                line-height: 1.78;
+            }
+        }
+
+        .note {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+        }
+
+        .text {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+        }
+
+        .privacy-title {
+            @include text-32-24-medium-basefont;
+            color: $textPrimary;
+        }
+
+        .subtitle {
+            @include text-28-18-normal-basefont;
+            color: $bgnBorder;
+        }
+
+        .privacy-text {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+        }
+
+        .list {
+            margin-left: length(16);
+            
+            &-item {
+                @include text-24-16-normal-basefont;
+                color: $textGray-1;
+                line-height: 1.78;
+            }
+        }
+    }
+}

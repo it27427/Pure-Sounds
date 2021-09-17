@@ -1,0 +1,60 @@
+.inputbox {
+    .inputfield {
+        width: 100%;
+        @include flex-column;
+        align-items: flex-start;
+        gap: length(4);
+
+        .form-label {
+            width: 100%;
+            @include text-24-16-semibold-basefont;
+            color: $textPrimary;
+        }
+
+        .drop-zone {
+            width: 100%;
+            height: 100%;
+            @include flex-center;
+            cursor: pointer;
+            @include border(dashed, 3, $dragBorder);
+            @include radius(4);
+            padding: length(28) length(16);
+            position: relative;
+            height: length(100);
+
+            &-prompt {
+                @include text-14-14-normal-basefont;
+                color: $dragBorder;
+
+                .text {
+                    font: inherit;
+                    color: $textPrimary;
+                    font-weight: bold;
+                }
+            }
+        
+            &-input {
+                display: none;
+            }
+        
+            &-thumb {
+                width: 100%;
+                height: length(20);
+                background: transparent;
+                position: absolute;
+                bottom: length(-36);
+                left: 0;
+        
+                &::after {
+                    content: attr(data-label);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    @include setBgColor(transparent, $textPrimary);
+                    @include text-14-14-normal-basefont;
+                }
+            }
+        }
+    }
+}

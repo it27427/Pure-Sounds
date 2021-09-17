@@ -167,7 +167,7 @@ $font-weights: ('normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700);
   	@include font(family($HelveticaNeueLTPro),
 		style('normal'),
 		size('f40'),
-		weight('normal'),
+		weight('bold'),
 		line-height(40, size('f40'))
   	);
 }

@@ -350,3 +350,88 @@
         transform: rotate(360deg);
     }
 }
+
+// PURESOUNDS HEADER
+.puresounds-header {
+    &-content {
+        @include flex-center-between;
+
+        .brand {
+            object-fit: contain;
+            width: length(113);
+            height: length(32);
+            margin: length(19) length(44) length(20) length(0);
+            display: flex;
+            position: relative;
+    
+            &-title {
+                @include text-20-14-semibold-basefont;
+                color: $textPrimary;
+            }
+    
+            .logo {
+                @include flex-center-vert;
+                gap: length(4);
+                overflow: hidden;
+                
+                svg {
+                    width: length(24);
+                    @include square(length(24));
+                }
+            }
+        }
+
+        .mobilemenu {
+            display: none;
+
+            @include breakpoint(phone768) {
+                display: block;
+            }
+
+            .btn-menu {
+                @include transparent-button;
+                @include transition(transform $time ease);
+                @include square(length(24));
+                @include flex-center;
+                @include transform(rotate(0deg));
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:not(.collapsed) {
+                    @include transform(rotate(-90deg));
+                }
+                
+                &.collapsed {
+                    @include transform(rotate(0deg));
+                }
+            }
+        }
+
+        .headerlist {
+            @include list-horizontal;
+            gap: length(8);
+
+            @include breakpoint(phone768) {
+                display: none;
+            }
+
+            &-link {
+                @include text-12-12-normal-basefont;
+                color: $textPrimary;
+            }
+        }
+    }
+
+    .headermobilelist {
+        @include list-horizontal;
+        gap: length(8);
+    
+        &-link {
+            @include text-12-12-normal-basefont;
+            color: $textPrimary;
+        }
+    }
+}

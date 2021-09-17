@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Sounds | Contact</title>
+    <title>Pure Sounds</title>
     <!-- SITE FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- FONT AWESOME CDN -->
@@ -76,76 +76,86 @@
     </header>
     <!-- PURESOUNDS HEADER END -->
 
-    <!-- CONTACT SECTION START -->
-    <main class="contact">
+    <!-- HELP-BANNER SECTION START -->
+    <section class="help-banner">
         <div class="container-lg container-fluid">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h1 class="contact-title">Submit a request</h1>
+            <div class="help-banner-content">
+                <div class="help-title">
+                    <h2 class="title">What do you need help with?</h2>
+                </div>
 
-                    <form class="contact-form">
-                        <div class="form-info">
-                            <div class="inputbox">
-                                <div class="inputfield">
-                                    <label for="email" class="form-label">Email address <span class="required">*</span></label>
-                                    <input type="email" class="form-control" id="email" autocomplete="off">
-                                </div>
-        
-                                <div class="errorbox">
-                                    <p class="error-message">Requester: Email: cannot be blank</p>
-                                </div>
-                            </div>
-        
-                            <div class="inputbox">
-                                <div class="inputfield">
-                                    <label for="subject" class="form-label">Email address <span class="required">*</span></label>
-                                    <input type="textt" class="form-control" id="subject" autocomplete="off">
-                                </div>
-        
-                                <div class="errorbox">
-                                    <p class="error-message">Subject: cannot be blank</p>
-                                </div>
-                            </div>
-        
-                            <div class="inputbox">
-                                <div class="inputfield">
-                                    <label for="description" class="form-label">Description <span class="required">*</span></label>
-                                    <textarea class="form-control" id="description" rows="6" autocomplete="off"></textarea>
-                                </div>
-        
-                                <div class="errorbox">
-                                    <p class="error-message">Description: cannot be blank</p>
-                                </div>
-                            </div>
+                <div class="help-search">
+                    <div class="searchbox">
+                        <button type="button" class="btn-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+
+                        <div class="inputbox">
+                            <input type="search" class="searchfield" placeholder="Search...">
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HELP-BANNER SECTION END -->
 
-                        <div class="drag-info">
-                            <p class="text">Please enter the details of your request. A member of our support staff will respond as soon as possible.</p>
+    <!-- HELP MAIN SECTION START -->
+    <main class="help-main">
+        <div class="container-lg container-fluid">
+            <div class="help-main-content">
+                <div class="help-main-content-top">
+                    <a href="articles.html" class="card-help">
+                        Billing &amp; Account
+                    </a>
+                    <a href="legal.html" class="card-help">
+                        Legal
+                    </a>
+                    <a href="technical.html" class="card-help">
+                        Technical Issues
+                    </a>
+                </div>
 
-                            <div class="inputbox">
-                                <div class="inputfield">
-                                    <label for="fileupload" class="form-label">Attachments</label>
+                <div class="help-main-content-bottom">
+                    <a href="general-info.html" class="card-info">
+                        <figure class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" class="custom-block__image replaced-svg">
+                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5 5c0-1.934 5.148-3.5 11-3.5V18c-5.852 0-11 1.566-11 3.5 0-1.934-5.149-3.5-11-3.5V1.5c5.851 0 11 1.566 11 3.5zm0 0v16.375M9 7.24C7.39 6.623 5.113 6.177 2.5 6M9 10.24C7.39 9.623 5.113 9.177 2.5 9M9 13.24c-1.61-.617-3.887-1.063-6.5-1.24M9 16.24c-1.61-.617-3.887-1.063-6.5-1.24M14 7.24c1.61-.617 3.887-1.063 6.5-1.24M14 10.24c1.61-.617 3.887-1.063 6.5-1.24M14 13.24c1.61-.617 3.887-1.063 6.5-1.24M14 16.24c1.61-.617 3.887-1.063 6.5-1.24" fill="none"></path>
+                            </svg>
+                        </figure>
 
-                                    <div class="drop-zone">
-                                        <p class="drop-zone-prompt">
-                                            <span class="text">Add file</span> or drop files here
-                                        </p>
+                        <span class="title">All FAQs</span>
+                    </a>
+                    <a href="contact.html" class="card-info">
+                        <figure class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24">
+                                <path d="M23.5 10.759c0 5.181-5.148 9.383-11.5 9.383-1.418 0-2.775-.21-4.029-.593l-6.608 3.076 2.588-5.166c-2.129-1.703-3.45-4.076-3.45-6.7 0-5.182 5.148-9.383 11.5-9.383S23.5 5.577 23.5 10.759zM7.5 8.5H14m-6.5 3H17m-9.5 3H17" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" fill="none"></path>
+                            </svg>
+                        </figure>
 
-                                        <input type="file" name="myFile" id="fileupload" class="drop-zone-input">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <span class="title">Leave feedback</span>
+                    </a>
 
-                        <div class="submit-form">
-                            <button type="button" class="btn-send btn-annual">Submit</button>
-                        </div>
-                    </form>
+                    <a href="contact.html" class="card-info">
+                        <figure class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24">
+                                <g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+                                    <path d="M7.219 13.5H.5v-3h6.703m6.297 6.266V23.5h-3v-6.734m6.266-6.266H23.5v3h-6.75M10.5 7.218V.5h3v6.734"></path>
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <path d="M13.5 1.607a10.506 10.506 0 0 1 8.893 8.893m-20.788 0A10.507 10.507 0 0 1 10.5 1.607m0 20.787A10.506 10.506 0 0 1 1.605 13.5m20.788 0a10.505 10.505 0 0 1-8.893 8.894"></path>
+                                </g>
+                            </svg>
+                        </figure>
+
+                        <span class="title">Contact us</span>
+                    </a>
                 </div>
             </div>
         </div>
     </main>
-    <!-- CONTACT SECTION END -->
+    <!-- HELP MAIN SECTION END -->
 
     <!-- PURESOUNDS FOOTER START -->
     <footer class="puresounds-footer">
@@ -186,7 +196,5 @@
 
     <!-- BOOTSTRAP SCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- DRAG AND DROP SCRIPT -->
-    <script src="assets/js/drag.js"></script>
 </body>
 </html>

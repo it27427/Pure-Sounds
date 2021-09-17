@@ -1,0 +1,137 @@
+.help-banner {
+    padding: length(56) length(0);
+
+    &-content {
+        @include flex-center-between;
+    
+        @include breakpoint(phone768) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: length(24);
+        }
+
+        .help-title,
+        .help-search {
+            width: 50%;
+
+            @include breakpoint(phone768) {
+                width: 100%;
+            }
+        }
+
+        .help-title {
+            .title {
+                @include h2-font-style;
+                color: $textPrimary;
+            }
+        }
+
+        .help-search {
+            .searchbox {
+                background: $searchboxBg;
+                @include flex-center-vert;
+                @include radius(4);
+                overflow: hidden;
+
+                .btn-search {
+                    @include square(length(56));
+                    background: transparent;
+
+                    svg {
+                        @include square(length(20));
+                        path {
+                            fill: $textPlaceholder;
+                        }
+                    }
+                }
+    
+                .inputbox {
+                    width: calc(100% - 3.5rem);
+
+                    .searchfield {
+                        background: transparent;
+                        width: 100%;
+                        padding: length(16) length(16) length(16) length(0);
+                        @include text-24-16-normal-basefont;
+                        color: $textPrimary;
+
+                        &::placeholder {
+                            color: $textPlaceholder;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.help-main {
+    background: $searchboxBg;
+    padding: length(56) length(0);
+
+    &-content {
+        @include flex-center-column;
+        gap: length(28);
+        
+        &-top {
+            width: 100%;
+            @include flex-center-vert;
+            gap: length(30);
+
+            @include breakpoint(tablet991) {
+                flex-direction: column;
+            }
+
+            .card-help {
+                width: 33%;
+                height: length(150);
+                @include text-24-20-semibold-basefont;
+                @include setBgColor($white, $textPrimary);
+                @include flex-center;
+                @include transition(all $time ease);
+                @include border-single(bottom, solid, 2, $cardBorderBottom);
+
+                @include breakpoint(tablet991) {
+                    width: 100%;
+                }
+
+                @include hover {
+                    color: $cardBorderBottom;
+                    box-shadow: $box-shadow-2;
+                }
+            }
+        }
+
+        &-bottom {
+            width: 100%;
+            @include flex-center-vert;
+            gap: length(30);
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+            }
+
+            .card-info {
+                width: 33%;
+                height: length(150);
+                @include flex-center-column;
+                gap: length(28);
+
+                @include breakpoint(phone768) {
+                    width: 100%;
+                }
+
+                .icon {
+                    width: length(60);
+                    height: length(80);
+                    @include flex-center;
+                }
+
+                .title {
+                    @include text-24-20-semibold-basefont;
+                    color: $textPrimary;
+                }
+            }
+        }
+    }
+}

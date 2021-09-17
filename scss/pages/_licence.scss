@@ -1,0 +1,20 @@
+.puresoundlicence {
+    @include flex-column;
+    gap: length(16);
+
+    .licence-details {
+        @include flex-column;
+        gap: length(10);
+
+        .licencetitle {
+            @include text-32-24-medium-basefont;
+            color: $textPrimary;
+        }
+
+        .licencetext {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+        }
+    }
+}

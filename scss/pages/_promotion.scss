@@ -1,0 +1,149 @@
+.promotion-content {
+    @include flex-center;
+    background: $filterBg;
+    min-height: calc(100vh - 20.25rem);
+}
+
+.promotionbox {
+    max-width: length(550);
+    background: $white;
+    box-shadow: $box-shadow-3;
+    margin-top: length(-600);
+    position: relative;
+    @include flex-column;
+    gap: length(20);
+    padding: length(40) length(56);
+    @include radius(4);
+
+    @include breakpoint(tablet991) {
+        width: calc(100% - 2.5rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include breakpoint(phone575) {
+        padding-left: length(16);
+        padding-right: length(16);
+    }
+
+    .icon {
+        @include square(length(56));
+        @include circle;
+        background: $white;
+        padding: length(4);
+        top: length(-28);
+        left: 50%;
+        @include transform(translateX(-50%));
+        position: absolute;
+        overflow: hidden;
+        @include border(solid, 1, $tabBorder);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .promotion-header {
+        .title {
+            @include faqtitle-font-style;
+            color: $textPrimary;
+            text-align: center;
+        }
+    }
+
+    .text {
+        @include text-20-14-normal-basefont;
+        color: $textGray-1;
+        text-align: center;
+
+        @include breakpoint(phone500) {
+            @include text-12-12-normal-basefont;
+            line-height: 1.5;
+        }
+    }
+}
+
+.promotion-form {
+    width: 100%;
+    @include flex-column;
+
+    .inputbox {
+        width: 100%;
+        @include flex-column;
+        align-items: flex-start;
+        gap: length(8);
+
+        .form-floating {
+            width: 100%;
+
+            .formlabel {
+                @include text-14-14-normal-basefont;
+                margin-top: length(5);
+                color: $textGray-1;
+                text-align: left;
+
+                .required {
+                    color: $danger;
+                }
+            }
+
+            .form-select,
+            .form-control {
+                @include text-14-14-normal-basefont;
+                color: $textPrimary;
+
+                &:focus {
+                    ~ .formlabel {
+                        @include text-12-12-normal-basefont;
+                    }
+                }
+            }
+        }
+
+        .error-message {
+            @include text-12-12-normal-basefont;
+            color: $danger;
+            display: none;
+        }
+
+        &.error {
+            .form-floating {
+                .form-select,
+                .form-control {
+                    border-color: $danger;
+                }
+
+                .formlabel {
+                    color: $danger;
+                }
+            }
+
+            .error-message {
+                display: block;
+            }
+        }
+    }
+
+    .submitform {
+        .btn-submit {
+            width: 100%;
+            margin: length(24) length(0);
+            @include radius(4);
+            padding: length(14);
+            @include transition(background $time ease);
+        }
+    
+        .btn-debit {
+            @include setBgColor($accessActiveBg, $white);
+    
+            @include hover {
+                background: $accessActiveHoverBg;
+            }
+    
+            &:focus {
+                background: $accessActiveFocusBg;
+            }
+        }
+    }
+}

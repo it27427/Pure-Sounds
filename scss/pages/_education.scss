@@ -1,0 +1,230 @@
+.education {
+    @include flex-center;
+    @include border-single(bottom, solid, 1, $noticeBg);
+    padding: length(64) length(30) length(72);
+
+    @include breakpoint(phone768) {
+        padding: length(20) length(16);
+    }
+
+    &-content {
+        @include flex-center;
+
+        .education-title {
+            @include h1-font-style;
+            color: $textPrimary;
+            text-align: center;
+
+            @include breakpoint(laptop1100) {
+                @include titletext-font-style;
+            }
+
+            @include breakpoint(tablet991) {
+                @include h2-font-style;
+            }
+
+            @include breakpoint(phone575) {
+                @include text-28-24-bold-basefont;
+                margin-bottom: length(32);
+            }
+        }
+    }
+}
+
+.education-main {
+    background: $white;
+    padding: length(40) length(0) length(50);
+
+    &-content {
+        .text {
+            @include faqtitle-font-style;
+            text-align: center;
+
+            @include breakpoint(phone575) {
+                @include text-28-24-bold-basefont;
+                margin-bottom: length(32);
+                line-height: 1.5;
+            }
+
+            .educationlink {
+                color: $accessActiveBg;
+                @include transition(color $time ease-in-out);
+
+                &:focus {
+                    color: $accessActiveFocusBg;
+                }
+                
+                @include hover {
+                    color: $accessActiveHoverBg;
+                }
+            }
+        }
+    }
+}
+
+.education-faq {
+    background: $black;
+    padding: length(64) length(0);
+
+    &-content {
+        .title {
+            @include h2-font-style;
+            color: $white;
+            margin-bottom: length(54);
+
+            @include breakpoint(phone575) {
+                @include text-28-24-bold-basefont;
+                margin-bottom: length(32);
+            }
+        }
+
+        .faq {
+            margin-bottom: length(24);
+
+            &-title {
+                @include text-28-18-medium-basefont;
+                color: $white;
+                margin: length(24) length(0);
+
+                @include breakpoint(phone575) {
+                    @include text-24-16-medium-basefont;
+                }
+            }
+
+            .details {
+                max-width: length(780);
+                @include flex-column;
+                gap: length(24);
+
+                .text {
+                    @include text-24-16-normal-basefont;
+                    color: $textGray-1;
+
+                    @include breakpoint(phone575) {
+                        @include text-20-14-normal-basefont;
+                    }
+
+                    .link {
+                        color: $accessActiveBg;
+                        @include transition(color $time ease-in-out);
+        
+                        &:focus {
+                            color: $accessActiveFocusBg;
+                        }
+                        
+                        @include hover {
+                            color: $accessActiveHoverBg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .faqcontact {
+            @include border-single(top, solid, 1, rgba($white, 0.2));
+            @include border-single(bottom, solid, 1, rgba($white, 0.2));
+            padding-bottom: length(24);
+
+            .title {
+                @include text-28-18-medium-basefont;
+                color: $white;
+                margin: length(24) length(0);
+
+                @include breakpoint(phone575) {
+                    @include text-24-16-medium-basefont;
+                }
+            }
+
+            .text {
+                @include text-24-16-normal-basefont;
+                color: $textGray-1;
+
+                @include breakpoint(phone575) {
+                    @include text-20-14-normal-basefont;
+                }
+
+                .link {
+                    color: $accessActiveBg;
+                    @include transition(color $time ease-in-out);
+    
+                    &:focus {
+                        color: $accessActiveFocusBg;
+                    }
+                    
+                    @include hover {
+                        color: $accessActiveHoverBg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.formbox.educationbox {
+    .formdescriptions {
+        .title {
+            color: $black;
+
+            @include breakpoint(tablet991) {
+                text-align: left;
+            }
+        }
+
+        @include breakpoint(tablet991) {
+            padding: length(0);
+        }
+    }
+
+    .text {
+        @include text-20-14-normal-basefont;
+        color: $educationText;
+    }
+
+    .education-button {
+        .btn-access {
+            @include text-24-20-semibold-basefont;
+
+            @include breakpoint(phone575) {
+                @include text-24-16-semibold-basefont;
+            }
+        }
+    }
+}
+
+.puresound-descriptions.educationbox {
+    margin-top: length(-300);
+
+    .jointitle {
+        @include text-48-34-bold-basefont;
+        color: $white;
+        margin-bottom: length(16);
+
+        @include breakpoint(phone575) {
+            @include faqtitle-font-style;
+        }
+    }
+
+    .jointext {
+        @include text-24-16-normal-basefont;
+        text-align: center;
+        color: $jointext;
+        margin-bottom: length(16);
+    }
+
+    .textjoin {
+        @include text-24-16-normal-basefont;
+        text-align: center;
+        color: $jointext;
+        margin-bottom: length(40);
+    }
+
+    .icon {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @include breakpoint(tablet991) {
+        margin-top: 0;
+    }
+}

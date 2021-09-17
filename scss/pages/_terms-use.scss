@@ -1,0 +1,50 @@
+.termsof {
+    @include flex-column;
+    gap: length(16);
+
+    .terms-details {
+        @include flex-column;
+        gap: length(10);
+        
+        .terms-title {
+            @include text-32-24-medium-basefont;
+            color: $textPrimary;
+        }
+
+        .terms-text {
+            @include text-24-16-normal-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+
+            .link {
+                font: inherit;
+                color: $accessActiveBg;
+                @include transition(color $time ease);
+                
+                @include hover {
+                    color: $accessActiveHoverBg;
+                }
+            }
+        }
+
+        .text {
+            @include text-24-16-bold-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+            text-decoration: underline;
+        }
+
+        .termstext {
+            @include text-24-16-bold-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+        }
+
+        .termtext {
+            @include text-24-16-bold-basefont;
+            color: $textGray-1;
+            line-height: 1.78;
+            text-transform: uppercase;
+        }
+    }
+}

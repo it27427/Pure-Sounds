@@ -1,0 +1,94 @@
+.jobs-main {
+    padding: length(48) length(0);
+
+    &-content {
+        max-width: length(768);
+        margin: 0 auto;
+
+        .joinus {
+            @include flex-center-column;
+            gap: length(24);
+            margin-bottom: length(50);
+
+            .title {
+                @include faqtitle-font-style;
+                color: $textPrimary;
+                text-align: center;
+            }
+
+            .text {
+                @include text-20-14-normal-basefont;
+                color: $textPrimary;
+                text-align: center;
+            }
+        }
+
+        .creative {
+            padding: length(30) length(0);
+            @include flex-column;
+            gap: length(24);
+            margin-bottom: length(30);
+
+            .title {
+                @include faqtitle-font-style;
+                color: $textPrimary;
+            }
+
+            .details {
+                @include flex-column;
+                gap: length(12);
+
+                .text {
+                    @include text-20-14-normal-basefont;
+                    color: $textGray-1;
+
+                    .link {
+                        font: inherit;
+                        color: $accessActiveBg;
+                        @include transition(color $time ease);
+
+                        @include hover {
+                            color: $accessActiveHoverBg;
+                        }
+                    }
+                }
+
+                .divider {
+                    background-color: $filterBorder;
+                    opacity: 1;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .callcontent {
+            @include flex-column;
+            gap: length(24);
+
+            .title {
+                @include faqtitle-font-style;
+                color: $textPrimary;
+            }
+
+            .details {
+                @include flex-column;
+                gap: length(12);
+
+                .text {
+                    @include text-20-14-normal-basefont;
+                    color: $textGray-1;
+
+                    .link {
+                        font: inherit;
+                        color: $accessActiveBg;
+                        @include transition(color $time ease);
+
+                        @include hover {
+                            color: $accessActiveHoverBg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

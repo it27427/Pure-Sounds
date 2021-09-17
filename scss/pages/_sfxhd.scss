@@ -1,0 +1,237 @@
+.main-store {
+    padding: length(48) length(0) length(56);
+
+    &-content {
+        @include flex-center-column;
+        gap: length(48);
+        max-width: length(890);
+        margin: 0 auto;
+
+        .blastwavefx {
+            width: 100%;
+            @include flex-center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .effects {
+            @include flex-center-vert;
+            gap: length(30);
+
+            @include breakpoint(tablet991) {
+                flex-direction: column;
+            }
+
+            .effect-description {
+                width: length(330);
+                @include flex-column;
+
+                @include breakpoint(tablet991) {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .effect-title {
+                    .title {
+                        @include text-28-24-medium-basefont;
+                        color: $titleText;
+                    }
+                }
+
+                .text {
+                    @include text-24-16-normal-basefont;
+                    color: $titleText;
+
+                    @include breakpoint(tablet991) {
+                        width: 60%;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+
+                    @include breakpoint(phone575) {
+                        width: 100%;
+                        @include text-20-14-normal-basefont;
+                    }
+                }
+            }
+
+            .effectbox {
+                width: calc(100% - 20.625rem);
+                @include flex-center;
+                gap: length(30);
+
+                @include breakpoint(tablet991) {
+                    width: 100%;
+                }
+
+                .effect-card {
+                    @include flex-center;
+                    width: 33%;
+
+                    .icon {
+                        width: 100%;
+                        @include flex-center;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .products {
+            @include flex-center-vert;
+            gap: length(30);
+
+            @include breakpoint(tablet991) {
+                width: 100%;
+                // @include flex-center;
+                flex-wrap: wrap;
+            }
+
+            .product-card {
+                @include flex-column;
+                width: 33%;
+
+                @include breakpoint(tablet991) {
+                    width: 45%;
+                }
+
+                @include breakpoint(phone575) {
+                    width: 100%;
+                    align-items: center;
+                }
+
+                .title {
+                    @include text-28-20-bold-basefont;
+                    color: $titleText;
+                    height: length(56);
+                    text-align: center;
+                    @include flex-column;
+                    justify-content: flex-end;
+                    margin-bottom: length(24);
+                }
+
+                .icon {
+                    height: length(168);
+                    overflow: hidden;
+                }
+            }
+
+            .cardfeatures {
+                .title {
+                    @include text-14-14-normal-basefont;
+                    color: $titleText;
+                    text-align: left;
+                    margin-bottom: length(4);
+                }
+
+                .featurelist {
+                    width: length(248);
+                    height: length(124);
+                    @include text-14-14-normal-basefont;
+                    color: $titleText;
+                    text-align: left;
+                    @include flex-column;
+                    gap: length(4);
+
+                    @include breakpoint(phone575) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .audio-video {
+                @include flex-center-column;
+                gap: length(4);
+
+                .audio, .video {
+                    width: 100%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .descriptionbox {
+            @include flex-column;
+            gap: length(40);
+
+            .card-details {
+                @include flex-center-vert;
+                gap: length(20);
+
+                @include breakpoint(phone575) {
+                    flex-direction: column;
+                }
+
+                .icon {
+                    @include square(length(85));
+                    @include flex-center;
+
+                    @include breakpoint(phone575) {
+                        width: 100%;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .details {
+                    width: calc(100% - 6.25rem);
+                    text-align: center;
+                    @include flex-column;
+                    gap: length(4);
+
+                    @include breakpoint(phone575) {
+                        width: 100%;
+                    }
+
+                    .title {
+                        @include h2-font-style;
+                        font-weight: 500;
+                        color: $titleText;
+
+                        @include breakpoint(phone575) {
+                            @include text-28-18-semibold-basefont;
+                        }
+                    }
+
+                    .text {
+                        @include text-20-16-normal-basefont;
+                        color: $titleText;
+
+                        @include breakpoint(phone575) {
+                            @include text-20-14-normal-basefont;
+                        }
+
+                        .details-link {
+                            font: inherit;
+                            color: $linkText;
+
+                            @include hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .clients {
+            width: 100%;
+            @include flex-center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

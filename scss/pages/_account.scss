@@ -1,4 +1,5 @@
-.account {
+.account,
+.jobs {
     @include flex-center;
     @include border-single(bottom, solid, 1, $noticeBg);
     padding: length(64) length(30) length(72);
@@ -10,7 +11,8 @@
     &-content {
         @include flex-center;
 
-        .account-title {
+        .account-title,
+        .jobs-title {
             @include h1-font-style;
             color: $textPrimary;
 

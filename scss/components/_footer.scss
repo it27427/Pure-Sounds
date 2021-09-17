@@ -121,3 +121,46 @@
         }
     }
 }
+
+.puresounds-footer {
+    background: $black;
+    padding: length(56) length(0);
+
+    &-content {
+        .copyright {
+            @include flex-center-between;
+    
+            @include breakpoint(phone575) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: length(24);
+            }
+        }
+
+        .copyright-text {
+            @include text-20-14-normal-basefont;
+            color: $footerText;
+
+            .copyright-icon {
+                font: inherit;
+                color: inherit;
+            }
+        }
+
+        .socialmenu {
+            @include list-horizontal;
+            gap: length(10);
+
+            &-link {
+                color: $footerText;
+                @include transition(color $time ease);
+                @include square(length(30));
+                @include flex-center;
+
+                @include hover {
+                    color: gray;
+                }
+            }
+        }
+    }
+}
