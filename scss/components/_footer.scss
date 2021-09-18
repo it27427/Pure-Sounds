@@ -16,6 +16,8 @@
 
             .footer-logo {
                 width: 25%;
+                @include flex-column;
+                gap: length(24);
             
                 @include breakpoint(phone768) {
                     width: 100%;

@@ -41,13 +41,13 @@
 
 @keyframes slideUpIn {
 	0% {
-		transform: translateY(length(-20));
+		transform: translateY(length(-10));
 	}
 	100% {
 		transform: translateY(0);
 	}
 	0% {
-		transform: translateY(length(20));
+		transform: translateY(length(10));
 	}
 }
 
