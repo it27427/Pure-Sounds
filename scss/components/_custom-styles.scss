@@ -93,6 +93,7 @@
 			@include text-overflow;
 			@include text-14-14-bold-basefont;
 			color: $bgnBorder;
+			width: length(110);
 		}
 
 		&::before {

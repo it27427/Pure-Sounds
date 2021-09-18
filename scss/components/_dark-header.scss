@@ -288,3 +288,245 @@
         padding: length(16) length(20) length(14);
     }
 }
+
+.blog-header {
+    background: $blogHeaderBg;
+    @include flex-center-vert;
+
+    &-content {
+        @include flex-center-between;
+        padding: length(0) length(24);
+
+        .brand {
+            object-fit: contain;
+            width: length(113);
+            height: length(32);
+            margin: length(19) length(44) length(20) length(0);
+            display: flex;
+            position: relative;
+    
+            &-title {
+                @include text-20-14-semibold-basefont;
+                color: $white;
+            }
+    
+            .logo {
+                @include flex-center-vert;
+                gap: length(4);
+                overflow: hidden;
+                
+                svg {
+                    width: length(24);
+                    @include square(length(24));
+    
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        .mainlist {
+            @include list-horizontal;
+            gap: length(4);
+
+            &-item {
+                padding: length(22);
+                @include border-single(bottom, solid, 1, $blogHeaderBg);
+
+                &:hover:not(.active) {
+                    border-color: $accessActiveBg;
+                }
+
+                &.active {
+                    border-color: $accessActiveBg;
+                }
+            }
+
+            &-link {
+                letter-spacing: length(2);
+                color: $white;
+                text-transform: uppercase;
+                display: inline-block;
+                @include text-12-12-bold-basefont;
+                @include transition(color $time ease);
+
+                @include hover {
+                    color: rgba($white, 0.5);
+                }
+            }
+        }
+
+        .social-list {
+            @include list-horizontal;
+            gap: length(20);
+
+            &-link {
+                color: $white;
+                @include transition(color $time ease);
+                @include text-14-14-bold-basefont;
+
+                @include hover {
+                    color: rgba($white, 0.5);
+                }
+            }
+
+            .btn-search {
+                @include square(length(20));
+                @include transparent-button;
+                margin-top: length(4);
+
+                svg {
+                    path {
+                        fill: $white;
+                        @include transition(fill $time ease);
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        path {
+                            fill: rgba($white, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-head {
+    background: $black;
+    @include flex-center-vert;
+
+    &-content {
+        @include flex-center-between;
+        padding: length(0) length(24);
+
+        .brand {
+            object-fit: contain;
+            width: length(113);
+            height: length(32);
+            margin: length(19) length(44) length(20) length(0);
+            display: flex;
+            position: relative;
+    
+            &-title {
+                @include text-20-14-semibold-basefont;
+                color: $white;
+            }
+    
+            .logo {
+                @include flex-center-vert;
+                gap: length(4);
+                overflow: hidden;
+                
+                svg {
+                    width: length(24);
+                    @include square(length(24));
+    
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        .social-list {
+            @include list-horizontal;
+            gap: length(20);
+
+            &-link {
+                color: $white;
+                @include text-14-14-bold-basefont;
+                @include transition(color $time ease);
+
+                @include hover {
+                    color: rgba($white, 0.5);
+                }
+            }
+
+            .btn-search {
+                @include square(length(20));
+                @include transparent-button;
+                margin-top: length(4);
+
+                svg {
+                    path {
+                        fill: $white;
+                        @include transition(fill $time ease);
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        path {
+                            fill: rgba($white, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-nav {
+    .bloglist {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+
+        &-item {
+            display:inline-block;
+            padding: length(22);
+
+            .dropdownlink {
+                letter-spacing: length(2);
+                color: $white;
+                text-transform: uppercase;
+                display: inline-block;
+                @include text-12-12-bold-basefont;
+                @include transition(color $time ease);
+
+                @include hover {
+                    color: rgba($white, 0.5);
+                }
+            }
+
+            .submenu {
+                @include list-vertical;
+                background: $dropdownBg;
+                position: absolute;
+                top: 100%; 
+                min-width: length(244);
+                padding: length(18);
+                gap: length(4);
+
+                &-link {
+                    display: inline-block;
+                    padding: length(5) length(10);
+                    background:rgba($white, 0.03);
+                    width: 100%;
+                    @include setBgColor(transparent, $white);
+                }
+            }
+
+            &:hover > .submenu {
+            }
+        }
+
+        &-link {
+            letter-spacing: length(2);
+            color: $white;
+            text-transform: uppercase;
+            display: inline-block;
+            @include text-12-12-bold-basefont;
+            @include transition(color $time ease);
+
+            @include hover {
+                color: rgba($white, 0.5);
+            }
+        }
+    }
+}

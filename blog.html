@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Sounds | Blog</title>
+    <!-- SITE FAVICON -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- UE-SCROLL TO TOP -->
+    <link rel="import" href="assets/css/ue-scroll.min.css">
+    <!-- CUSTOM STYLESHEET LINK -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- BLOG HEADER SECTION START -->
+    <header class="blog-header">
+        <div class="container-fluid">
+            <div class="blog-header-content">
+                <!-- COMPANY BRAND START -->
+                <figure class="brand">
+                    <a href="blog.html" class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                            <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            </mask>
+                        </svg>
+                        
+                        <span class="brand-title">puresounds</span>
+                    </a>
+                </figure>
+                <!-- COMPANY BRAND END -->
+
+                <!-- MAIN MENU START -->
+                <ul class="mainlist">
+                    <li class="mainlist-item">
+                        <a href="index.html" class="mainlist-link">Sounds Effects</a>
+                    </li>
+
+                    <li class="mainlist-item active">
+                        <a href="blog.html" class="mainlist-link">Blog</a>
+                    </li>
+                </ul>
+                <!-- MAIN MENU END -->
+
+                <!-- SOCIAL-LIST START -->
+                <ul class="social-list">
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <button type="button" class="btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <!-- SOCIAL-LIST END -->
+            </div>
+
+            <!-- SEARCHBOX START -->
+            <div class="offcanvas offcanvas-top searchblog" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                    </svg>
+                </button>
+
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="blog-searchbox">
+                            <input type="search" placeholder="Search..." class="searchfield" autocomplete="off">
+                            <button type="button" class="search-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SEARCHBOX END -->
+        </div>
+    </header>
+    <!-- BLOG HEADER SECTION END -->
+
+    <!-- BLOG HEADER SECTION START -->
+    <section class="blog-head sticky-top">
+        <div class="container-fluid">
+            <div class="blog-header-content">
+                <!-- COMPANY BRAND START -->
+                <figure class="brand">
+                    <a href="blog.html" class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                            <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            </mask>
+                        </svg>
+                        
+                        <span class="brand-title">puresounds</span>
+                    </a>
+                </figure>
+                <!-- COMPANY BRAND END -->
+
+                <!-- BLOG NAV START -->
+                <nav class="blog-nav">
+                    <ul class="bloglist">
+                        <li class="bloglist-item">
+                            <a href="#" class="dropdownlink">Web Design</a>
+
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="#" class="submenu-link">Project</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="#" class="submenu-link">Project</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="#" class="submenu-link">Project</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="bloglist-item">
+                            <a href="#" class="bloglist-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- BLOG NAV END -->
+
+                <!-- SOCIAL-LIST START -->
+                <ul class="social-list">
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <button type="button" class="btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <!-- SOCIAL-LIST END -->
+            </div>
+
+            <!-- SEARCHBOX START -->
+            <div class="offcanvas offcanvas-top searchblog" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                    </svg>
+                </button>
+
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="blog-searchbox">
+                            <input type="search" placeholder="Search..." class="searchfield" autocomplete="off">
+                            <button type="button" class="search-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SEARCHBOX END -->
+        </div>
+    </section>
+    <!-- BLOG HEADER SECTION END -->
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A nulla eum modi neque ea, ratione ad? Distinctio fugit laudantium eius voluptatem doloribus optio quod aliquam voluptatum, iusto nisi architecto, numquam, quam excepturi sunt odio unde exercitationem eligendi ipsam beatae sint esse quaerat a rerum. Nemo reiciendis itaque voluptatibus fugit corporis. Ipsum similique eius nihil deleniti illo officiis excepturi amet quisquam dicta odio, numquam ipsa, molestias maxime error voluptate iusto et. Illum vero incidunt consequatur iusto aspernatur id ea adipisci eaque nihil ex impedit nisi totam cum dolor, quos fugiat nobis nam voluptate veniam quae inventore! Sequi qui quo voluptas, nobis blanditiis officia distinctio officiis ipsum soluta consequatur, et, quasi mollitia amet facilis voluptate dolorem similique dolorum eum magni atque perspiciatis delectus sapiente repellat voluptatum! Assumenda, iusto asperiores eligendi blanditiis maiores magnam exercitationem sed ea veniam quibusdam saepe voluptatum recusandae libero! Totam porro ab, illum et delectus quia voluptates reiciendis error numquam! Earum qui, eius dolores molestias explicabo possimus, voluptate omnis esse quia iste dicta repellat, debitis ea illo. Hic nisi sint doloribus aut nihil vitae quas quis sapiente dolorum? Rem nam cumque, nihil quibusdam non maxime error, molestiae aperiam laudantium dolores voluptas nulla sed eveniet eos expedita alias, aut tempora dolore voluptatem? Nisi eius illo ipsa deserunt quos at dicta inventore minima provident non culpa, distinctio error odit mollitia corrupti perspiciatis cumque sapiente sint cupiditate, commodi neque voluptas possimus! Quos porro dignissimos nisi dolore nemo. Aut nesciunt enim totam quasi earum perspiciatis dolorum in at molestias vitae, perferendis cumque, qui fuga similique voluptate deserunt corporis aspernatur dicta consequuntur sed officiis adipisci sapiente harum! Maxime officia consequatur odit ut inventore dolores accusantium tenetur a delectus aliquid illum debitis nisi alias id itaque, dicta ipsa saepe aperiam, nihil, mollitia non voluptate dolorum impedit. At nulla sit repellat voluptate dolore dolorum fugiat ut, nam harum ipsum eaque modi officia hic quisquam recusandae praesentium aspernatur? Impedit iusto iure expedita optio amet itaque molestias quas, magni beatae, blanditiis voluptates minima saepe omnis deserunt numquam. Laborum exercitationem earum facilis, minus alias itaque a dicta nisi libero quia beatae, corrupti magnam sint nesciunt sunt accusamus quidem sequi tenetur deserunt dolorum voluptate repellat consectetur quam. Rem nulla iure illo ea cupiditate placeat ratione officiis alias. Voluptas soluta voluptates illo illum totam tenetur. Id, similique? Voluptatibus commodi cupiditate reprehenderit, minima sunt soluta, ea sapiente ratione, ut quo pariatur aspernatur deserunt ipsa est atque voluptatum natus esse aut beatae molestiae incidunt voluptatem. Iste totam debitis modi dolorum assumenda quos soluta esse quod! Laborum saepe et praesentium similique facilis corporis harum non necessitatibus veritatis, labore iure in ut, ipsum laboriosam temporibus natus aliquid, distinctio ipsam doloribus dolorem excepturi. Dolorem unde consectetur quo molestias porro ad libero tempore est, quos provident velit ipsa officia ipsum amet eum optio explicabo quam aliquid asperiores. Asperiores praesentium minima obcaecati dolore mollitia ratione fugiat facere, incidunt quod maiores sapiente ipsum labore, iusto cumque doloremque aperiam fuga numquam consequuntur! Vero velit unde distinctio necessitatibus, nisi fuga voluptatem odit. Quod dolorum, voluptate unde tenetur laborum perferendis consequatur, labore quo voluptas sed voluptatibus debitis explicabo dignissimos corporis mollitia ab molestias necessitatibus illum ratione assumenda delectus sint fugiat adipisci! Laboriosam accusamus eius iusto sunt velit quae fugiat nam repudiandae expedita provident architecto fugit consectetur enim quaerat incidunt quos error voluptatibus praesentium suscipit aut eligendi, voluptatum veritatis! Perferendis error aperiam ab odio praesentium commodi sunt minus assumenda repellat saepe animi fugiat illum, adipisci laudantium esse, perspiciatis ipsa odit. Atque inventore porro tempora esse distinctio! Nihil necessitatibus ab in praesentium laudantium consequuntur voluptate reiciendis accusantium numquam molestias nemo voluptatem repellat soluta vitae, natus consectetur voluptas repudiandae. Aperiam ullam ipsa pariatur cupiditate maxime a aliquid quasi eos, corporis esse adipisci consectetur dicta illo nostrum ut at numquam doloribus deserunt earum porro quas blanditiis nisi architecto. Nemo deserunt molestias, quos ipsa minima aliquam iure dignissimos qui dolore laborum numquam mollitia unde voluptatem quidem. Aliquid corporis, rerum, ratione explicabo id iste voluptate placeat, laborum nostrum ex iure inventore quisquam? Animi nam molestiae laboriosam totam laudantium distinctio! Quae voluptatibus maxime hic, nostrum enim id veniam quaerat esse ipsa impedit aspernatur corporis, repellat sequi dignissimos, rem deserunt pariatur quam? Iste ad distinctio quasi eos, accusamus velit sit quas ab nesciunt reprehenderit non assumenda quidem aspernatur, itaque cum tempora molestiae cumque! Rerum saepe consequatur sapiente veritatis, error necessitatibus est nesciunt et neque sint autem consectetur repellat hic aliquam iusto tempore ab ut voluptate? Rerum assumenda alias totam exercitationem quos commodi numquam itaque dignissimos, unde non voluptate modi aliquam repudiandae eos, perspiciatis dicta sit ab, quisquam inventore enim quidem? Assumenda, non saepe? Distinctio accusamus doloribus error, nemo iste repudiandae aut suscipit exercitationem ab quisquam? Deserunt eum vitae ullam expedita laborum quidem at deleniti reiciendis pariatur sed ipsam aperiam tempora quae, esse optio odit molestias perferendis. Delectus magni iure nobis deleniti voluptates laboriosam ex, odit omnis veniam doloribus cupiditate dignissimos at fuga tempore perspiciatis eum quo modi facere asperiores voluptatibus sint vitae vero illo tenetur! Rem inventore ratione, sunt molestiae ipsam necessitatibus? Enim, blanditiis ab velit magni minima error repellat vel quidem dolorem natus quae, commodi recusandae. Illo consequatur voluptatem sed quibusdam earum sapiente totam, laboriosam maxime quos doloremque corrupti. Maxime quos neque ratione id a corrupti ipsam tempora magnam cum! Alias ex hic numquam dolorum earum quae eligendi? Ratione nostrum quam illum fugit sit eaque nesciunt aliquam, cupiditate iste aliquid nisi repellat tenetur laudantium consequuntur ea obcaecati modi sunt. Odit consectetur omnis vero, amet laudantium ab eveniet! Incidunt, voluptate? Quo praesentium cupiditate consequuntur quaerat repellendus dolores amet libero voluptas eos eveniet, dolorem rem ipsa sint est perspiciatis pariatur qui sunt quisquam laborum ullam omnis! Eos soluta autem vitae modi, laudantium magni quibusdam odit suscipit! Ad iusto esse deserunt itaque, veniam debitis eos, enim quaerat autem modi quos nam suscipit, maiores dignissimos eius ipsa perferendis consequuntur corrupti aspernatur ipsam porro placeat? Dolorem atque pariatur optio quia natus eum, harum quisquam, ipsam voluptatum quasi accusamus tempore dolores qui minima voluptas laboriosam, non nisi a doloribus? Praesentium saepe nihil quod in cumque excepturi fugiat asperiores maxime beatae? Expedita odio repellendus officia modi, quod deserunt obcaecati maiores. Inventore commodi exercitationem qui eos facilis illo eum. Veniam maxime ipsam quia libero? Et eaque harum neque dolores ullam dolor molestiae provident quae necessitatibus, impedit eligendi possimus reiciendis, deleniti, odit amet excepturi. Doloribus dicta animi, nesciunt odio praesentium non, consequuntur aspernatur veritatis sapiente recusandae nostrum iste sit tempora enim. Inventore eveniet maxime dignissimos tempora! Minima ea consequuntur natus, sunt porro earum. Eum iure porro officiis ab. Error rem optio quam officiis at, quos repudiandae debitis facere quibusdam ducimus quas fugit quae amet eius sint sed culpa? Id, dolorem maxime debitis molestiae ratione nihil velit voluptatem repellat dolorum voluptatibus nemo corporis mollitia suscipit aspernatur aliquid, dicta eum dolor iure ipsa, aut placeat odit reiciendis? Molestiae magnam adipisci rem provident corrupti earum repellat dolorem possimus iure, temporibus quidem voluptas, officia mollitia distinctio ad? Distinctio reprehenderit perspiciatis quod soluta magni error neque tempore atque adipisci ut totam magnam voluptatibus maiores, earum esse ad doloribus explicabo aspernatur accusamus nulla est aliquid eligendi sint dignissimos. Quos sapiente cupiditate repudiandae alias sequi eos beatae nam a ab. Voluptas deserunt eligendi possimus, laudantium ut labore non itaque? Animi nam hic repellat maxime quam accusamus totam excepturi dicta repudiandae enim. Temporibus laboriosam alias atque optio, asperiores nemo quia vel error animi nam, ex labore, ipsum assumenda velit culpa doloremque. Accusamus sequi ab qui quia quidem excepturi, voluptate laudantium minus neque tenetur cum error, necessitatibus ad magni aspernatur ducimus. Consequatur cumque provident atque aliquam itaque sapiente, alias libero, praesentium suscipit rerum quas eius unde, ullam perferendis dolore eligendi? Odio vel, aspernatur tenetur saepe itaque ut! Dolorum perspiciatis beatae nobis qui, dolores quo quibusdam repellat placeat. Ullam, dolore labore! Animi vel et atque laboriosam iusto velit aliquam ipsum provident totam. Tempore, voluptatem nihil consequuntur itaque, qui voluptate voluptatibus non suscipit sint temporibus dolorum! Nihil porro nobis fuga odit commodi! Aut ratione praesentium, quidem ipsa tempora velit, hic ipsam, corrupti assumenda labore omnis! Dolorum molestias dolorem ipsa ea nihil obcaecati beatae laboriosam, fuga laborum suscipit quibusdam neque facere architecto, et optio aperiam itaque, doloremque veritatis. Esse maxime illum ipsum dolor quae? Sed eius maiores libero dolore perferendis laborum explicabo quos. Et quae perferendis non quod ipsa nisi eaque. Vitae numquam labore totam. Animi architecto beatae voluptates iusto reprehenderit nisi, quas, eius tempore odit doloremque suscipit ipsa asperiores perferendis quasi, nesciunt culpa tenetur ducimus quidem. Hic, architecto labore dolor dolorum necessitatibus ut cupiditate molestias veniam voluptatibus provident sequi autem, aliquid perspiciatis, quibusdam ratione a quia adipisci sed. Placeat, dignissimos! Alias doloremque quas inventore laboriosam! Unde culpa voluptate, et non labore necessitatibus rerum quibusdam, hic obcaecati perferendis tempora nemo laboriosam eius doloribus dignissimos minus molestias sapiente. Quasi commodi enim nostrum nam dolorum ea obcaecati repellat cumque ratione alias maiores necessitatibus nihil at rerum iusto tempore asperiores, iste impedit fuga pariatur. Sit esse ut adipisci quis, at magnam, qui assumenda illum, cupiditate aspernatur nostrum modi corrupti quisquam. Laborum, nulla incidunt a soluta nostrum hic quos. Laborum, possimus facilis sapiente eveniet iure impedit dicta vitae expedita natus voluptatum incidunt ratione, explicabo earum sequi dolor et odit, ab qui. Inventore nostrum pariatur exercitationem molestias dolorum nulla error, voluptatem excepturi accusantium quod quia odio harum? Aperiam dicta ab eos, consequuntur fugit ipsa aut deserunt asperiores blanditiis quod incidunt eum odit soluta nesciunt dignissimos non modi doloremque harum sunt porro dolores reiciendis? Consectetur eos accusantium repellat debitis vero aliquid, porro ipsam tempora, temporibus voluptatem non esse nemo optio itaque, illo beatae velit amet quaerat repudiandae laborum. Voluptatibus explicabo odit veritatis perspiciatis quibusdam debitis id sapiente ab tenetur minus, modi doloribus iure, dignissimos animi accusantium itaque, ad sed unde iste quam! Dolor perferendis repellendus minima assumenda explicabo ullam earum exercitationem enim officia veniam adipisci amet quibusdam temporibus, praesentium ad, autem recusandae consectetur natus incidunt voluptatem est? Optio, doloremque aliquam ex, tenetur odio rerum quod ipsum adipisci fuga ea porro at molestias esse enim? Vitae, assumenda aliquam dolore at perspiciatis praesentium voluptates doloremque possimus iste aut officia doloribus fuga rerum voluptas sit aspernatur explicabo quasi deleniti excepturi consectetur aliquid nobis. Corporis alias voluptatem commodi nostrum et suscipit exercitationem porro accusantium soluta! Expedita neque soluta odio aut dicta. Dicta cum provident deleniti, saepe vero explicabo. Dolores facere eligendi veniam modi corrupti beatae incidunt voluptatum quia commodi, ut repudiandae accusamus quod! Tempore voluptatum quaerat inventore atque natus? Aspernatur sapiente praesentium libero, obcaecati, earum, magnam suscipit maiores aperiam quisquam voluptatum illum reiciendis sint illo provident ullam debitis veniam reprehenderit amet sed impedit ut rerum. Quas, eveniet cumque. Iusto, similique! Accusantium, hic temporibus explicabo beatae in quis ab ea nulla, est porro qui architecto modi ipsa reiciendis tenetur et molestias veritatis dolor officiis aliquid nihil doloribus aut! Sequi nam porro nostrum quo eaque non, nisi, aliquid nobis eveniet quos, ducimus libero accusantium nihil nulla sint quam illum provident odio et quisquam animi? Aut officia omnis fugit aliquam nulla quaerat quas impedit magni, ut voluptatum rerum placeat eaque dolorem amet commodi? Hic, quisquam. Voluptatum, non tempore! Laboriosam numquam quas assumenda officia, suscipit consequatur nemo totam non illum distinctio debitis necessitatibus perspiciatis. Voluptatum quasi deleniti expedita, debitis, amet dignissimos quos quis officia ducimus impedit beatae, aperiam atque unde et praesentium explicabo quia possimus mollitia sint qui cum porro odit velit! Error quas quia similique nihil! Ducimus incidunt dolore sed doloremque hic nobis quibusdam quia recusandae porro eos exercitationem ad nostrum quidem illum velit rem cupiditate, fugit nulla a illo ipsam architecto. Quo, sunt? Excepturi perspiciatis ipsa, minima esse autem provident ratione quia eos nobis error alias quidem tempore aliquam id quod libero. Vitae doloribus, nam ducimus error repellendus iure minus omnis in perspiciatis obcaecati culpa magnam ipsa aliquam temporibus sequi optio minima laudantium itaque natus, dolores adipisci nemo veritatis! Ad eaque fugiat ipsum facere optio quisquam, illo libero, veniam quas delectus aliquid autem natus! Voluptas dignissimos necessitatibus architecto inventore ullam praesentium nesciunt adipisci voluptatibus eveniet tenetur laborum accusantium obcaecati in accusamus cum reprehenderit, doloremque, dolore quidem esse eos laudantium? Quidem necessitatibus, voluptatem explicabo expedita quas facere tempore a vitae debitis? Explicabo distinctio dolores voluptatibus nulla doloribus ipsa neque sunt dicta iure est necessitatibus in illum suscipit rerum, quam quas. Illo, provident quo saepe ullam quam quidem aliquid sunt tempora sit voluptas porro, quae quaerat rem atque odit nihil amet. Delectus enim consequatur id laborum, numquam suscipit ipsum aperiam quaerat officiis mollitia autem obcaecati, esse facilis excepturi est nisi sunt tempore debitis? Neque tempore est quam nam inventore veniam hic dignissimos esse distinctio libero natus sapiente totam earum, repellendus ducimus dolorum sequi? Placeat accusamus fugit blanditiis aliquam repellendus fugiat iste laborum facere laboriosam provident nostrum iusto, temporibus doloremque obcaecati fuga labore ullam nam nulla ut consectetur. Molestiae, blanditiis maxime, et esse dolor harum, at aliquid obcaecati ea voluptate perferendis animi non dicta veniam consequuntur nostrum unde. Ex totam, soluta minima nisi modi quaerat dolore. Obcaecati repellendus labore reprehenderit perferendis velit maxime qui earum placeat expedita nihil sequi totam doloribus nulla fugiat officiis, vel repudiandae doloremque cum necessitatibus officia fugit. Fugiat natus hic repellat quos eum? Voluptatum, inventore quas quos suscipit assumenda at a accusantium doloremque perspiciatis similique vel numquam, voluptatem blanditiis praesentium fugit quidem ratione obcaecati delectus officia repudiandae ea nemo pariatur! Expedita error perspiciatis sint saepe, vero fugiat tenetur nulla, voluptas ab asperiores perferendis reprehenderit assumenda nobis provident. Corporis hic quas sequi optio repellendus saepe accusamus rem, veritatis corrupti eius voluptates veniam voluptatibus vero commodi itaque ut fuga alias labore recusandae explicabo perferendis quidem cum maiores! Facere id, cumque unde nostrum corporis magni nesciunt est dolor, quae fuga consequuntur ducimus commodi dolore quidem rerum tenetur debitis inventore. Voluptate maxime, sit rem saepe veniam, culpa vitae illo magni eligendi molestias neque rerum veritatis sapiente nihil aliquid perspiciatis harum officiis mollitia alias, deleniti esse iusto quia laudantium nisi. Nisi velit aut omnis reprehenderit commodi, molestiae inventore dolor quo error rerum autem suscipit alias similique tempora iusto. Dolore, voluptas ad? Harum, suscipit. Atque ab, ex temporibus autem cumque omnis tempore rem. Reprehenderit autem, deleniti cum aliquam iure esse quasi amet aperiam sint at. Natus eum dicta molestiae at nulla alias inventore quam voluptatibus cupiditate esse commodi, fugiat recusandae in tempora non qui. Maxime, odio dolor! A maiores explicabo repudiandae reiciendis ex voluptatibus, eveniet iure saepe similique facilis corporis maxime ipsum pariatur molestias? Animi, recusandae doloribus harum esse perspiciatis ad labore aperiam consequatur et. Facere, aliquam fuga ut veniam exercitationem maxime dolores incidunt, pariatur ad sed numquam. Sed, excepturi voluptas. Nobis deleniti recusandae dicta tempore, aspernatur ut accusamus consequatur hic cumque, sequi maxime vitae reiciendis consectetur omnis consequuntur, molestiae libero cum blanditiis sapiente impedit natus laudantium veritatis quos ratione. Dolore temporibus qui obcaecati unde illo, voluptatum et natus mollitia nesciunt odio beatae, quis odit. Molestias, sed minima laborum eaque quos deleniti ut quibusdam modi rerum quod exercitationem illo nobis porro dolore aspernatur laudantium assumenda necessitatibus! Cum dicta, sed impedit vitae molestiae perspiciatis ea animi. Id, ea laborum quam veritatis tenetur eligendi quidem hic asperiores reiciendis labore placeat corporis illum quis accusamus ad eveniet. Eligendi, animi eaque? Natus ratione ad quas pariatur! Voluptatum consectetur, ipsum perferendis modi harum ipsam labore cumque reiciendis quae molestiae veniam? Libero voluptatibus voluptatum dignissimos rerum possimus autem, neque veniam tenetur velit! Eum provident in similique explicabo nisi laborum saepe unde molestias minima harum pariatur molestiae sed est assumenda cum perspiciatis commodi, libero ratione voluptates sapiente fuga alias inventore. Optio, debitis rem consectetur labore quae culpa tempora eveniet nisi fuga recusandae libero ipsam consequatur eius nulla officiis nesciunt, beatae quas ea ut dolorum! Quod rerum harum quaerat doloremque laborum unde cupiditate accusamus, ducimus in omnis suscipit tempora iusto recusandae dolorem eaque. Hic officiis numquam voluptatem nihil fugiat consequuntur voluptatum eveniet doloremque voluptatibus, sit laudantium possimus debitis doloribus dicta sapiente est dignissimos magni quaerat in veniam culpa animi! Esse ducimus praesentium aut magni excepturi dolor quaerat minus, necessitatibus, perferendis nemo molestiae perspiciatis, aperiam eveniet quia debitis fuga ipsam atque quis illo sed. Aperiam a aliquid, amet eligendi quasi dolore vitae cum illo consectetur dicta animi laborum eius? Soluta, asperiores accusantium repellat ex molestias quas explicabo facere voluptate repudiandae! Earum consequatur accusamus sequi cumque aspernatur tempore nam eveniet quia dolorum, maxime pariatur vitae, repudiandae numquam beatae. Odit impedit nostrum minus, aperiam veritatis aliquam quas distinctio voluptatibus reiciendis ipsum. Dolorum tempora quia mollitia nobis ea repellendus ratione exercitationem quasi fugiat, ab molestias cumque quae aspernatur praesentium tempore amet iure vel aperiam sequi nam. Error sapiente, esse, adipisci deleniti cumque optio voluptatum minus, ullam placeat voluptatem quaerat perferendis consequatur officiis ut ratione? Earum voluptatem perspiciatis repellat provident, dicta modi accusantium, maxime id ullam, autem et harum minima? Magnam ex pariatur aliquam recusandae libero non tempore ratione deleniti sit qui excepturi suscipit veniam consequatur maxime minus aperiam, dolores delectus adipisci, commodi molestias quasi! Soluta esse eos voluptatibus molestiae alias cumque dolor deserunt molestias labore quia eius est quos, nostrum hic velit delectus doloremque suscipit expedita reiciendis sapiente cupiditate aliquid? Accusamus doloribus eligendi facere tempore labore tenetur nemo quam facilis recusandae animi nam quasi illo, ducimus minima! Inventore reprehenderit voluptatem laboriosam magni facilis doloremque dolor? Sint impedit architecto fugiat autem, molestias vero unde expedita quo ut voluptates corporis, fuga dolorum in aperiam, totam dicta suscipit corrupti perferendis voluptate officia. Tempora quo necessitatibus ea cum natus id nemo exercitationem aperiam delectus iste, inventore culpa, quis distinctio fugiat perspiciatis porro. Nihil delectus tempore, aspernatur doloribus velit a deleniti, veritatis facere obcaecati nisi, magni numquam distinctio. Veritatis non distinctio amet nihil vero molestiae aspernatur veniam totam perspiciatis praesentium quae doloremque, laborum quo officia harum provident suscipit nam, nemo tempora ipsam iure deserunt. Eos placeat dolor nisi ex quod totam quae eligendi consectetur error quibusdam, blanditiis harum aut veniam tempora, quia eum qui aliquid voluptas! Officiis atque similique cupiditate quibusdam beatae nostrum quisquam hic reprehenderit consequatur laboriosam suscipit, fugit nobis modi non animi, omnis ea officia tenetur error nulla. Voluptatum iste dolorem, ipsa reiciendis in esse assumenda deserunt facere illo vel delectus dolorum ab ipsum optio hic dolor, laborum, ducimus doloremque tempora? Similique illum aperiam repellendus aut expedita error libero iure aliquam hic doloribus perspiciatis earum, beatae autem voluptatum ex consequuntur, officiis reiciendis, unde fuga ab sunt dignissimos consectetur explicabo. Harum, ab itaque!
+
+    </div>
+    
+
+    <div id="my-custom-id" class="ue-scroll btn-black arrow-white rounded-rectangle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+        </svg>
+    </div>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-infos">
+                    <!-- FOOTER LOGO START -->
+                    <figure class="footer-logo">
+                        <a href="index.html" class="footer-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                                <path fill="#333" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                                <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                    <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            
+                            <span class="link-title">puresounds</span>
+                        </a>
+                    </figure>
+                    <!-- FOOTER LOGO END -->
+
+                    <!-- FOOTER NAV START -->
+                    <nav class="footer-nav">
+                        <div class="footlist-info">
+                            <h4 class="footlist-title">Product</h4>
+
+                            <ul class="footlist">
+                                <li class="footlist-item">
+                                    <a href="browse-sounds.html" class="footlist-link">Browse Sounds</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="pricing.html" class="footlist-link">Pricing</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="faq.html" class="footlist-link">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footlist-info">
+                            <h4 class="footlist-title">Company</h4>
+
+                            <ul class="footlist">
+                                <li class="footlist-item">
+                                    <a href="jobs.html" class="footlist-link">Jobs</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="blog.html" class="footlist-link">Blog</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="education.html" class="footlist-link">Education</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="contact.html" class="footlist-link">Contact</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="affiliates.html" class="footlist-link">Affiliates</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footlist-info">
+                            <h4 class="footlist-title">Legal</h4>
+
+                            <ul class="footlist">
+                                <li class="footlist-item">
+                                    <a href="licence.html" class="footlist-link">Licence</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="terms-use.html" class="footlist-link">Terms of Use</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="privacy-policy.html" class="footlist-link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footlist-info">
+                            <h4 class="footlist-title">Blog</h4>
+
+                            <ul class="footlist">
+                                <li class="footlist-item">
+                                    <a href="blog.html" class="footlist-link">Home</a>
+                                </li>
+                                <li class="footlist-item">
+                                    <a href="free-stuff.html" class="footlist-link">Free Stuff</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- FOOTER NAV END -->
+
+                    <!-- FOOTER SOCIAL LIST START -->
+                    <ul class="social-list">
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- FOOTER SOCIAL LIST END -->
+                </div>
+
+                <div class="copyright">
+                    <p class="copyright-text">Puresounds &copy; 2021, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- UE-SCROLL TO TOP JS -->
+    <script src="assets/js/ue-scroll.min.js"></script>
+    <!-- SCROLL TO TOP -->
+    <script src="assets/js/scrollTop.js"></script>
+</body>
+</html>

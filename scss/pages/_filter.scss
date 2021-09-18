@@ -46,9 +46,11 @@
 
     &-sidebar {
         width: length(300);
-        height: calc(100vh - 9.375rem);
+        height: calc(100vh - 4.4375rem);
         @include border-single(right, solid, 1, $filterBorder);
         padding-right: length(4);
+        position: sticky;
+        top: length(71);
 
         @include breakpoint(tablet991) {
             display: none;
@@ -159,9 +161,9 @@
                                 @include flex-center-between;
                                 flex-wrap: wrap;
                                 gap: length(14);
-                                max-height: length(235);
                                 overflow: hidden;
-
+                                max-height: length(235);
+        
                                 &.show {
                                     max-height: 100%;
                                 }
@@ -300,6 +302,45 @@
                                 }
                             }
                         }
+                    }
+                }
+
+                .btn-seeall {
+                    display: inline-block;
+                    text-align: left;
+                    max-width: 40%;
+                    @include transparent-button;
+                    @include text-20-14-medium-basefont;
+                    color: $accessActiveBg;
+                    @include transition(color $time ease);
+
+                    @include hover {
+                        color: $accessActiveHoverBg;
+                    }
+                }
+
+                .allcategories {
+                    .categoryall {
+                        max-height: length(235);
+                        overflow-y: scroll;
+
+                        &::-webkit-scrollbar-track {
+                            @include radius(5);
+                        }
+                
+                        &::-webkit-scrollbar {
+                            width: length(4);
+                            background: transparent;
+                        }
+                
+                        &::-webkit-scrollbar-thumb {
+                            @include radius(5);
+                            background-color: $socialHover;
+                        }
+        
+                        &.show {
+                            max-height: 100%;
+                        }
 
                         .btn-seeall {
                             display: inline-block;
@@ -309,7 +350,7 @@
                             @include text-20-14-medium-basefont;
                             color: $accessActiveBg;
                             @include transition(color $time ease);
-
+        
                             @include hover {
                                 color: $accessActiveHoverBg;
                             }

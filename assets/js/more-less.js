@@ -33,13 +33,13 @@ function toggleMore() {
 }
 
 function seeMore() {
-    const checkmarks = document.querySelector('.checkmarks');
+    const allCategories = document.querySelector('.categoryall');
 
-    if(checkmarks.classList.contains('show')) {
-        checkmarks.classList.remove('show');
+    if(allCategories.classList.contains('show')) {
+        allCategories.classList.remove('show');
         seeall.textContent = 'See more';
     } else {
-        checkmarks.classList.add('show');
+        allCategories.classList.add('show');
         seeall.textContent = 'See less';
     }
 }
@@ -77,13 +77,13 @@ function toggleMoremobile() {
 }
 
 function seeMoremobile() {
-    const checkmarksmobile = document.querySelector('.checkmarks-mobile');
+    const allCategories = document.querySelector('.categoryall-mobile');
 
-    if(checkmarksmobile.classList.contains('show')) {
-        checkmarksmobile.classList.remove('show');
+    if(allCategories.classList.contains('show')) {
+        allCategories.classList.remove('show');
         seeallmobile.textContent = 'See more';
     } else {
-        checkmarksmobile.classList.add('show');
+        allCategories.classList.add('show');
         seeallmobile.textContent = 'See less';
     }
 }
