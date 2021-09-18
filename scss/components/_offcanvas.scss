@@ -380,6 +380,7 @@
                             .categoryall-mobile {
                                 max-height: length(235);
                                 overflow-y: scroll;
+                                overflow-x: hidden;
 
                                 &::-webkit-scrollbar-track {
                                     @include radius(5);
@@ -493,7 +494,11 @@
 .offcanvas-top {
     width: 100%;
     height: 100vh;
-    background: rgba(20, 22, 24, 0.95);
+    background: $searchBackground;
+
+    @include breakpoint(tablet991) {
+        background: $black;
+    }
 
     .btn-close {
         @include square(length(40));
@@ -502,8 +507,8 @@
         @include flex-center;
         opacity: 1;
         position: absolute;
-        top: length(24);
-        right: length(48);
+        top: length(16);
+        right: length(28);
 
         svg {
             @include square(length(20));

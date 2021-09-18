@@ -323,6 +323,7 @@
                     .categoryall {
                         max-height: length(235);
                         overflow-y: scroll;
+                        overflow-x: hidden;
 
                         &::-webkit-scrollbar-track {
                             @include radius(5);

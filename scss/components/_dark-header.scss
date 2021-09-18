@@ -1,3 +1,4 @@
+// PRICING DARK HEADER WRAPPER
 .dark-header-wrapper {
     position: sticky;
     width: 100%;
@@ -12,6 +13,7 @@
     }
 }
 
+// PRICING DARK HEADER
 .dark-header {
     @include flex-center-vert;
     padding: length(0) length(30);
@@ -289,9 +291,16 @@
     }
 }
 
+// BLOG MAIN HEADER
 .blog-header {
     background: $blogHeaderBg;
     @include flex-center-vert;
+
+    @include breakpoint(tablet991) {
+        background: $black;
+        margin-left: length(-12);
+        margin-right: length(-12);
+    }
 
     &-content {
         @include flex-center-between;
@@ -330,6 +339,10 @@
             @include list-horizontal;
             gap: length(4);
 
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+
             &-item {
                 padding: length(22);
                 @include border-single(bottom, solid, 1, $blogHeaderBg);
@@ -360,6 +373,10 @@
         .social-list {
             @include list-horizontal;
             gap: length(20);
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
 
             &-link {
                 color: $white;
@@ -392,13 +409,121 @@
                 }
             }
         }
+
+        // MOBILE MENU ICON
+        .mobilemenu {
+            display: none;
+
+            @include breakpoint(tablet991) {
+                display: block;
+            }
+
+            .btn-menu {
+                @include transparent-button;
+                @include transition(transform $time ease);
+                @include square(length(24));
+                @include flex-center;
+
+                .iconmenu,
+                .iconclose {
+                    width: 100%;
+                    height: 100%;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+
+                &:not(.collapsed) {
+                    .iconmenu {
+                        display: none;
+                    }
+
+                    .iconclose {
+                        display: block;
+                    }
+                }
+                
+                &.collapsed {
+                    .iconmenu {
+                        display: block;
+                    }
+
+                    .iconclose {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // BLOG RESPONSIVE MENU
+    .responsivemenu {
+        .social-list {
+            @include list-horizontal;
+            gap: length(24);
+
+            &-link {
+                @include price-font-style;
+                color: $white;
+                @include transition(color $time ease);
+                width: 100%;
+                text-align: center;
+
+                @include hover {
+                    color: rgba($white, 0.5);
+                }
+
+                @include breakpoint(phone500) {
+                    @include text-20-16-medium-basefont;
+                }
+            }
+        }
+
+        .searchlist {
+            @include list-vertical;
+            align-items: center;
+            gap: length(16);
+            width: 100%;
+            
+            &-link {
+                @include transparent-button;
+                color: $white;
+                @include price-font-style;
+                color: $white;
+                letter-spacing: length(2);
+                text-transform: capitalize;
+                padding: length(5) length(36);
+                width: 100%;
+                text-align: center;
+                @include transition(color $time ease);
+
+                @include hover {
+                    color: rgba($white, 0.5);
+                }
+
+                @include breakpoint(phone500) {
+                    @include text-20-16-medium-basefont;
+                }
+            }
+        }
     }
 }
 
+// BLOG DESKTOP STICKY HEADER
 .blog-head {
     background: $black;
     @include flex-center-vert;
     @include border-single(bottom, solid, 1, rgba($white, 0.15));
+
+    @include breakpoint(tablet991) {
+        display: none;
+    }
 
     &-content {
         @include flex-center-between;
@@ -407,8 +532,7 @@
         .brand {
             object-fit: contain;
             width: length(113);
-            height: length(32);
-            margin: length(19) length(44) length(20) length(0);
+            margin: length(22) length(0) length(22) length(0);
             position: relative;
             opacity: 0;
             visibility: hidden;
@@ -484,16 +608,24 @@
     }
 }
 
+// BLOG DESKTOP DROPDOWN MENU
 .blog-nav {
     .bloglist {
-        padding: 0;
-        margin: 0;
-        list-style: none;
         position: relative;
+        @include list-horizontal;
+        gap: length(28);
+
+        @include breakpoint(desktop1169) {
+            gap: length(20);
+        }
+
+        @include breakpoint(laptop1100) {
+            gap: length(14);
+        }
 
         &-item {
             display:inline-block;
-            padding: length(22);
+            padding: length(22) length(0);
 
             .dropdownlink {
                 letter-spacing: length(2);
@@ -505,6 +637,10 @@
 
                 @include hover {
                     color: rgba($white, 0.5);
+                }
+
+                @include breakpoint(desktop1169) {
+                    letter-spacing: length(1);
                 }
             }
 
@@ -551,6 +687,131 @@
 
             @include hover {
                 color: rgba($white, 0.5);
+            }
+        }
+    }
+}
+
+// BLOG MOBILE DROPDOWN MENU
+.responsivemenu {
+    padding: length(36) length(0);
+    @include flex-center-column;
+    gap: length(24);
+    background: $dropdownBg;
+    margin-left: length(-12);
+    margin-right: length(-12);
+
+    .dropdownlist {
+        @include list-vertical;
+        align-items: center;
+        gap: length(16);
+        width: 100%;
+
+        &-item {
+            position: relative;
+            width: 100%;
+
+            .dropdownlink {
+                @include flex-center;
+                gap: length(10);
+                @include price-font-style;
+                color: $white;
+                letter-spacing: length(2);
+                text-transform: capitalize;
+                @include transition(color $time ease);
+                padding: length(5) length(36);
+                width: 100%;
+                text-align: center;
+
+                @include breakpoint(phone500) {
+                    @include text-20-16-medium-basefont;
+                }
+
+                .text {
+                    font: inherit;
+                    color: inherit;
+                }
+
+                .minusicon,
+                .plusicon {
+                    @include square(length(20));
+                    margin-top: length(-12);
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @include breakpoint(phone500) {
+                        @include square(length(14));
+                        margin-top: length(-8);
+                    }
+                }
+
+                .minusicon {
+                    display: none;
+                }
+
+                .plusicon {
+                    display: block;
+                }
+
+                &.active {
+                    .minusicon {
+                        display: block;
+                    }
+    
+                    .plusicon {
+                        display: none;
+                    }
+                }
+
+                @include hover {
+                    color: rgba($white, 0.5);
+
+                    .text {
+                        color: inherit;
+                    }
+                }
+            }
+
+            .sublist {
+                background: rgba($white, 0.03);
+                @include list-vertical;
+                align-items: center;
+                position: static;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                display: none;
+                @extend %animation;
+                @extend %slideUpIn;
+
+                &.show {
+                    @include flex-column;
+                }
+
+                &-link {
+                    @include flex-center;
+                    gap: length(10);
+                    @include price-font-style;
+                    color: $white;
+                    letter-spacing: length(2);
+                    text-transform: capitalize;
+                    padding: length(5) length(36);
+                    width: 100%;
+                    text-align: center;
+                    @include transition(color $time ease);
+
+                    @include hover {
+                        color: rgba($white, 0.5);
+                    }
+
+                    @include breakpoint(phone500) {
+                        @include text-20-16-medium-basefont;
+                    }
+                }
             }
         }
     }
