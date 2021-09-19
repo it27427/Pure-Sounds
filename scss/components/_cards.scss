@@ -319,3 +319,57 @@
         }
     }
 }
+
+.cardblog {
+    width: calc(25% - 1.125rem);
+    background: $white;
+    box-shadow: $box-shadow-2;
+
+    @include breakpoint(desktop1199) {
+        width: calc(33% - 1.125rem);
+    }
+
+    @include breakpoint(tablet991) {
+        width: calc(50% - 1.125rem);
+    }
+
+    @include breakpoint(phone768) {
+        width: 100%;
+    }
+
+    &-header {
+        .bloglink {
+            display: block;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                @include transition(transform $time ease);
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+    
+    &-body {
+        padding: length(36);
+
+        .bloglink {
+            display: block;
+
+            .title {
+                @include line-clamp;
+                @include text-28-18-medium-basefont;
+                color: $blogTitle;
+                @include transition(color $time ease);
+                height: length(56);
+
+                @include hover {
+                    color: $blogTitle-Hover;
+                }
+            }
+        }
+    }
+}

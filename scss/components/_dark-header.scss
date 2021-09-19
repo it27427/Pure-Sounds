@@ -298,8 +298,10 @@
 
     @include breakpoint(tablet991) {
         background: $black;
-        margin-left: length(-12);
-        margin-right: length(-12);
+
+        .container-fluid {
+            padding: 0;
+        }
     }
 
     &-content {
@@ -518,7 +520,7 @@
 // BLOG DESKTOP STICKY HEADER
 .blog-head {
     background: $black;
-    @include flex-center-vert;
+    @include flex-center-column;
     @include border-single(bottom, solid, 1, rgba($white, 0.15));
 
     @include breakpoint(tablet991) {
@@ -600,11 +602,16 @@
     &.sticky-head {
         position: sticky;
         top: 0;
+        z-index: 250;
         
         .brand, .social-list {
             opacity: 1;
             visibility: visible;
         }
+    }
+
+    &.single-head {
+        border-bottom: 0;
     }
 }
 
@@ -653,6 +660,7 @@
                 padding: length(18);
                 gap: length(4);
                 display: none;
+                z-index: 250;
 
                 @extend %animation;
                 @extend %slideUpIn;
@@ -698,8 +706,6 @@
     @include flex-center-column;
     gap: length(24);
     background: $dropdownBg;
-    margin-left: length(-12);
-    margin-right: length(-12);
 
     .dropdownlist {
         @include list-vertical;
@@ -724,7 +730,7 @@
                 text-align: center;
 
                 @include breakpoint(phone500) {
-                    @include text-20-16-medium-basefont;
+                    @include text-20-14-medium-basefont;
                 }
 
                 .text {
@@ -809,7 +815,7 @@
                     }
 
                     @include breakpoint(phone500) {
-                        @include text-20-16-medium-basefont;
+                        @include text-20-14-medium-basefont;
                     }
                 }
             }

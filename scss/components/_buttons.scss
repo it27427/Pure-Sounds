@@ -72,6 +72,52 @@
     }
 }
 
+.btn-sounds {
+    @include border(solid, 1, rgba($white, 0.2));
+    @include radius(4);
+    @include text-24-16-semibold-basefont;
+    @include setBgColor(transparent, $white);
+    padding: length(14) length(38);
+    text-transform: capitalize;
+    min-height: length(45);
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    @include transition(all $time ease);
+
+    @include breakpoint(phone500) {
+        @include text-14-14-semibold-basefont;
+    }
+
+    @include hover {
+        color: rgba($white, 0.75);
+        border-color: $blogMenuBg;
+    }
+}
+
+.btn-subscribe {
+    @include border(solid, 1, rgba($white, 0.2));
+    @include radius(4);
+    @include text-24-16-semibold-basefont;
+    @include setBgColor(transparent, $white);
+    padding: length(14) length(38);
+    text-transform: capitalize;
+    min-height: length(45);
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    @include transition(all $time ease);
+
+    @include breakpoint(phone500) {
+        @include text-14-14-semibold-basefont;
+    }
+
+    @include hover {
+        backgorund: $subscribeBtnHoverBg;
+        @include setBgColor($subscribeBtnHoverBg, rgba($white, 0.75));
+    }
+}
+
 .btn-sorting,
 .btn-library {
     display: inline-block;
