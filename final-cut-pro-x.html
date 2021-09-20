@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Sounds | Final Cut Pro X Archives</title>
+    <!-- SITE FAVICON -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- UE-SCROLL TO TOP -->
+    <link rel="import" href="assets/css/ue-scroll.min.css">
+    <!-- CUSTOM STYLESHEET LINK -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- BLOG HEADER SECTION START -->
+    <header class="blog-header">
+        <div class="container-fluid">
+            <!-- HEADER CONTENT START -->
+            <div class="blog-header-content">
+                <!-- COMPANY BRAND START -->
+                <figure class="brand">
+                    <a href="blog.html" class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                            <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            </mask>
+                        </svg>
+                        
+                        <span class="brand-title">puresounds</span>
+                    </a>
+                </figure>
+                <!-- COMPANY BRAND END -->
+
+                <!-- MAIN MENU START -->
+                <ul class="mainlist">
+                    <li class="mainlist-item">
+                        <a href="index.html" class="mainlist-link">Sounds Effects</a>
+                    </li>
+
+                    <li class="mainlist-item active">
+                        <a href="blog.html" class="mainlist-link">Blog</a>
+                    </li>
+                </ul>
+                <!-- MAIN MENU END -->
+
+                <!-- SOCIAL-LIST START -->
+                <ul class="social-list">
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <button type="button" class="btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <!-- SOCIAL-LIST END -->
+
+                <!-- MOBILE LIST ICON START -->
+                <div class="mobilemenu">
+                    <button class="btn-menu collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMobileMenu" aria-expanded="false" aria-controls="collapseMobileMenu">
+                        <figure class="iconmenu">
+                            <svg height="384pt" viewBox="0 -53 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                                <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                                <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                            </svg>
+                        </figure>
+
+                        <figure class="iconclose">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                            </svg>
+                        </figure>
+                    </button>
+                </div>
+                <!-- MOBILE LIST ICON END -->
+            </div>
+            <!-- HEADER CONTENT END -->
+            
+            <!-- MOBILE COLLAPSED MENU START -->
+            <div class="collapse" id="collapseMobileMenu">
+                <div class="responsivemenu">
+                    <!-- RESPONSIVE DROPDOWN LIST START -->
+                    <ul class="dropdownlist">
+                        <li class="dropdownlist-item">
+                            <a href="#" class="dropdownlink m-dropdownlink">
+                                <span class="text">News &amp; Updates</span>
+
+                                <figure class="plusicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                        <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                                    </svg>
+                                </figure>
+
+                                <figure class="minusicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                                        <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
+                                    </svg>
+                                </figure>
+                            </a>
+
+                            <ul class="sublist">
+                                <li class="sublist-item">
+                                    <a href="industry-news.html" class="sublist-link">Industry News</a>
+                                </li>
+                                <li class="sublist-item">
+                                    <a href="puresounds-news.html" class="sublist-link">Puresounds News</a>
+                                </li>
+                                
+                                <li class="sublist-item">
+                                    <a href="media-industry-jobs.html" class="sublist-link">Industry Tips</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="tutorials.html" class="sublist-link">Tutorials</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdownlist-item">
+                            <a href="#" class="dropdownlink m-dropdownlink">
+                                <span class="text">Filmmaking &amp; Post-Production</span>
+
+                                <figure class="plusicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                        <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                                    </svg>
+                                </figure>
+
+                                <figure class="minusicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                                        <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
+                                    </svg>
+                                </figure>
+                            </a>
+
+                            <ul class="sublist">
+                                <li class="sublist-item">
+                                    <a href="film-video-editing.html" class="sublist-link">Film &amp; Video Editing</a>
+                                </li>
+                                
+                                <li class="sublist-item">
+                                    <a href="filmmaking-video-production.html" class="sublist-link">Filmmaking</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="advertising.html" class="sublist-link">Advertising</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="premiere-pro.html" class="sublist-link">Premiere Pro</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="final-cut-pro-x.html" class="sublist-link">Final Cut Pro X</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdownlist-item">
+                            <a href="#" class="dropdownlink m-dropdownlink">
+                                <span class="text">Post-Audio &amp; Sound Design</span>
+
+                                <figure class="plusicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                        <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                                    </svg>
+                                </figure>
+
+                                <figure class="minusicon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                                        <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
+                                    </svg>
+                                </figure>
+                            </a>
+
+                            <ul class="sublist">
+                                <li class="sublist-item">
+                                    <a href="sound-editing-design.html" class="sublist-link">Sound Editing &amp; Design</a>
+                                </li>
+                                
+                                <li class="sublist-item">
+                                    <a href="sound-effects.html" class="sublist-link">Sound Effects</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="audio-equipment-tools.html" class="sublist-link">Audio Equipment &amp; Tools</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="sound-recording.html" class="sublist-link">Sound Recording</a>
+                                </li>
+                                
+                                <li class="sublist-item">
+                                    <a href="sound-mixing.html" class="sublist-link">Sound Mixing</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="pro-tools.html" class="sublist-link">Pro Tools</a>
+                                </li>
+                                
+                                <li class="sublist-item">
+                                    <a href="reaper.html" class="sublist-link">Reaper</a>
+                                </li>
+
+                                <li class="sublist-item">
+                                    <a href="video-game-audio.html" class="sublist-link">Video Game Audio</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdownlist-item">
+                            <a href="free-stuff.html" class="dropdownlink">Free Stuff</a>
+                        </li>
+                    </ul>
+                    <!-- RESPONSIVE DROPDOWN LIST END -->
+
+                    <!-- RESPONSIVE SOCIAL LIST START -->
+                    <ul class="social-list">
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- RESPONSIVE SOCIAL LIST END -->
+
+                    <!-- RESPONSIVE SEARCH LIST START -->
+                    <ul class="searchlist">
+                        <li class="searchlist-item">
+                            <a href="#offcanvasTop" class="searchlist-link" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Search</a>
+                        </li>
+
+                        <li class="searchlist-item">
+                            <a href="index.html" class="searchlist-link">Sound Effects</a>
+                        </li>
+
+                        <li class="searchlist-item">
+                            <a href="blog.html" class="searchlist-link">Blog</a>
+                        </li>
+                    </ul>
+                    <!-- RESPONSIVE SEARCH LIST END -->
+                </div>
+            </div>
+            <!-- MOBILE COLLAPSED MENU END -->
+        </div>
+    </header>
+    <!-- BLOG HEADER SECTION END -->
+
+    <!-- SEARCHBOX START -->
+    <div class="offcanvas offcanvas-top searchblog" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+            </svg>
+        </button>
+
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="blog-searchbox">
+                    <input type="search" placeholder="Search..." class="searchfield" autocomplete="off">
+                    <button type="button" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SEARCHBOX END -->
+
+    <!-- BLOG HEADER SECTION START -->
+    <section class="blog-head single-head">
+        <div class="container-fluid">
+            <div class="blog-head-content">
+                <!-- COMPANY BRAND START -->
+                <figure class="brand">
+                    <a href="blog.html" class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                            <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            </mask>
+                        </svg>
+                        
+                        <span class="brand-title">puresounds</span>
+                    </a>
+                </figure>
+                <!-- COMPANY BRAND END -->
+
+                <!-- BLOG NAV START -->
+                <nav class="blog-nav">
+                    <ul class="bloglist">
+                        <li class="bloglist-item">
+                            <a href="#" class="dropdownlink">News & Updates</a>
+
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="industry-news.html" class="submenu-link">Industry News</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="puresounds-news.html" class="submenu-link">Puresounds News</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="media-industry-jobs.html" class="submenu-link">Industry Tips</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="tutorials.html" class="submenu-link">Tutorials</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="bloglist-item">
+                            <a href="#" class="dropdownlink">Filmmaking & Post-Production</a>
+
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="film-video-editing.html" class="submenu-link">Film & Video Editing</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="filmmaking-video-production.html" class="submenu-link">Filmmaking</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="advertising.html" class="submenu-link">Advertising</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="premiere-pro.html" class="submenu-link">Premiere Pro</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="final-cut-pro-x.html" class="submenu-link">Final Cut Pro X</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="bloglist-item">
+                            <a href="#" class="dropdownlink">Post-Audio & Sound Design</a>
+
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="sound-editing-design.html" class="submenu-link">Sound Editing & Design</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="sound-effects.html" class="submenu-link">Sound Effects</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="audio-equipment-tools.html" class="submenu-link">Audio Equipment & Tools</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="sound-recording.html" class="submenu-link">Sound Recording</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="sound-mixing.html" class="submenu-link">Sound Mixing</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="pro-tools.html" class="submenu-link">Pro Tools</a>
+                                </li>
+                                
+                                <li class="submenu-item">
+                                    <a href="reaper.html" class="submenu-link">Reaper</a>
+                                </li>
+
+                                <li class="submenu-item">
+                                    <a href="video-game-audio.html" class="submenu-link">Video Game Audio</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="bloglist-item">
+                            <a href="free-stuff.html" class="bloglist-link">Free Stuff</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- BLOG NAV END -->
+
+                <!-- SOCIAL-LIST START -->
+                <ul class="social-list">
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <a href="#" target="_blank" class="social-list-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-list-item">
+                        <button type="button" class="btn-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <!-- SOCIAL-LIST END -->
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </section>
+    <!-- BLOG HEADER SECTION END -->
+
+    <!-- BLOG SINGLE BANNER START -->
+    <section class="blogsingle-banner">
+        <div class="container-fluid">
+            <div class="blogsingle-banner-content">
+                <div class="titlebox">
+                    <h2 class="title">Final Cut Pro X</h2>
+                </div>
+
+                <a href="#single-blog" class="btn-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- BLOG SINGLE BANNER END -->
+
+    <!-- BLOG SINGLE MAIN SECTION START -->
+    <main class="blogsingle-main" id="single-blog">
+        <div class="container-fluid">
+            <div class="blogsingle-main-content">
+                <div class="cardblog">
+                    <div class="cardblog-header">
+                        <a href="#" class="bloglink">
+                            <img src="assets/images/blog/final-cut-pro-x/1.jpg" alt="card-cap">
+                        </a>
+                    </div>
+
+                    <div class="cardblog-body">
+                        <a href="#" class="bloglink">
+                            <h2 class="title">Essential Video Editing Resources for 2021</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cardblog">
+                    <div class="cardblog-header">
+                        <a href="#" class="bloglink">
+                            <img src="assets/images/blog/final-cut-pro-x/2.jpg" alt="card-cap">
+                        </a>
+                    </div>
+
+                    <div class="cardblog-body">
+                        <a href="#" class="bloglink">
+                            <h2 class="title">Understanding Final Cut Pro X’s Magnetic Timeline</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cardblog">
+                    <div class="cardblog-header">
+                        <a href="#" class="bloglink">
+                            <img src="assets/images/blog/final-cut-pro-x/3.jpg" alt="card-cap">
+                        </a>
+                    </div>
+
+                    <div class="cardblog-body">
+                        <a href="#" class="bloglink">
+                            <h2 class="title">Beginner’s Guide To Color Correction With Scopes in FCPX</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- BLOG SINGLE MAIN SECTION END -->
+
+    <!-- PREMIUM SECTION START -->
+    <section class="subscribe-section">
+        <div class="container-lg container-fluid">
+            <div class="subscribe-section-content">
+                <div class="premiumbox">
+                    <h2 class="title">Get premium, royalty free sound effects</h2>
+    
+                    <a href="index.html" class="btn-sounds">Browse Sounds</a>
+                </div>
+    
+                <div class="subscribebox">
+                    <h2 class="title">Subscribe to our mailing list</h2>
+    
+                    <form class="form-subscribe">
+                        <div class="inputbox">
+                            <input type="email" placeholder="Email address" class="inputfield">
+                            <button class="btn-subscribe" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PREMIUM SECTION END -->
+
+    <!-- FOOTER SECTION START -->
+    <footer class="footer blog-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-infos">
+                    <!-- FOOTER LOGO START -->
+                    <figure class="footer-logo">
+                        <a href="index.html" class="footer-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                                <path fill="#333" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                                <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                    <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                                </mask>
+                            </svg>
+                            
+                            <span class="link-title">puresounds</span>
+                        </a>
+                    </figure>
+                    <!-- FOOTER LOGO END -->
+                    
+                    <div class="footlist-info">
+                        <h4 class="footlist-title">Product</h4>
+
+                        <ul class="footlist">
+                            <li class="footlist-item">
+                                <a href="browse-sounds.html" class="footlist-link">Browse Sounds</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="pricing.html" class="footlist-link">Pricing</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="faq.html" class="footlist-link">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footlist-info">
+                        <h4 class="footlist-title">Company</h4>
+
+                        <ul class="footlist">
+                            <li class="footlist-item">
+                                <a href="jobs.html" class="footlist-link">Jobs</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="blog.html" class="footlist-link">Blog</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="education.html" class="footlist-link">Education</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="contact.html" class="footlist-link">Contact</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="affiliates.html" class="footlist-link">Affiliates</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footlist-info">
+                        <h4 class="footlist-title">Legal</h4>
+
+                        <ul class="footlist">
+                            <li class="footlist-item">
+                                <a href="licence.html" class="footlist-link">Licence</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="terms-use.html" class="footlist-link">Terms of Use</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="privacy-policy.html" class="footlist-link">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footlist-info">
+                        <h4 class="footlist-title">Blog</h4>
+
+                        <ul class="footlist">
+                            <li class="footlist-item">
+                                <a href="blog.html" class="footlist-link">Home</a>
+                            </li>
+                            <li class="footlist-item">
+                                <a href="free-stuff.html" class="footlist-link">Free Stuff</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- FOOTER SOCIAL LIST START -->
+                    <ul class="social-list">
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="social-list-item">
+                            <a href="#" target="_blank" class="social-list-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- FOOTER SOCIAL LIST END -->
+                </div>
+
+                <div class="copyright">
+                    <p class="copyright-text">Puresounds &copy; 2021, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- STICKY HEADER -->
+    <script src="assets/js/sticky-header.js"></script> 
+    <!-- MOBILE DROPDOWN MENU SCRIPT -->
+    <script src="assets/js/mobile-dropdown.js"></script>
+    <!-- SCROLL PROGRESS -->
+    <script src="assets/js/scroll-progress.js"></script>
+</body>
+</html>

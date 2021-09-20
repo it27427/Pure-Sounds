@@ -3,10 +3,9 @@
     background: $black;
     height: length(400);
     position: relative;
-    // top: length(62);
     padding: length(62) length(0);
     margin-bottom: length(128);
-             
+
     @include breakpoint(phone768) {
         flex-direction: column;
         height: auto;
@@ -37,8 +36,8 @@
                 @include h1-font-style;
                 color: $white;
 
-                @include breakpoint(laptop1100) {
-                    @include titletext-font-style;
+                @include breakpoint(desktop1400) {
+                    @include h2-font-style;
                 }
 
                 @include breakpoint(tablet991) {
@@ -231,6 +230,10 @@
 .home-discover {
     padding: length(104) length(0) length(88);
     background: $locationBg;
+
+    @include breakpoint(phone768) {
+        padding: length(52) length(0) length(44);
+    }
 
     &-content {
         @include flex-column;

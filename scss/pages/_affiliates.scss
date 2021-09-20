@@ -1,0 +1,278 @@
+.affeliates-header {
+    display: flex;
+    background: $black;
+    height: length(450);
+    overflow: hidden;
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .headerbox,
+    .coverbox {
+        width: 50%;
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+        }
+    }
+
+    .headerbox {
+        padding: length(50) length(55) length(100) length(100);
+
+        @include breakpoint(phone768) {
+            padding: length(40) length(40) length(60);
+        }
+
+        .brand {
+            object-fit: contain;
+            width: length(113);
+            height: length(32);
+            margin: length(20) length(0) length(40);
+            display: flex;
+            position: relative;
+    
+            &-title {
+                @include text-20-14-semibold-basefont;
+                color: $white;
+            }
+    
+            .logo {
+                @include flex-center-vert;
+                gap: length(4);
+                overflow: hidden;
+                
+                svg {
+                    width: length(24);
+                    @include square(length(24));
+    
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        .title {
+            @include h1-font-style;
+            color: $white;
+
+            @include breakpoint(desktop1366) {
+                @include titletext-font-style;
+            }
+
+            @include breakpoint(desktop1200) {
+                @include h2-font-style;
+            }
+
+            @include breakpoint(tablet991) {
+                @include h2-font-style;
+            }
+        }
+
+        .text {
+            @include text-24-16-normal-basefont;
+            color: $white;
+            margin: length(24) length(0) length(40);
+        }
+    }
+
+    .coverbox {
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.affiliate-platform {
+    display: flex;
+    background: $black;
+    height: length(450);
+    overflow: hidden;
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .headerbox,
+    .coverbox {
+        width: 50%;
+
+        @include breakpoint(tablet991) {
+            width: 100%;
+        }
+    }
+
+    .headerbox {
+        padding: length(50) length(55) length(100) length(100);
+
+        @include breakpoint(phone768) {
+            padding: length(40) length(40) length(60);
+        }
+
+        .title {
+            @include h1-font-style;
+            color: $white;
+
+            @include breakpoint(desktop1366) {
+                @include titletext-font-style;
+            }
+
+            @include breakpoint(desktop1200) {
+                @include h2-font-style;
+            }
+
+            @include breakpoint(tablet991) {
+                @include h2-font-style;
+            }
+        }
+
+        .platformlist {
+            margin: length(24) length(0) length(40);
+
+            &-item {
+                @include text-24-16-normal-basefont;
+                color: $white;
+                line-height: 2;
+            }
+        }
+    }
+
+    .coverbox {
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.affeliates-discover {
+    background: $white;
+    padding: length(52) length(0) length(44);
+
+    .card-discover {
+        &-header {
+            margin-bottom: length(20);
+        }
+
+        &-body {
+            .text {
+                line-height: 1.75;
+            }
+        }
+    }
+}
+
+.affiliatefaq {
+    background: $locationBg;
+    padding: length(64)length(0);
+
+    &-content {
+        padding: length(0) length(8);
+        @include flex-column;
+        gap: length(54);
+
+        .faq-title {
+            @include faqtitle-font-style;
+            color: $blogTitle;
+
+            @include breakpoint(phone768) {
+                @include text-28-24-bold-basefont;
+                text-align: center;
+            }
+
+            @include breakpoint(phone575) {
+                @include text-28-20-bold-basefont;
+            }
+        }
+
+        .accordion {
+            &-item {
+                background-color: transparent;
+                border: none;
+                @include border-single(bottom, solid, 0.5, rgba($black, 0.2));
+
+                &:first-of-type {
+                    border-radius: 0 !important;
+                }
+            }
+
+            &-button {
+                border-radius: 0 !important;
+                background-color: transparent;
+                padding: length(24) length(0);
+
+                .text {
+                    @include text-28-18-normal-basefont;
+                    color: $textPrimary;
+                }
+
+                @include breakpoint(phone768) {
+                    .text {
+                        @include text-20-16-normal-basefont;
+                        margin-right: length(4);
+                    }
+                }
+
+                &::after {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231B1D1F' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z'/%3E%3C/svg%3E");
+                    @include transition(transform $time ease);
+                }
+
+                &:not(.collapsed) {
+                    box-shadow: none;
+
+                    .text {
+                        color: $textPrimary;
+                    }
+
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231b1d1f' class='bi bi-x-lg' viewBox='0 0 16 16'%3E%3Cpath d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E");
+                    }
+                }
+
+                &:focus {
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            &-body {
+                max-width: length(780);
+                padding: length(0) length(0) length(24);
+
+                .text {
+                    @include text-24-16-normal-basefont;
+                    color: $textPrimary;
+
+                    @include breakpoint(phone768) {
+                        @include text-20-14-normal-basefont;
+                    }
+
+                    .link {
+                        color: $black;
+                        @include transition(color $time ease);
+
+                        @include hover {
+                            color: $black;
+                        }
+
+                        &:focus {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

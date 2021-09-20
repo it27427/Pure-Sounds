@@ -9127,13 +9127,13 @@ input[type=time]::-webkit-clear-button {
   color: white;
 }
 
-@media screen and (max-width: 68.75rem) {
+@media screen and (max-width: 87.5rem) {
   .home-banner .home-banner-descriptions .description .home-title {
     font-family: "Helvetica";
     font-style: normal;
-    font-size: 2.625rem;
-    font-weight: normal;
-    line-height: 1.14286;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35714;
   }
 }
 
@@ -9454,6 +9454,12 @@ input[type=time]::-webkit-clear-button {
 .home-discover {
   padding: 6.5rem 0rem 5.5rem;
   background: #f4f9f7;
+}
+
+@media screen and (max-width: 48rem) {
+  .home-discover {
+    padding: 3.25rem 0rem 2.75rem;
+  }
 }
 
 .home-discover-content {
@@ -13457,4 +13463,415 @@ input[type=time]::-webkit-clear-button {
 
 .promotion-form .submitform .btn-debit:focus {
   background: #649989;
+}
+
+.affeliates-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: black;
+  height: 28.125rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .affeliates-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
+.affeliates-header .headerbox,
+.affeliates-header .coverbox {
+  width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .affeliates-header .headerbox,
+  .affeliates-header .coverbox {
+    width: 100%;
+  }
+}
+
+.affeliates-header .headerbox {
+  padding: 3.125rem 3.4375rem 6.25rem 6.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .affeliates-header .headerbox {
+    padding: 2.5rem 2.5rem 3.75rem;
+  }
+}
+
+.affeliates-header .headerbox .brand {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 7.0625rem;
+  height: 2rem;
+  margin: 1.25rem 0rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.affeliates-header .headerbox .brand-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: white;
+}
+
+.affeliates-header .headerbox .brand .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.affeliates-header .headerbox .brand .logo svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.affeliates-header .headerbox .brand .logo svg path {
+  fill: white;
+}
+
+.affeliates-header .headerbox .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.23077;
+  color: white;
+}
+
+@media screen and (max-width: 85.375rem) {
+  .affeliates-header .headerbox .title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 2.625rem;
+    font-weight: normal;
+    line-height: 1.14286;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .affeliates-header .headerbox .title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35714;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .affeliates-header .headerbox .title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35714;
+  }
+}
+
+.affeliates-header .headerbox .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: white;
+  margin: 1.5rem 0rem 2.5rem;
+}
+
+.affeliates-header .coverbox {
+  overflow: hidden;
+}
+
+.affeliates-header .coverbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.affiliate-platform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: black;
+  height: 28.125rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .affiliate-platform {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
+.affiliate-platform .headerbox,
+.affiliate-platform .coverbox {
+  width: 50%;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .affiliate-platform .headerbox,
+  .affiliate-platform .coverbox {
+    width: 100%;
+  }
+}
+
+.affiliate-platform .headerbox {
+  padding: 3.125rem 3.4375rem 6.25rem 6.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .affiliate-platform .headerbox {
+    padding: 2.5rem 2.5rem 3.75rem;
+  }
+}
+
+.affiliate-platform .headerbox .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.23077;
+  color: white;
+}
+
+@media screen and (max-width: 85.375rem) {
+  .affiliate-platform .headerbox .title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 2.625rem;
+    font-weight: normal;
+    line-height: 1.14286;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .affiliate-platform .headerbox .title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35714;
+  }
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .affiliate-platform .headerbox .title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.35714;
+  }
+}
+
+.affiliate-platform .headerbox .platformlist {
+  margin: 1.5rem 0rem 2.5rem;
+}
+
+.affiliate-platform .headerbox .platformlist-item {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: white;
+  line-height: 2;
+}
+
+.affiliate-platform .coverbox {
+  overflow: hidden;
+}
+
+.affiliate-platform .coverbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.affeliates-discover {
+  background: white;
+  padding: 3.25rem 0rem 2.75rem;
+}
+
+.affeliates-discover .card-discover-header {
+  margin-bottom: 1.25rem;
+}
+
+.affeliates-discover .card-discover-body .text {
+  line-height: 1.75;
+}
+
+.affiliatefaq {
+  background: #f4f9f7;
+  padding: 4rem 0rem;
+}
+
+.affiliatefaq-content {
+  padding: 0rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.375rem;
+}
+
+.affiliatefaq-content .faq-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.375;
+  color: #303133;
+}
+
+@media screen and (max-width: 48rem) {
+  .affiliatefaq-content .faq-title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.16667;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .affiliatefaq-content .faq-title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+}
+
+.affiliatefaq-content .accordion-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 0.03125rem rgba(0, 0, 0, 0.2);
+}
+
+.affiliatefaq-content .accordion-item:first-of-type {
+  border-radius: 0 !important;
+}
+
+.affiliatefaq-content .accordion-button {
+  border-radius: 0 !important;
+  background-color: transparent;
+  padding: 1.5rem 0rem;
+}
+
+.affiliatefaq-content .accordion-button .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.55556;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .affiliatefaq-content .accordion-button .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.25;
+    margin-right: 0.25rem;
+  }
+}
+
+.affiliatefaq-content .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231B1D1F' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z'/%3E%3C/svg%3E");
+  -webkit-transition: transform 350ms ease;
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
+}
+
+.affiliatefaq-content .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.affiliatefaq-content .accordion-button:not(.collapsed) .text {
+  color: #333333;
+}
+
+.affiliatefaq-content .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231b1d1f' class='bi bi-x-lg' viewBox='0 0 16 16'%3E%3Cpath d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E");
+}
+
+.affiliatefaq-content .accordion-button:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.affiliatefaq-content .accordion-body {
+  max-width: 48.75rem;
+  padding: 0rem 0rem 1.5rem;
+}
+
+.affiliatefaq-content .accordion-body .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .affiliatefaq-content .accordion-body .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.42857;
+  }
+}
+
+.affiliatefaq-content .accordion-body .text .link {
+  color: black;
+  -webkit-transition: color 350ms ease;
+  transition: color 350ms ease;
+}
+
+.affiliatefaq-content .accordion-body .text .link:not([disabled]):hover {
+  color: black;
+}
+
+.affiliatefaq-content .accordion-body .text .link:focus {
+  color: black;
 }
