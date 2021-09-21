@@ -7714,6 +7714,7 @@ h1 {
 .help-main {
   background: #f9f9f9;
   padding: 3.5rem 0rem;
+  min-height: calc(100vh - 23.8125rem);
 }
 
 .help-main-content {
@@ -12671,13 +12672,233 @@ input[type=time]::-webkit-clear-button {
   }
 }
 
+.creditdebit-form .formrow .formcol .expired-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired,
+.creditdebit-form .formrow .formcol .expired-date .date {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  height: 4.875rem;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired .form-floating .formlabel,
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .formlabel {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #828282;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired .form-floating .formlabel .required,
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .formlabel .required {
+  color: #cc3340;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired .form-floating .form-control,
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .form-control {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333333;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired .form-floating .form-control:focus ~ .formlabel,
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .form-control:focus ~ .formlabel {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired .error-message,
+.creditdebit-form .formrow .formcol .expired-date .date .error-message {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #cc3340;
+  display: none;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired.error .form-floating .form-control,
+.creditdebit-form .formrow .formcol .expired-date .date.error .form-floating .form-control {
+  border-color: #cc3340;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired.error .form-floating .formlabel,
+.creditdebit-form .formrow .formcol .expired-date .date.error .form-floating .formlabel {
+  color: #cc3340;
+}
+
+.creditdebit-form .formrow .formcol .expired-date .expired.error .error-message,
+.creditdebit-form .formrow .formcol .expired-date .date.error .error-message {
+  display: block;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cardbox {
+  width: 75%;
+  margin-bottom: 0;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  height: 4.875rem;
+  padding-left: 0.75rem;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .cardicon {
+  width: 3rem;
+  height: 1.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .cardicon {
+    width: 1.75rem;
+  }
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .cardicon svg {
+  height: 100%;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .inputfield {
+  width: calc(100% - 3.5rem);
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: left;
+  padding: 0.5rem 0rem;
+  background: transparent;
+  color: #333333;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .inputfield {
+    width: calc(100% - 1.75rem);
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard {
+  width: 25%;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #828282;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel .required {
+  color: #cc3340;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333333;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control:focus ~ .formlabel {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .error-message {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #cc3340;
+  display: none;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .form-control {
+  border-color: #cc3340;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .formlabel {
+  color: #cc3340;
+}
+
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .error-message {
+  display: block;
+}
+
 .creditdebit-form .formrow .formcol .form-floating .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
-  margin-top: 0.3125rem;
   color: #828282;
 }
 
@@ -12755,143 +12976,6 @@ input[type=time]::-webkit-clear-button {
   line-height: 1;
   color: #cc3340;
   display: none;
-}
-
-.creditdebit-form .formrow .cardbox .inputbox {
-  padding: 0.5rem 0.75rem;
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .cardnumber {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  width: 60%;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .cardnumber {
-    width: 44%;
-  }
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .cardnumber .cardicon {
-  width: 3rem;
-  height: 1.5625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .cardnumber .cardicon {
-    width: 1.75rem;
-  }
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .cardnumber .cardicon svg {
-  height: 100%;
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .cardnumber .inputfield {
-  width: calc(100% - 3.5rem);
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1;
-  text-align: left;
-  padding: 0.5rem 0rem;
-  background: transparent;
-  color: #333333;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .cardnumber .inputfield {
-    width: calc(100% - 1.75rem);
-    font-family: "Helvetica";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: normal;
-    line-height: 1;
-  }
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .deadline {
-  width: 20%;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .deadline {
-    width: 28%;
-  }
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .deadline .inputfield {
-  width: 100%;
-  text-align: center;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1;
-  background: transparent;
-  color: #333333;
-  padding: 0.5rem 0.75rem;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .deadline .inputfield {
-    font-family: "Helvetica";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: normal;
-    line-height: 1;
-  }
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .cvv {
-  width: 20%;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .cvv {
-    width: 28%;
-  }
-}
-
-.creditdebit-form .formrow .cardbox .inputbox .cvv .inputfield {
-  width: 100%;
-  text-align: center;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1;
-  background: transparent;
-  color: #333333;
-  padding: 0.5rem 0.75rem;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .cardbox .inputbox .cvv .inputfield {
-    font-family: "Helvetica";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: normal;
-    line-height: 1;
-  }
 }
 
 .creditdebit-form .formrow .cardbox.error {
@@ -13874,4 +13958,650 @@ input[type=time]::-webkit-clear-button {
 
 .affiliatefaq-content .accordion-body .text .link:focus {
   color: black;
+}
+
+.faqmain-section {
+  padding: 3.5rem 0rem;
+  background: #f9f9f9;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section {
+    padding: 1.5rem 0rem 2.5rem;
+  }
+}
+
+.faqmain-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.faqmain-section-content .faq-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .faq-breadcrumb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.faqmain-section-content .faq-breadcrumb nav {
+  width: 50%;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .faq-breadcrumb nav {
+    width: 100%;
+  }
+}
+
+.faqmain-section-content .faq-breadcrumb nav .breadcrumb {
+  width: 100%;
+}
+
+.faqmain-section-content .faq-breadcrumb nav .breadcrumb-item {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.faqmain-section-content .faq-breadcrumb nav .breadcrumb-item a {
+  font: inherit;
+  color: #333333;
+}
+
+.faqmain-section-content .faq-breadcrumb nav .breadcrumb-item.active {
+  color: #828282;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search {
+  width: 50%;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .faq-breadcrumb .breadcrumb-search {
+    width: 100%;
+  }
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox {
+  width: 23.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 0.25rem 0.75rem;
+  border: solid 0.0625rem #dddddd;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border 350ms ease;
+  transition: border 350ms ease;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox:focus-within {
+  border-color: #828282;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .btn-search {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  border: none;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .btn-search svg path {
+  fill: #dfdfdf;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .searchfield {
+  width: calc(100% - 1rem);
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #55595c;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .searchfield::-webkit-input-placeholder {
+  font: inherit;
+  color: #dfdfdf;
+  text-transform: capitalize;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .searchfield:-ms-input-placeholder {
+  font: inherit;
+  color: #dfdfdf;
+  text-transform: capitalize;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .searchfield::-ms-input-placeholder {
+  font: inherit;
+  color: #dfdfdf;
+  text-transform: capitalize;
+}
+
+.faqmain-section-content .faq-breadcrumb .breadcrumb-search .inputbox .searchfield::placeholder {
+  font: inherit;
+  color: #dfdfdf;
+  text-transform: capitalize;
+}
+
+.faqmain-section-content .article-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles {
+  width: calc(100% - 23.125rem);
+  background: white;
+  padding: 1.75rem 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+  border-bottom: solid 0.0625rem #dddddd;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles {
+    width: 100%;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .article-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .article-header .article-title {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.33333;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox .avatar {
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox .avatar .activeicon {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.25rem;
+  z-index: 120;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox .avatar .activeicon i {
+  font-size: 0.875rem;
+  color: #55DCA3;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox .details .username {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  line-height: 1.75;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqarticles .article-header .avatarbox .details .date-time {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  line-height: 1.75;
+  color: #979797;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-item {
+  border: solid 0.01562rem #dddddd;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-button {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333333;
+  padding: 0.9375rem 1.25rem 0.9375rem 3.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-button {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-button::after {
+  position: absolute;
+  left: 0.9375rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #f0f0f0;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-button.collapsed {
+  background: white;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-body .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .text .link {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .text .link:not([disabled]):hover {
+  color: gray;
+  text-decoration: none;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts .text .link {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts .text .link:not([disabled]):hover {
+  color: gray;
+  text-decoration: none;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.faqmain-section-content .article-links .faqarticles .articles .accordion-body ul li {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-body ul li {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #dddddd;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpfultexts .title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  line-height: 1.75;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpfultexts .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1;
+  line-height: 1.75;
+  color: #979797;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-help {
+  background: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-like, .faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-dislike {
+  border: solid 0.0625rem #bbbbbb;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-like i, .faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-dislike i {
+  font-size: 0.875rem;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-like:not([disabled]):hover, .faqmain-section-content .article-links .faqarticles .helpfulbox .helpful-buttons .btn-dislike:not([disabled]):hover {
+  border-color: #9c9c9c;
+  color: #141414;
+}
+
+.faqmain-section-content .article-links .faqarticles .querybox .questiontext .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  color: #333333;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .querybox .questiontext .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .querybox .questiontext .link {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.75;
+  color: #333333;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqarticles .querybox .questiontext .link {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+.faqmain-section-content .article-links .faqarticles .querybox .questiontext .link:not([disabled]):hover {
+  color: gray;
+  text-decoration: none;
+}
+
+.faqmain-section-content .article-links .faqlinks {
+  width: 23.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqlinks {
+    width: 100%;
+  }
+}
+
+.faqmain-section-content .article-links .faqlinks .linkbox {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+  padding: 1.75rem 1.875rem;
+  border-bottom: solid 0.0625rem #dddddd;
+}
+
+.faqmain-section-content .article-links .faqlinks .linkbox .linktitle {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqlinks .linkbox .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.faqmain-section-content .article-links .faqlinks .linkbox .links .link {
+  display: inline-block;
+  width: 100%;
+  text-decoration: underline;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333333;
+}
+
+.faqmain-section-content .article-links .faqlinks .linkbox .links .link:not([disabled]):hover {
+  color: gray;
+  text-decoration: none;
 }

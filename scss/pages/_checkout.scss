@@ -207,11 +207,160 @@
                 width: 100%;
             }
 
-            .form-floating {
+            .expired-date {
+                @include flex-center-between;
+                gap: length(20);
 
+                .expired,
+                .date {
+                    width: 50%;
+                    @include flex-column;
+                    gap: length(8);
+                    height: length(78);
+
+                    .form-floating {
+                        .formlabel {
+                            @include text-14-14-normal-basefont;
+                            color: $textGray-1;
+        
+                            .required {
+                                color: $danger;
+                            }
+                        }
+        
+                        .form-control {
+                            @include text-14-14-normal-basefont;
+                            color: $textPrimary;
+        
+                            &:focus {
+        
+                                ~ .formlabel {
+                                    @include text-12-12-normal-basefont;
+                                }
+                            }
+                        }
+                    }
+        
+                    .error-message {
+                        @include text-12-12-normal-basefont;
+                        color: $danger;
+                        display: none;
+                    }
+        
+                    &.error {
+                        .form-floating {
+                            .form-control {
+                                border-color: $danger;
+                            }
+        
+                            .formlabel {
+                                color: $danger;
+                            }
+                        }
+        
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .card-cvv {
+                @include flex-center-between;
+                gap: length(20);
+
+                .cardbox {
+                    width: 75%;
+                    margin-bottom: 0;
+
+                    .cardnumber {
+                        @include flex-center-vert;
+                        gap: length(8);
+                        height: length(78);
+                        padding-left: length(12);
+    
+                        .cardicon {
+                            width: length(48);
+                            height: length(25);
+                            @include flex-center;
+    
+                            @include breakpoint(phone575) {
+                                width: length(28);
+                            }
+                        
+                            svg {
+                                height: 100%;
+                            }
+                        }
+    
+                        .inputfield {
+                            width: calc(100% - 3.5rem);
+                            @include text-14-14-normal-basefont;
+                            text-align: left;
+                            padding: length(8) length(0);
+                            @include setBgColor(transparent, $inputText);
+    
+                            @include breakpoint(phone575) {
+                                width: calc(100% - 1.75rem);
+                                @include text-12-12-normal-basefont;
+                            }
+                        }
+                    }
+                }
+
+                .cvvcard  {
+                    width: 25%;
+
+                    .form-floating {
+                        .formlabel {
+                            @include text-14-14-normal-basefont;
+                            color: $textGray-1;
+        
+                            .required {
+                                color: $danger;
+                            }
+                        }
+        
+                        .form-control {
+                            @include text-14-14-normal-basefont;
+                            color: $textPrimary;
+        
+                            &:focus {
+        
+                                ~ .formlabel {
+                                    @include text-12-12-normal-basefont;
+                                }
+                            }
+                        }
+                    }
+        
+                    .error-message {
+                        @include text-12-12-normal-basefont;
+                        color: $danger;
+                        display: none;
+                    }
+        
+                    &.error {
+                        .form-floating {
+                            .form-control {
+                                border-color: $danger;
+                            }
+        
+                            .formlabel {
+                                color: $danger;
+                            }
+                        }
+        
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .form-floating {
                 .formlabel {
                     @include text-14-14-normal-basefont;
-                    margin-top: length(5);
                     color: $textGray-1;
 
                     .required {
@@ -274,88 +423,7 @@
                 display: none;
             }
 
-            .inputbox {
-                padding: length(8) length(12);
-
-                .cardnumber {
-                    @include flex-center-vert;
-                    gap: length(8);
-                    width: 60%;
-
-                    @include breakpoint(phone575) {
-                        width: 44%;
-                    }
-
-                    .cardicon {
-                        width: length(48);
-                        height: length(25);
-                        @include flex-center;
-
-                        @include breakpoint(phone575) {
-                            width: length(28);
-                        }
-                    
-                        svg {
-                            height: 100%;
-                        }
-                    }
-
-                    .inputfield {
-                        width: calc(100% - 3.5rem);
-                        @include text-14-14-normal-basefont;
-                        text-align: left;
-                        padding: length(8) length(0);
-                        @include setBgColor(transparent, $inputText);
-
-                        @include breakpoint(phone575) {
-                            width: calc(100% - 1.75rem);
-                            @include text-12-12-normal-basefont;
-                        }
-                    }
-                }
-
-                .deadline {
-                    width: 20%;
-                    overflow: hidden;
-
-                    @include breakpoint(phone575) {
-                        width: 28%;
-                    }
-
-                    .inputfield {
-                        width: 100%;
-                        text-align: center;
-                        @include text-14-14-normal-basefont;
-                        @include setBgColor(transparent, $inputText);
-                        padding: length(8) length(12);
-
-                        @include breakpoint(phone575) {
-                            @include text-12-12-normal-basefont;
-                        }
-                    }
-                }
-
-                .cvv {
-                    width: 20%;
-                    overflow: hidden;
-
-                    @include breakpoint(phone575) {
-                        width: 28%;
-                    }
-
-                    .inputfield {
-                        width: 100%;
-                        text-align: center;
-                        @include text-14-14-normal-basefont;
-                        @include setBgColor(transparent, $inputText);
-                        padding: length(8) length(12);
-
-                        @include breakpoint(phone575) {
-                            @include text-12-12-normal-basefont;
-                        }
-                    }
-                }
-            }
+            
 
             &.error {
                 border-color: $danger;

@@ -1,0 +1,405 @@
+.faqmain-section {
+    padding: length(56) length(0);
+    background: $searchboxBg;
+
+    @include breakpoint(phone768) {
+        padding: length(24) length(0) length(40);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+
+        .faq-breadcrumb {
+            @include flex-center-between;
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 50%;
+
+                @include breakpoint(phone768) {
+                    width: 100%;
+                }
+
+                .breadcrumb {
+                    width: 100%;
+    
+                    &-item {
+                        @include text-24-16-normal-basefont;
+    
+                        a {
+                            font: inherit;
+                            color: $textPrimary;
+                        }
+    
+                        &.active {
+                            color: $textGray-1;
+                        }
+                    }
+                }
+            }
+
+            .breadcrumb-search {
+                width: 50%;
+
+                @include breakpoint(phone768) {
+                    width: 100%;
+                }
+                
+                .inputbox {
+                    width: length(370);
+                    @include flex-center-vert;
+                    background: $white;
+                    padding: length(4) length(12);
+                    @include border(solid, 1, $contactBorder);
+                    @include radius(4);
+                    @include transition(border $time ease);
+                    margin-left: auto;
+
+                    @include breakpoint(phone768) {
+                        width: 100%;
+                        margin-left: 0;
+                    }
+
+                    &:focus-within {
+                        border-color: $textGray-1;
+                    }
+
+                    .btn-search {
+                        @include square(length(16));
+                        @include flex-center;
+                        @include transparent-button;
+
+                        svg {
+                            path {
+                                fill: $noticeBg;
+                            }
+                        }
+                    }
+
+                    .searchfield {
+                        width: calc(100% - 1rem);
+                        padding: length(4) length(12) length(4) length(4);
+                        @include text-24-16-normal-basefont;
+                        color: $contactText;
+
+                        &::placeholder {
+                            font: inherit;
+                            color: $noticeBg;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+
+        .article-links {
+            display: flex;
+            gap: length(30);
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+            }
+
+            .faqarticles {
+                width: calc(100% - 23.125rem);
+                background: $white;
+                padding: length(28) length(30);
+                @include flex-column;
+                gap: length(28);
+                @include border-single(bottom, solid, 1, $contactBorder);
+
+                @include breakpoint(phone768) {
+                    width: 100%;
+                }
+
+                .article-header {
+                    @include flex-column;
+                    gap: length(28);
+
+                    .article-title {
+                        @include hometitle-mobile-font-style;
+                        color: $textPrimary;
+
+                        @include breakpoint(phone768) {
+                            @include log-reg-font-style;
+                        }
+                    }
+
+                    .avatarbox {
+                        display: flex;
+                        gap: length(12);
+
+                        .avatar {
+                            position: relative;
+                            @include square(length(40));
+                            @include flex-center;
+                            @include circle;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                @include circle;
+                            }
+
+                            .activeicon {
+                                position: absolute;
+                                bottom: length(-8);
+                                right: length(-4);
+                                z-index: 120;
+
+                                i {
+                                    font-size: length(14);
+                                    color: $cardBorderBottom;
+                                }
+                            }
+                        }
+
+                        .details {
+                            .username {
+                                @include text-14-14-semibold-basefont;
+                                line-height: 1.75;
+                                color: $textPrimary;
+                            }
+
+                            .date-time {
+                                @include text-14-14-normal-basefont;
+                                line-height: 1.75;
+                                color: $checkmarkvalue;
+                            }
+                        }
+                    }
+                }
+
+                .articles {
+                    .accordion {
+                        &-item {
+                            @include border(solid, 0.25, $contactBorder);
+                        }
+
+                        &-button {
+                            @include text-28-20-semibold-basefont;
+                            color: $textPrimary;
+                            padding: length(15) length(20) length(15) length(52);
+
+                            @include breakpoint(phone768) {
+                                @include text-24-16-semibold-basefont;
+                            }
+
+                            &::after {
+                                position: absolute;
+                                left: length(15);
+                                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                            }
+
+                            &:not(.collapsed) {
+                                box-shadow: none;
+                                @include setBgColor($accordionBtnBg, $textPrimary);
+                            }
+
+                            &.collapsed {
+                                @include setBgColor($white, $textPrimary);
+                            }
+
+                            &:focus {
+                                box-shadow: none;
+                            }
+                        }
+
+                        &-body {
+                            .text {
+                                @include text-28-16-normal-basefont;
+                                color: $textPrimary;
+
+                                @include breakpoint(phone768) {
+                                    @include text-14-14-normal-basefont;
+                                    line-height: 1.75;
+                                }
+
+                                .link {
+                                    font: inherit;
+                                    color: inherit;
+                                    text-decoration: underline;
+
+                                    @include hover {
+                                        color: gray;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+
+                            .texts {
+                                @include flex-column;
+                                gap: length(28);
+
+                                .text {
+                                    @include text-28-16-normal-basefont;
+                                    color: $textPrimary;
+
+                                    @include breakpoint(phone768) {
+                                        @include text-14-14-normal-basefont;
+                                        line-height: 1.75;
+                                    }
+
+                                    .link {
+                                        font: inherit;
+                                        color: inherit;
+                                        text-decoration: underline;
+
+                                        @include hover {
+                                            color: gray;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            ul {
+                                @include list-vertical;
+
+                                li {
+                                    @include text-24-16-normal-basefont;
+                                    color: $textPrimary;
+
+                                    @include breakpoint(phone768) {
+                                        @include text-14-14-normal-basefont;
+                                        line-height: 1.75;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .divider {
+                    width: 100%;
+                    height: length(1);
+                    background: $contactBorder;
+                }
+
+                .helpfulbox {
+                    display: flex;
+                    gap: length(16);
+
+                    .helpfultexts {
+                        .title {
+                            @include text-14-14-medium-basefont;
+                            line-height: 1.75;
+                            color: $textPrimary;
+                        }
+
+                        .text {
+                            @include text-12-12-normal-basefont;
+                            line-height: 1.75;
+                            color: $checkmarkvalue;
+                        }
+                    }
+
+                    .helpful-buttons {
+                        @include flex-center-vert;
+                        gap: length(8);
+
+                        .btn-help {
+                            @include transparent-button;
+                            width: length(40);
+                            height: length(30);
+                            @include flex-center;
+                            @include radius(4);
+                        }
+
+                        .btn-like, .btn-dislike {
+                            @include border(solid, 1, $likeBtnBorder);
+                            @include transition(all $time ease);
+
+                            i {
+                                font-size: length(14);
+                                color: $textPrimary;
+                            }
+
+                            @include hover {
+                                border-color: $likeBtnHoverBorder;
+                                color: $likeBtnColor;
+                            }
+                        }
+                    }
+                }
+
+                .querybox {
+                    .questiontext {
+                        .text {
+                            @include text-28-16-normal-basefont;
+                            color: $textPrimary;
+
+                            @include breakpoint(phone768) {
+                                @include text-14-14-normal-basefont;
+                                line-height: 1.75;
+                            }
+                        }
+
+                        .link {
+                            @include text-28-16-normal-basefont;
+                            color: $textPrimary;
+                            text-decoration: underline;
+
+                            @include breakpoint(phone768) {
+                                @include text-14-14-normal-basefont;
+                                line-height: 1.75;
+                            }
+
+                            @include hover {
+                                color: gray;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .faqlinks {
+                width: length(370);
+                @include flex-column;
+                gap: length(14);
+
+                @include breakpoint(phone768) {
+                    width: 100%;
+                }
+
+                .linkbox {
+                    background: $white;
+                    @include flex-column;
+                    gap: length(14);
+                    padding: length(28) length(30);
+                    @include border-single(bottom, solid, 1, $contactBorder);
+
+                    .linktitle {
+                        @include text-28-20-bold-basefont;
+                        color: $textPrimary;
+                    }
+
+                    .links {
+                        @include flex-column;
+                        gap: length(14);
+
+                        .link {
+                            display: inline-block;
+                            width: 100%;
+                            text-decoration: underline;
+                            @include transition(all $time ease);
+                            @include text-14-14-normal-basefont;
+                            color: $textPrimary;
+
+                            @include hover {
+                                color: gray;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
