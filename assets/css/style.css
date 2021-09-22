@@ -10389,6 +10389,10 @@ input[type=time]::-webkit-clear-button {
   height: 3.125rem;
 }
 
+.selectbox {
+  height: 3.125rem;
+}
+
 .pricing-plans {
   padding: 4.5rem 6.25rem;
   display: -webkit-box;
