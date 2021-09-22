@@ -13400,7 +13400,7 @@ input[type=time]::-webkit-clear-button {
     width: calc(100% - 2.5rem);
     margin-left: auto;
     margin-right: auto;
-    margin-top: -20rem;
+    margin-top: -13.75rem;
   }
 }
 
