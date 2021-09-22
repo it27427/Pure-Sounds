@@ -30,6 +30,10 @@
     
                     &-item {
                         @include text-24-16-normal-basefont;
+
+                        @include breakpoint(phone575) {
+                            @include text-20-14-semibold-basefont;
+                        }
     
                         a {
                             font: inherit;
@@ -115,6 +119,7 @@
 
                 @include breakpoint(phone768) {
                     width: 100%;
+                    padding: length(20) length(16);
                 }
 
                 .article-header {
@@ -190,6 +195,10 @@
                                 @include text-24-16-semibold-basefont;
                             }
 
+                            @include breakpoint(phone575) {
+                                @include text-20-14-semibold-basefont;
+                            }
+
                             &::after {
                                 position: absolute;
                                 left: length(15);
@@ -220,6 +229,11 @@
                                     line-height: 1.75;
                                 }
 
+                                @include breakpoint(phone575) {
+                                    @include text-12-12-normal-basefont;
+                                    line-height: 1.75;
+                                }
+
                                 .link {
                                     font: inherit;
                                     color: inherit;
@@ -245,6 +259,11 @@
                                         line-height: 1.75;
                                     }
 
+                                    @include breakpoint(phone575) {
+                                        @include text-12-12-normal-basefont;
+                                        line-height: 1.75;
+                                    }
+
                                     .link {
                                         font: inherit;
                                         color: inherit;
@@ -267,6 +286,11 @@
 
                                     @include breakpoint(phone768) {
                                         @include text-14-14-normal-basefont;
+                                        line-height: 1.75;
+                                    }
+
+                                    @include breakpoint(phone575) {
+                                        @include text-12-12-normal-basefont;
                                         line-height: 1.75;
                                     }
                                 }
@@ -374,6 +398,10 @@
                     gap: length(14);
                     padding: length(28) length(30);
                     @include border-single(bottom, solid, 1, $contactBorder);
+
+                    @include breakpoint(phone768) {
+                        padding: length(20) length(16);
+                    }
 
                     .linktitle {
                         @include text-28-20-bold-basefont;

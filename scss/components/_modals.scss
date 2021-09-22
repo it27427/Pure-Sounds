@@ -211,14 +211,6 @@
     }
 }
 
-.register-form {
-    @include breakpoint(phone768) {
-        .form-check {
-            margin-left: length(16);
-        }
-    }
-}
-
 .delete-modal {
     .modal-dialog {
         .modal-content {

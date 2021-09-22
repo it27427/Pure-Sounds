@@ -4047,12 +4047,6 @@ h1 {
   color: #50bf90;
 }
 
-@media screen and (max-width: 48rem) {
-  .register-form .form-check {
-    margin-left: 1rem;
-  }
-}
-
 .delete-modal .modal-dialog .modal-content {
   border-radius: 0.25rem;
   border-radius: 0.25rem;
@@ -10369,7 +10363,6 @@ input[type=time]::-webkit-clear-button {
 
 .form-floating .formlabel {
   color: #828282;
-  margin-top: 0.3125rem;
 }
 
 .form-floating .formlabel .required {
@@ -10382,11 +10375,18 @@ input[type=time]::-webkit-clear-button {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1;
-  padding: 1rem 0.75rem;
 }
 
 .form-select .option {
   font: inherit;
+}
+
+.form-floating > .form-control {
+  height: 3.125rem;
+}
+
+.form-floating > .form-select {
+  height: 3.125rem;
 }
 
 .pricing-plans {
@@ -12480,7 +12480,7 @@ input[type=time]::-webkit-clear-button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  height: 4.875rem;
+  height: 4.375rem;
 }
 
 @media screen and (max-width: 48rem) {
@@ -12495,7 +12495,6 @@ input[type=time]::-webkit-clear-button {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
-  margin-top: 0.3125rem;
   color: #828282;
 }
 
@@ -12594,6 +12593,9 @@ input[type=time]::-webkit-clear-button {
   margin: 0rem -3.5rem;
   padding: 0rem 3.5rem;
   border-bottom: solid 0.0625rem #d5d5d5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .credit-debit-paypal-info .nav-tabs .nav-item {
@@ -12621,7 +12623,8 @@ input[type=time]::-webkit-clear-button {
   border-color: #333333;
 }
 
-.creditdebit-form {
+.creditdebit-form,
+.paypal-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12632,7 +12635,8 @@ input[type=time]::-webkit-clear-button {
   gap: 1.25rem;
 }
 
-.creditdebit-form .formrow {
+.creditdebit-form .formrow,
+.paypal-form .formrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12643,7 +12647,8 @@ input[type=time]::-webkit-clear-button {
 }
 
 @media screen and (max-width: 48rem) {
-  .creditdebit-form .formrow {
+  .creditdebit-form .formrow,
+  .paypal-form .formrow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -12654,7 +12659,8 @@ input[type=time]::-webkit-clear-button {
   }
 }
 
-.creditdebit-form .formrow .formcol {
+.creditdebit-form .formrow .formcol,
+.paypal-form .formrow .formcol {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12664,15 +12670,18 @@ input[type=time]::-webkit-clear-button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
+  height: 4.375rem;
 }
 
 @media screen and (max-width: 48rem) {
-  .creditdebit-form .formrow .formcol {
+  .creditdebit-form .formrow .formcol,
+  .paypal-form .formrow .formcol {
     width: 100%;
   }
 }
 
-.creditdebit-form .formrow .formcol .expired-date {
+.creditdebit-form .formrow .formcol .expired-date,
+.paypal-form .formrow .formcol .expired-date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12686,7 +12695,9 @@ input[type=time]::-webkit-clear-button {
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired,
-.creditdebit-form .formrow .formcol .expired-date .date {
+.creditdebit-form .formrow .formcol .expired-date .date,
+.paypal-form .formrow .formcol .expired-date .expired,
+.paypal-form .formrow .formcol .expired-date .date {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12696,11 +12707,13 @@ input[type=time]::-webkit-clear-button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  height: 4.875rem;
+  height: 4.375rem;
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired .form-floating .formlabel,
-.creditdebit-form .formrow .formcol .expired-date .date .form-floating .formlabel {
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .formlabel,
+.paypal-form .formrow .formcol .expired-date .expired .form-floating .formlabel,
+.paypal-form .formrow .formcol .expired-date .date .form-floating .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -12710,12 +12723,16 @@ input[type=time]::-webkit-clear-button {
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired .form-floating .formlabel .required,
-.creditdebit-form .formrow .formcol .expired-date .date .form-floating .formlabel .required {
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .formlabel .required,
+.paypal-form .formrow .formcol .expired-date .expired .form-floating .formlabel .required,
+.paypal-form .formrow .formcol .expired-date .date .form-floating .formlabel .required {
   color: #cc3340;
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired .form-floating .form-control,
-.creditdebit-form .formrow .formcol .expired-date .date .form-floating .form-control {
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .form-control,
+.paypal-form .formrow .formcol .expired-date .expired .form-floating .form-control,
+.paypal-form .formrow .formcol .expired-date .date .form-floating .form-control {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -12725,7 +12742,9 @@ input[type=time]::-webkit-clear-button {
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired .form-floating .form-control:focus ~ .formlabel,
-.creditdebit-form .formrow .formcol .expired-date .date .form-floating .form-control:focus ~ .formlabel {
+.creditdebit-form .formrow .formcol .expired-date .date .form-floating .form-control:focus ~ .formlabel,
+.paypal-form .formrow .formcol .expired-date .expired .form-floating .form-control:focus ~ .formlabel,
+.paypal-form .formrow .formcol .expired-date .date .form-floating .form-control:focus ~ .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12734,7 +12753,9 @@ input[type=time]::-webkit-clear-button {
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired .error-message,
-.creditdebit-form .formrow .formcol .expired-date .date .error-message {
+.creditdebit-form .formrow .formcol .expired-date .date .error-message,
+.paypal-form .formrow .formcol .expired-date .expired .error-message,
+.paypal-form .formrow .formcol .expired-date .date .error-message {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12745,21 +12766,28 @@ input[type=time]::-webkit-clear-button {
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired.error .form-floating .form-control,
-.creditdebit-form .formrow .formcol .expired-date .date.error .form-floating .form-control {
+.creditdebit-form .formrow .formcol .expired-date .date.error .form-floating .form-control,
+.paypal-form .formrow .formcol .expired-date .expired.error .form-floating .form-control,
+.paypal-form .formrow .formcol .expired-date .date.error .form-floating .form-control {
   border-color: #cc3340;
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired.error .form-floating .formlabel,
-.creditdebit-form .formrow .formcol .expired-date .date.error .form-floating .formlabel {
+.creditdebit-form .formrow .formcol .expired-date .date.error .form-floating .formlabel,
+.paypal-form .formrow .formcol .expired-date .expired.error .form-floating .formlabel,
+.paypal-form .formrow .formcol .expired-date .date.error .form-floating .formlabel {
   color: #cc3340;
 }
 
 .creditdebit-form .formrow .formcol .expired-date .expired.error .error-message,
-.creditdebit-form .formrow .formcol .expired-date .date.error .error-message {
+.creditdebit-form .formrow .formcol .expired-date .date.error .error-message,
+.paypal-form .formrow .formcol .expired-date .expired.error .error-message,
+.paypal-form .formrow .formcol .expired-date .date.error .error-message {
   display: block;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv {
+.creditdebit-form .formrow .formcol .card-cvv,
+.paypal-form .formrow .formcol .card-cvv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12772,76 +12800,8 @@ input[type=time]::-webkit-clear-button {
   gap: 1.25rem;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cardbox {
-  width: 75%;
-  margin-bottom: 0;
-}
-
-.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  height: 4.875rem;
-  padding-left: 0.75rem;
-}
-
-.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .cardicon {
-  width: 3rem;
-  height: 1.5625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .cardicon {
-    width: 1.75rem;
-  }
-}
-
-.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .cardicon svg {
-  height: 100%;
-}
-
-.creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .inputfield {
-  width: calc(100% - 3.5rem);
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1;
-  text-align: left;
-  padding: 0.5rem 0rem;
-  background: transparent;
-  color: #333333;
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .creditdebit-form .formrow .formcol .card-cvv .cardbox .cardnumber .inputfield {
-    width: calc(100% - 1.75rem);
-    font-family: "Helvetica";
-    font-style: normal;
-    font-size: 0.75rem;
-    font-weight: normal;
-    line-height: 1;
-  }
-}
-
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard {
-  width: 25%;
-}
-
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel,
+.paypal-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -12850,11 +12810,13 @@ input[type=time]::-webkit-clear-button {
   color: #828282;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel .required {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel .required,
+.paypal-form .formrow .formcol .card-cvv .cvvcard .form-floating .formlabel .required {
   color: #cc3340;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control,
+.paypal-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -12863,7 +12825,8 @@ input[type=time]::-webkit-clear-button {
   color: #333333;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control:focus ~ .formlabel {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control:focus ~ .formlabel,
+.paypal-form .formrow .formcol .card-cvv .cvvcard .form-floating .form-control:focus ~ .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12871,7 +12834,8 @@ input[type=time]::-webkit-clear-button {
   line-height: 1;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard .error-message {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard .error-message,
+.paypal-form .formrow .formcol .card-cvv .cvvcard .error-message {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12881,19 +12845,23 @@ input[type=time]::-webkit-clear-button {
   display: none;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .form-control {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .form-control,
+.paypal-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .form-control {
   border-color: #cc3340;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .formlabel {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .formlabel,
+.paypal-form .formrow .formcol .card-cvv .cvvcard.error .form-floating .formlabel {
   color: #cc3340;
 }
 
-.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .error-message {
+.creditdebit-form .formrow .formcol .card-cvv .cvvcard.error .error-message,
+.paypal-form .formrow .formcol .card-cvv .cvvcard.error .error-message {
   display: block;
 }
 
-.creditdebit-form .formrow .formcol .form-floating .formlabel {
+.creditdebit-form .formrow .formcol .form-floating .formlabel,
+.paypal-form .formrow .formcol .form-floating .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -12902,11 +12870,13 @@ input[type=time]::-webkit-clear-button {
   color: #828282;
 }
 
-.creditdebit-form .formrow .formcol .form-floating .formlabel .required {
+.creditdebit-form .formrow .formcol .form-floating .formlabel .required,
+.paypal-form .formrow .formcol .form-floating .formlabel .required {
   color: #cc3340;
 }
 
-.creditdebit-form .formrow .formcol .form-floating .form-control {
+.creditdebit-form .formrow .formcol .form-floating .form-control,
+.paypal-form .formrow .formcol .form-floating .form-control {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.875rem;
@@ -12915,7 +12885,8 @@ input[type=time]::-webkit-clear-button {
   color: #333333;
 }
 
-.creditdebit-form .formrow .formcol .form-floating .form-control:focus ~ .formlabel {
+.creditdebit-form .formrow .formcol .form-floating .form-control:focus ~ .formlabel,
+.paypal-form .formrow .formcol .form-floating .form-control:focus ~ .formlabel {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12923,7 +12894,8 @@ input[type=time]::-webkit-clear-button {
   line-height: 1;
 }
 
-.creditdebit-form .formrow .formcol .error-message {
+.creditdebit-form .formrow .formcol .error-message,
+.paypal-form .formrow .formcol .error-message {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12933,19 +12905,23 @@ input[type=time]::-webkit-clear-button {
   display: none;
 }
 
-.creditdebit-form .formrow .formcol.error .form-floating .form-control {
+.creditdebit-form .formrow .formcol.error .form-floating .form-control,
+.paypal-form .formrow .formcol.error .form-floating .form-control {
   border-color: #cc3340;
 }
 
-.creditdebit-form .formrow .formcol.error .form-floating .formlabel {
+.creditdebit-form .formrow .formcol.error .form-floating .formlabel,
+.paypal-form .formrow .formcol.error .form-floating .formlabel {
   color: #cc3340;
 }
 
-.creditdebit-form .formrow .formcol.error .error-message {
+.creditdebit-form .formrow .formcol.error .error-message,
+.paypal-form .formrow .formcol.error .error-message {
   display: block;
 }
 
-.creditdebit-form .formrow .cardbox {
+.creditdebit-form .formrow .cardbox,
+.paypal-form .formrow .cardbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12954,21 +12930,27 @@ input[type=time]::-webkit-clear-button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  border: solid 0.0625rem #d5d5d5;
   width: 100%;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  height: 3rem;
-  margin-bottom: 1.25rem;
+  height: 4.375rem;
 }
 
-@media screen and (max-width: 48rem) {
-  .creditdebit-form .formrow .cardbox {
-    margin-bottom: 1.875rem;
-  }
+.creditdebit-form .formrow .cardbox .cardnumber,
+.paypal-form .formrow .cardbox .cardnumber {
+  height: 3.125rem;
+  border: solid 0.0625rem #d5d5d5;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border 350ms ease-in-out;
+  transition: border 350ms ease-in-out;
 }
 
-.creditdebit-form .formrow .cardbox .error-message {
+.creditdebit-form .formrow .cardbox .cardnumber:focus-within,
+.paypal-form .formrow .cardbox .cardnumber:focus-within {
+  border-color: rgba(51, 51, 51, 0.5);
+}
+
+.creditdebit-form .formrow .cardbox .error-message,
+.paypal-form .formrow .cardbox .error-message {
   font-family: "Helvetica";
   font-style: normal;
   font-size: 0.75rem;
@@ -12978,19 +12960,28 @@ input[type=time]::-webkit-clear-button {
   display: none;
 }
 
-.creditdebit-form .formrow .cardbox.error {
+.creditdebit-form .formrow .cardbox.error,
+.paypal-form .formrow .cardbox.error {
   border-color: #cc3340;
 }
 
-.creditdebit-form .formrow .cardbox.error .inputbox .cardnumber .inputfield {
+.creditdebit-form .formrow .cardbox.error .cardnumber,
+.paypal-form .formrow .cardbox.error .cardnumber {
+  border-color: #cc3340;
+}
+
+.creditdebit-form .formrow .cardbox.error .cardnumber .inputfield,
+.paypal-form .formrow .cardbox.error .cardnumber .inputfield {
   color: #cc3340;
 }
 
-.creditdebit-form .formrow .cardbox.error .inputbox .inputfield {
+.creditdebit-form .formrow .cardbox.error .inputfield,
+.paypal-form .formrow .cardbox.error .inputfield {
   color: #cc3340;
 }
 
-.creditdebit-form .formrow .cardbox.error .error-message {
+.creditdebit-form .formrow .cardbox.error .error-message,
+.paypal-form .formrow .cardbox.error .error-message {
   display: block;
 }
 
@@ -13054,36 +13045,7 @@ input[type=time]::-webkit-clear-button {
   padding: 0.625rem;
 }
 
-.invoice-promo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.invoice-promo .btn-invoice,
-.invoice-promo .btn-promo {
-  background: transparent;
-  border: none;
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1;
-  color: #828282;
-}
-
 .promocode {
-  gap: 0.5rem;
-  display: none;
-}
-
-.promocode.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13091,6 +13053,8 @@ input[type=time]::-webkit-clear-button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.5rem;
+  height: 4.375rem;
 }
 
 .promocode .form-floating .formlabel {
@@ -13099,7 +13063,6 @@ input[type=time]::-webkit-clear-button {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
-  margin-top: 0.3125rem;
   color: #828282;
 }
 
@@ -13147,11 +13110,6 @@ input[type=time]::-webkit-clear-button {
 }
 
 .invoicebox {
-  gap: 1.25rem;
-  display: none;
-}
-
-.invoicebox.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13159,6 +13117,7 @@ input[type=time]::-webkit-clear-button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1.25rem;
 }
 
 .invoicebox .inputbox {
@@ -13174,6 +13133,7 @@ input[type=time]::-webkit-clear-button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  height: 4.375rem;
 }
 
 .invoicebox .inputbox .form-floating {
@@ -13186,7 +13146,6 @@ input[type=time]::-webkit-clear-button {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
-  margin-top: 0.3125rem;
   color: #828282;
 }
 
@@ -13279,7 +13238,6 @@ input[type=time]::-webkit-clear-button {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
-  margin-top: 0.3125rem;
   color: #828282;
 }
 
@@ -13339,6 +13297,70 @@ input[type=time]::-webkit-clear-button {
   gap: 0.5rem;
 }
 
+.cardbox {
+  margin-bottom: 0;
+}
+
+.cardbox .cardnumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+  height: 4.375rem;
+}
+
+.cardbox .cardnumber .cardicon {
+  width: 3rem;
+  height: 1.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cardbox .cardnumber .cardicon {
+    width: 1.75rem;
+  }
+}
+
+.cardbox .cardnumber .cardicon svg {
+  height: 100%;
+}
+
+.cardbox .cardnumber .inputfield {
+  width: calc(100% - 3.5rem);
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: left;
+  padding: 0.5rem 0rem;
+  background: transparent;
+  color: #333333;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .cardbox .cardnumber .inputfield {
+    width: calc(100% - 1.75rem);
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
 .promotion-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13378,6 +13400,7 @@ input[type=time]::-webkit-clear-button {
     width: calc(100% - 2.5rem);
     margin-left: auto;
     margin-right: auto;
+    margin-top: -25rem;
   }
 }
 
@@ -14028,6 +14051,16 @@ input[type=time]::-webkit-clear-button {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .faqmain-section-content .faq-breadcrumb nav .breadcrumb-item {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.42857;
+  }
+}
+
 .faqmain-section-content .faq-breadcrumb nav .breadcrumb-item a {
   font: inherit;
   color: #333333;
@@ -14165,6 +14198,7 @@ input[type=time]::-webkit-clear-button {
 @media screen and (max-width: 48rem) {
   .faqmain-section-content .article-links .faqarticles {
     width: 100%;
+    padding: 1.25rem 1rem;
   }
 }
 
@@ -14283,6 +14317,16 @@ input[type=time]::-webkit-clear-button {
   }
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-button {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.42857;
+  }
+}
+
 .faqmain-section-content .article-links .faqarticles .articles .accordion-button::after {
   position: absolute;
   left: 0.9375rem;
@@ -14320,6 +14364,17 @@ input[type=time]::-webkit-clear-button {
     font-family: "Helvetica";
     font-style: normal;
     font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-body .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
     font-weight: normal;
     line-height: 1;
     line-height: 1.75;
@@ -14368,6 +14423,17 @@ input[type=time]::-webkit-clear-button {
   }
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts .text {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
 .faqmain-section-content .article-links .faqarticles .articles .accordion-body .texts .text .link {
   font: inherit;
   color: inherit;
@@ -14406,6 +14472,17 @@ input[type=time]::-webkit-clear-button {
     font-family: "Helvetica";
     font-style: normal;
     font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1;
+    line-height: 1.75;
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .faqmain-section-content .article-links .faqarticles .articles .accordion-body ul li {
+    font-family: "Helvetica";
+    font-style: normal;
+    font-size: 0.75rem;
     font-weight: normal;
     line-height: 1;
     line-height: 1.75;
@@ -14565,6 +14642,12 @@ input[type=time]::-webkit-clear-button {
   gap: 0.875rem;
   padding: 1.75rem 1.875rem;
   border-bottom: solid 0.0625rem #dddddd;
+}
+
+@media screen and (max-width: 48rem) {
+  .faqmain-section-content .article-links .faqlinks .linkbox {
+    padding: 1.25rem 1rem;
+  }
 }
 
 .faqmain-section-content .article-links .faqlinks .linkbox .linktitle {

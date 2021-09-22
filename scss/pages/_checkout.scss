@@ -80,7 +80,7 @@
             width: 50%;
             @include flex-column;
             gap: length(8);
-            height: length(78);
+            height: length(70);
 
             @include breakpoint(phone768) {
                 width: 100%;
@@ -89,7 +89,6 @@
             .form-floating {
                 .formlabel {
                     @include text-14-14-normal-basefont;
-                    margin-top: length(5);
                     color: $textGray-1;
 
                     .required {
@@ -161,6 +160,7 @@
         margin: length(0) length(-56);
         padding: length(0) length(56);
         @include border-single(bottom, solid, 1, $searchBorder);
+        justify-content: center;
 
         .nav-item {
             width: 50%;
@@ -185,7 +185,8 @@
     }
 }
 
-.creditdebit-form {
+.creditdebit-form,
+.paypal-form {
     @include flex-column;
     gap: length(20);
 
@@ -202,6 +203,7 @@
             width: 50%;
             @include flex-column;
             gap: length(8);
+            height: length(70);
 
             @include breakpoint(phone768) {
                 width: 100%;
@@ -216,7 +218,7 @@
                     width: 50%;
                     @include flex-column;
                     gap: length(8);
-                    height: length(78);
+                    height: length(70);
 
                     .form-floating {
                         .formlabel {
@@ -269,48 +271,7 @@
                 @include flex-center-between;
                 gap: length(20);
 
-                .cardbox {
-                    width: 75%;
-                    margin-bottom: 0;
-
-                    .cardnumber {
-                        @include flex-center-vert;
-                        gap: length(8);
-                        height: length(78);
-                        padding-left: length(12);
-    
-                        .cardicon {
-                            width: length(48);
-                            height: length(25);
-                            @include flex-center;
-    
-                            @include breakpoint(phone575) {
-                                width: length(28);
-                            }
-                        
-                            svg {
-                                height: 100%;
-                            }
-                        }
-    
-                        .inputfield {
-                            width: calc(100% - 3.5rem);
-                            @include text-14-14-normal-basefont;
-                            text-align: left;
-                            padding: length(8) length(0);
-                            @include setBgColor(transparent, $inputText);
-    
-                            @include breakpoint(phone575) {
-                                width: calc(100% - 1.75rem);
-                                @include text-12-12-normal-basefont;
-                            }
-                        }
-                    }
-                }
-
                 .cvvcard  {
-                    width: 25%;
-
                     .form-floating {
                         .formlabel {
                             @include text-14-14-normal-basefont;
@@ -326,7 +287,6 @@
                             color: $textPrimary;
         
                             &:focus {
-        
                                 ~ .formlabel {
                                     @include text-12-12-normal-basefont;
                                 }
@@ -407,14 +367,18 @@
         .cardbox {
             @include flex-column;
             gap: length(8);
-            @include border(solid, 1, $searchBorder);
             width: 100%;
-            @include radius(4);
-            height: length(48);
-            margin-bottom: length(20);
+            height: length(70);
 
-            @include breakpoint(phone768) {
-                margin-bottom: length(30);
+            .cardnumber {
+                height: length(50);
+                @include border(solid, 1, $searchBorder);
+                @include radius(4);
+                @include transition(border $time ease-in-out);
+
+                &:focus-within {
+                    border-color: $darklinkhovercolor;
+                }
             }
 
             .error-message {
@@ -423,21 +387,19 @@
                 display: none;
             }
 
-            
-
             &.error {
                 border-color: $danger;
+                
+                .cardnumber {
+                    border-color: $danger;
 
-                .inputbox {
-                    .cardnumber {
-                        .inputfield {
-                            color: $danger;
-                        }
-                    }
-                    
                     .inputfield {
                         color: $danger;
                     }
+                }
+                
+                .inputfield {
+                    color: $danger;
                 }
 
                 .error-message {
@@ -495,29 +457,14 @@
     }
 }
 
-.invoice-promo {
-    @include flex-center-between;
-
-    .btn-invoice,
-    .btn-promo {
-        @include transparent-button;
-        @include text-12-12-normal-basefont;
-        color: $textGray-1;
-    }
-}
-
 .promocode {
+    @include flex-column;
     gap: length(8);
-    display: none;
-
-    &.show {
-        @include flex-column;
-    }
+    height: length(70);
 
     .form-floating {
         .formlabel {
             @include text-14-14-normal-basefont;
-            margin-top: length(5);
             color: $textGray-1;
 
             .required {
@@ -561,25 +508,21 @@
 }
 
 .invoicebox {
+    @include flex-column;
     gap: length(20);
-    display: none;
-
-    &.show {
-        @include flex-column;
-    }
 
     .inputbox {
         width: 100%;
         @include flex-column;
         gap: length(8);
         align-items: flex-start;
+        height: length(70);
 
         .form-floating {
             width: 100%;
 
             .formlabel {
                 @include text-14-14-normal-basefont;
-                margin-top: length(5);
                 color: $textGray-1;
 
                 .required {
@@ -643,7 +586,6 @@
             .form-floating {
                 .formlabel {
                     @include text-14-14-normal-basefont;
-                    margin-top: length(5);
                     color: $textGray-1;
 
                     .required {
@@ -692,4 +634,44 @@
 .paymentcards {
     @include flex-center;
     gap: length(8);
+}
+
+
+
+.cardbox {
+    margin-bottom: 0;
+
+    .cardnumber {
+        @include flex-center-vert;
+        gap: length(8);
+        padding-left: length(12);
+        height: length(70);
+
+        .cardicon {
+            width: length(48);
+            height: length(25);
+            @include flex-center;
+
+            @include breakpoint(phone575) {
+                width: length(28);
+            }
+        
+            svg {
+                height: 100%;
+            }
+        }
+
+        .inputfield {
+            width: calc(100% - 3.5rem);
+            @include text-14-14-normal-basefont;
+            text-align: left;
+            padding: length(8) length(0);
+            @include setBgColor(transparent, $inputText);
+
+            @include breakpoint(phone575) {
+                width: calc(100% - 1.75rem);
+                @include text-12-12-normal-basefont;
+            }
+        }
+    }
 }

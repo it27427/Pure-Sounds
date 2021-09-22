@@ -325,7 +325,6 @@
 
     .formlabel {
         color: $textGray-1;
-        margin-top: length(5);
 
         .required {
             color: $danger;
@@ -335,9 +334,16 @@
 
 .form-select {
     @include text-14-14-medium-basefont;
-    padding: length(16) length(12);
 
     .option {
         font: inherit;
     }
+}
+
+.form-floating>.form-control{
+    height: length(50);
+}
+
+.form-floating>.form-select {
+    height: length(50);
 }
