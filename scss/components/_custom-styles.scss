@@ -171,3 +171,56 @@
 		position: static;
 	}
 }
+
+.switch {
+	@include flex-center-vert;
+	gap: length(8);
+
+	.switch-input {
+		appearance: none;
+		border: 0;
+		background: $noticeBg;
+		width: length(50);
+		height: length(29);
+		border-radius: length(100);
+		cursor: pointer;
+		position: relative;
+		box-sizing: border-box;
+		@include transition(background $time);
+		vertical-align: middle;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			left: length(2);
+			top: length(2);
+			bottom: length(2);
+			@include square(length(25));
+			@include circle;
+			background: $white;
+			will-change: transform;
+			@include transition(transform $time cubic-bezier(.01,.65,.23,1));
+		}
+		
+		&:checked {
+		  	background: $accessActiveBg;
+		  
+			&::before {
+				transform: translateX(85%);
+				background: $white;
+			}
+		}
+		
+		&:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+	}
+
+	.switch-label {
+		@include text-32-24-medium-basefont;
+		color: $accessActiveBg;
+		cursor: pointer;
+	}
+}

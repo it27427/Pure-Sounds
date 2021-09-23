@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Sounds | Billing Information</title>
+    <title>Pure Sounds | Invoices</title>
     <!-- SITE FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- FONT AWESOME CDN -->
@@ -116,7 +116,7 @@
                                     </div>
                                     <!-- LOGGED IN MENU END -->
                                 </div>
-                                
+
                                 <!-- LANGUAGE CHANGE SECTION START -->
                                 <div class="change-language">
                                     <select class="form-select">
@@ -441,11 +441,11 @@
                         </li>
 
                         <li class="billinglist-item">
-                            <a href="invoices.html" class="billinglist-link">Invoices</a>
+                            <a href="invoices.html" class="billinglist-link active">Invoices</a>
                         </li>
 
                         <li class="billinglist-item">
-                            <a href="info.html" class="billinglist-link active">Billing Information</a>
+                            <a href="info.html" class="billinglist-link">Billing Information</a>
                         </li>
 
                         <li class="billinglist-item">
@@ -457,139 +457,32 @@
 
                 <!-- BILLING INVOICES START -->
                 <div class="billing-invoices">
-                    <!-- COMPANY ADDRESS INFORMATIONS START -->
-                    <div class="company-address">
-                        <div class="address-info">
-                            <h3 class="address-info-title">Company Address</h3>
-                            <p class="address-info-text">This address will appear on your Invoices/Receipts</p>
+                    <!-- INVOICES SECTION START -->
+                    <div class="invoices">
+                        <div class="invoices-header">
+                            <h2 class="title">Invoices</h2>
+                            <p class="text">Browse all issued invoices</p>
                         </div>
 
-                        <form class="address-form">
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="contactPerson" placeholder="Contact Person">
-                                    <label class="formlabel" for="contactPerson">Contact Person <span class="required">*</span></label>
+                        <div class="descriptions">
+                            <div class="heading">
+                                <h2 class="title">2021</h2>
+                            </div>
+    
+                            <div class="details">
+                                <div class="date-price">
+                                    <p class="date">25 Aug 2021</p>
+                                    <p class="price">$298.8</p>
                                 </div>
                                 
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressLine1" placeholder="Address, Line 1">
-                                    <label class="formlabel" for="addressLine1">Address, Line 1 <span class="required">*</span></label>
+                                <div class="view-download">
+                                    <button class="btn-view" data-bs-toggle="modal" data-bs-target="#deleteModal">View</button>
+                                    <button class="btn-view">Download PDF</button>
                                 </div>
-                                
-                                <p class="error-message">This field is required</p>
                             </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressLine2" placeholder="Address, Line 2">
-                                    <label class="formlabel" for="addressLine2">Address, Line 2 <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressCity" placeholder="City">
-                                    <label class="formlabel" for="addressCity">City <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressState" placeholder="State/Province">
-                                    <label class="formlabel" for="addressState">State/Province <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressPostalCode" placeholder="Postal Code">
-                                    <label class="formlabel" for="addressPostalCode">Postal Code <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <select class="form-select" id="selectAddressCountry" aria-label="Select Address Country">
-                                        <option selected>Select Country</option>
-                                        <option value="1">Bangladesh</option>
-                                        <option value="2">Honduras</option>
-                                        <option value="3">Åland Islands</option>
-                                        <option value="4">Albania</option>
-                                        <option value="5">Algeria</option>
-                                        <option value="6">American Samoa</option>
-                                        <option value="7">Andorra</option>
-                                        <option value="8">Angola</option>
-                                        <option value="9">Anguilla</option>
-                                        <option value="10">Antarctica</option>
-                                        <option value="11">Antigua and Barbuda</option>
-                                        <option value="12">Argentina</option>
-                                        <option value="13">Armenia</option>
-                                        <option value="14">Aruba</option>
-                                        <option value="15">Australia</option>
-                                        <option value="16">Austria</option>
-                                        <option value="17">Azerbaijan</option>
-                                        <option value="18">Bahamas</option>
-                                        <option value="19">Bahrain</option>
-                                    </select>
-        
-                                    <label for="selectAddressCountry" class="formlabel">Country <span class="required">*</span></label>
-                                </div>
-                                <p class="error-message">You must have fill this field</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressCompany" placeholder="Company">
-                                    <label class="formlabel" for="addressCompany">Company <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="address-submit">
-                                <button type="button" class="btn-access btn-annual">Save Company Address</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- COMPANY ADDRESS INFORMATIONS END -->
-
-                    <!-- VAT INFORMATIONS START -->
-                    <div class="vat-informations">
-                        <div class="vat-info">
-                            <h3 class="vat-info-title">VAT Number</h3>
-                            <p class="vat-info-text">
-                                Add a VAT number to be included in your invoices. Please note that VAT numbers are only available for companies located in the EU.
-                            </p>
                         </div>
-
-                        <form class="vat-form">
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="vatNumber" placeholder="VAT Number">
-                                    <label class="formlabel" for="vatNumber">VAT Number <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="vat-submit">
-                                <button type="button" class="btn-access btn-annual">Save VAT Information</button>
-                            </div>
-                        </form>
                     </div>
-                    <!-- VAT INFORMATIONS END -->
+                    <!-- INVOICES SECTION END -->
                 </div>
                 <!-- BILLING INVOICES END -->
             </div>
@@ -704,10 +597,33 @@
     </footer>
     <!-- FOOTER SECTION END -->
 
+    <!--  -->
+    <div class="modal fade delete-modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <figure class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" fill="none" viewBox="0 0 48 44">
+                            <path fill="#333" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            <mask id="prefix__a" width="48" height="43" x="0" y="0" maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd" d="M29.934 2.808c0-1.085.88-1.964 1.964-1.964 1.085 0 1.965.88 1.965 1.964v37.415c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V2.808zM.464 10.683c0-1.085.88-1.964 1.965-1.964s1.965.88 1.965 1.964v21.665c0 1.085-.88 1.965-1.965 1.965s-1.964-.88-1.964-1.965V10.683zm9.824 7.88c-1.085 0-1.965.88-1.965 1.964v7.883c0 1.085.88 1.965 1.965 1.965s1.964-.88 1.964-1.965v-7.883c0-1.085-.88-1.965-1.964-1.965zm5.893-4.933c0-2.712 2.2-4.911 4.912-4.911 2.712 0 4.911 2.199 4.911 4.911V33.34c0 2.712-2.199 4.911-4.911 4.911-2.713 0-4.912-2.199-4.912-4.911V13.63zm26.522.995c-2.712 0-4.911 2.199-4.911 4.912V29.4c0 2.713 2.199 4.912 4.911 4.912 2.713 0 4.912-2.2 4.912-4.912v-9.864c0-2.713-2.199-4.912-4.912-4.912z" clip-rule="evenodd"/>
+                            </mask>
+                        </svg>
+                        
+                        <span class="brand-title">puresounds</span>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- BOOTSTRAP SCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- CUSTOM SCRIPT FILE -->
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/dropdown.js"></script>
     <!-- MOBILE SEARCH FILE -->
     <script src="assets/js/responsive-search.js"></script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Sounds | Billing Information</title>
+    <title>Pure Sounds | Payment Method</title>
     <!-- SITE FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- FONT AWESOME CDN -->
@@ -116,7 +116,7 @@
                                     </div>
                                     <!-- LOGGED IN MENU END -->
                                 </div>
-                                
+
                                 <!-- LANGUAGE CHANGE SECTION START -->
                                 <div class="change-language">
                                     <select class="form-select">
@@ -445,11 +445,11 @@
                         </li>
 
                         <li class="billinglist-item">
-                            <a href="info.html" class="billinglist-link active">Billing Information</a>
+                            <a href="info.html" class="billinglist-link">Billing Information</a>
                         </li>
 
                         <li class="billinglist-item">
-                            <a href="payment-method.html" class="billinglist-link">Payment Method</a>
+                            <a href="payment-method.html" class="billinglist-link active">Payment Method</a>
                         </li>
                     </ul>
                 </aside>
@@ -457,139 +457,58 @@
 
                 <!-- BILLING INVOICES START -->
                 <div class="billing-invoices">
-                    <!-- COMPANY ADDRESS INFORMATIONS START -->
-                    <div class="company-address">
-                        <div class="address-info">
-                            <h3 class="address-info-title">Company Address</h3>
-                            <p class="address-info-text">This address will appear on your Invoices/Receipts</p>
+                    <!-- PROFILE OVERVIEW START -->
+                    <div class="profile-overview">
+                        <h2 class="overview-title">Profile Overview</h2>
+
+                        <div class="overviewbox">
+                            <div class="overview">
+                                <h4 class="account-type">Account Type</h4>
+
+                                <p class="overview-text">
+                                    You currently don’t have any subscription. Subscribe to one of our plans and start downloading.
+                                </p>
+                            </div>
+
+                            <div class="overviewbutton">
+                                <a href="pricing.html" class="btn-access btn-annual">View Pricing</a>
+                            </div>
                         </div>
-
-                        <form class="address-form">
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="contactPerson" placeholder="Contact Person">
-                                    <label class="formlabel" for="contactPerson">Contact Person <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressLine1" placeholder="Address, Line 1">
-                                    <label class="formlabel" for="addressLine1">Address, Line 1 <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressLine2" placeholder="Address, Line 2">
-                                    <label class="formlabel" for="addressLine2">Address, Line 2 <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressCity" placeholder="City">
-                                    <label class="formlabel" for="addressCity">City <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressState" placeholder="State/Province">
-                                    <label class="formlabel" for="addressState">State/Province <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressPostalCode" placeholder="Postal Code">
-                                    <label class="formlabel" for="addressPostalCode">Postal Code <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <select class="form-select" id="selectAddressCountry" aria-label="Select Address Country">
-                                        <option selected>Select Country</option>
-                                        <option value="1">Bangladesh</option>
-                                        <option value="2">Honduras</option>
-                                        <option value="3">Åland Islands</option>
-                                        <option value="4">Albania</option>
-                                        <option value="5">Algeria</option>
-                                        <option value="6">American Samoa</option>
-                                        <option value="7">Andorra</option>
-                                        <option value="8">Angola</option>
-                                        <option value="9">Anguilla</option>
-                                        <option value="10">Antarctica</option>
-                                        <option value="11">Antigua and Barbuda</option>
-                                        <option value="12">Argentina</option>
-                                        <option value="13">Armenia</option>
-                                        <option value="14">Aruba</option>
-                                        <option value="15">Australia</option>
-                                        <option value="16">Austria</option>
-                                        <option value="17">Azerbaijan</option>
-                                        <option value="18">Bahamas</option>
-                                        <option value="19">Bahrain</option>
-                                    </select>
-        
-                                    <label for="selectAddressCountry" class="formlabel">Country <span class="required">*</span></label>
-                                </div>
-                                <p class="error-message">You must have fill this field</p>
-                            </div>
-
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="addressCompany" placeholder="Company">
-                                    <label class="formlabel" for="addressCompany">Company <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="address-submit">
-                                <button type="button" class="btn-access btn-annual">Save Company Address</button>
-                            </div>
-                        </form>
                     </div>
-                    <!-- COMPANY ADDRESS INFORMATIONS END -->
+                    <!-- PROFILE OVERVIEW END -->
 
-                    <!-- VAT INFORMATIONS START -->
-                    <div class="vat-informations">
-                        <div class="vat-info">
-                            <h3 class="vat-info-title">VAT Number</h3>
-                            <p class="vat-info-text">
-                                Add a VAT number to be included in your invoices. Please note that VAT numbers are only available for companies located in the EU.
-                            </p>
+                    <!-- BILLING INFORMATION START -->
+                    <div class="billing-information">
+                        <div class="billing-info">
+                            <h2 class="billing-info-title">Billing Information</h2>
+                            <p class="billing-info-text">Edit your billing address and VAT number</p>
                         </div>
-
-                        <form class="vat-form">
-                            <div class="input-box">
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="vatNumber" placeholder="VAT Number">
-                                    <label class="formlabel" for="vatNumber">VAT Number <span class="required">*</span></label>
-                                </div>
-                                
-                                <p class="error-message">This field is required</p>
-                            </div>
-
-                            <div class="vat-submit">
-                                <button type="button" class="btn-access btn-annual">Save VAT Information</button>
-                            </div>
-                        </form>
+                        
+                        <div class="billing-button">
+                            <a href="info.html" class="btn-access btn-annual">Edit Billing Information</a>
+                        </div>
                     </div>
-                    <!-- VAT INFORMATIONS END -->
+                    <!-- BILLING INFORMATION END -->
+
+                    <!-- PAYMENT INFORMATION START -->
+                    <div class="payment-information">
+                        <div class="payment-info">
+                            <h2 class="payment-info-title">Payment Methods</h2>
+                            <p class="payment-info-text">View and edit your payment methods</p>
+                        </div>
+                        
+                        <p class="paymenttext">You don't have any payment details yet</p>
+                    </div>
+                    <!-- PAYMENT INFORMATION END -->
+
+                    <!-- INVOICES CONTENT START -->
+                    <div class="invoices-information">
+                        <div class="invoices-info">
+                            <h2 class="invoices-info-title">Invoices</h2>
+                            <p class="invoices-info-text">You don’t have any invoices yet.</p>
+                        </div>
+                    </div>
+                    <!-- INVOICES CONTENT END -->
                 </div>
                 <!-- BILLING INVOICES END -->
             </div>
@@ -707,7 +626,6 @@
     <!-- BOOTSTRAP SCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- CUSTOM SCRIPT FILE -->
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/dropdown.js"></script>
     <!-- MOBILE SEARCH FILE -->
     <script src="assets/js/responsive-search.js"></script>

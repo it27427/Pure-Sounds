@@ -207,3 +207,12 @@ h1 {
         max-width: 100%;
     }
 }
+
+label,
+.form-check-label,
+.labeltext,
+.formlink {
+    &::selection {
+        @include setBgColor(transparent, $textPrimary);
+    }
+}
