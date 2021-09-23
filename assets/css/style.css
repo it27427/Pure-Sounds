@@ -645,7 +645,6 @@ label::selection,
 }
 
 .home-header .brand .logo svg {
-  width: 1.5rem;
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -1328,7 +1327,6 @@ label::selection,
 }
 
 .dark-header .brand .logo svg {
-  width: 1.5rem;
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -1740,7 +1738,6 @@ label::selection,
 }
 
 .blog-header-content .brand .logo svg {
-  width: 1.5rem;
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -2074,7 +2071,6 @@ label::selection,
 }
 
 .blog-head-content .brand .logo svg {
-  width: 1.5rem;
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -7070,7 +7066,13 @@ label::selection,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 1.5rem;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .invoices .descriptions .details {
+    gap: 1.5rem;
+  }
 }
 
 .invoices .descriptions .details .date-price {
@@ -7126,6 +7128,156 @@ label::selection,
 
 .invoices .descriptions .details .view-download .btn-view:not([disabled]):hover {
   color: #50bf90;
+}
+
+.invoice-receipt {
+  width: 100%;
+  text-align: left;
+}
+
+.invoice-receipt .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.invoice-receipt .logo svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.invoice-receipt .logo .brand-title {
+  color: black;
+  font-weight: 700;
+}
+
+.invoice-receipt table {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.invoice-receipt table tbody tr td {
+  vertical-align: top;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #333333;
+}
+
+.invoice-receipt .order-details tbody tr th {
+  border: inherit;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #333333;
+  padding: 0.5rem 0rem;
+}
+
+.invoice-receipt .order-details tbody tr td {
+  border-top: solid 0.0625rem #dfdfdf;
+  padding: 0.5rem 0rem;
+}
+
+.invoice-receipt .order-details tbody tr .invoice-title {
+  font-weight: 700;
+}
+
+.invoice-receipt .order-details tbody tr .invoice-amount {
+  font-weight: 400;
+  text-align: right;
+}
+
+.invoice-receipt .order-details tbody .total .invoice-title {
+  text-align: right;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.55556;
+}
+
+.toaster {
+  position: fixed;
+  top: 6.25rem;
+  left: 11.25rem;
+}
+
+.toast {
+  width: 21.875rem;
+  max-width: 100%;
+  font-size: .875rem;
+  pointer-events: auto;
+  background-color: rgba(82, 217, 160, 0.85);
+  background-clip: padding-box;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: .25rem;
+}
+
+.toast-body .descriptons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+
+.toast-body .descriptons .icon {
+  height: 1.875rem;
+  width: 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.toast-body .descriptons .icon svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.toast-body .descriptons .text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  line-height: 1.3;
+  color: white;
+  width: calc(100% - 1.875rem);
+}
+
+.toast-danger {
+  background-color: rgba(204, 51, 64, 0.85);
+}
+
+.toast-warning {
+  background-color: rgba(255, 193, 7, 0.85);
+}
+
+.toast-info {
+  background-color: rgba(13, 202, 240, 0.85);
+}
+
+.toast-success {
+  background-color: rgba(82, 217, 160, 0.85);
 }
 
 .blog-banner {

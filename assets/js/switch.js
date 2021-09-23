@@ -9,4 +9,9 @@ switchCheck.addEventListener('click', () => {
     } else {
         switchLabel.textContent = 'Off';
     }
+
+    var successToast = document.querySelector('#successToast');
+    let toast = new bootstrap.Toast(successToast);
+
+    toast.show();
 });

@@ -37,7 +37,6 @@
             overflow: hidden;
             
             svg {
-                width: length(24);
                 @include square(length(24));
             }
         }

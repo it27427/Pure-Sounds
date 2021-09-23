@@ -677,8 +677,12 @@
     
         .details {
             @include flex-between;
-            gap: length(24);
-    
+            gap: length(48);
+
+            @include breakpoint(phone768) {
+                gap: length(24);
+            }
+
             .date-price {
                 width: 50%;
                 @include flex-between;
@@ -711,4 +715,130 @@
             }
         }
     }
+}
+
+.invoice-receipt {
+    width: 100%;
+    text-align: left;
+
+    .logo {
+        @include flex-center-vert;
+        gap: length(4);
+        overflow: hidden;
+        
+        svg {
+            @include square(length(24));
+        }
+
+        .brand-title {
+            color: $black;
+            font-weight: 700;
+        }
+    }
+
+    table {
+        margin-top: length(32);
+        width: 100%;
+
+        tbody {
+            tr {
+                td {
+                    vertical-align: top;
+                    @include text-20-14-normal-basefont;
+                    color: $textPrimary;
+                }
+            }
+        }
+    }
+
+    .order-details {
+        tbody {
+            tr {
+                th {
+                    border: inherit;
+                    @include text-20-14-normal-basefont;
+                    color: $textPrimary;
+                    padding: length(8) length(0);
+                }
+
+                td {
+                    @include border-single(top, solid, 1, $noticeBg);
+                    padding: length(8) length(0);
+                }
+
+                .invoice-title {
+                    font-weight: 700;
+                }
+                
+                .invoice-amount {
+                    font-weight: 400;
+                    text-align: right;
+                }
+            }
+
+            .total {
+                .invoice-title {
+                    text-align: right;
+                    @include text-28-18-bold-basefont;
+                }
+            }
+        }
+    }
+}
+
+.toaster {
+    position: fixed;
+    top: length(100);
+    left: length(180);
+}
+
+.toast {
+    width: length(350);
+    max-width: 100%;
+    font-size: .875rem;
+    pointer-events: auto;
+    background-color: rgba($accessActiveBg, .85);
+    background-clip: padding-box;
+    border: none;
+    box-shadow: none;
+    border-radius: .25rem;
+
+    &-body {
+        .descriptons {
+            @include flex-center-vert;
+            gap: length(10);
+
+            .icon {
+                @include square(length(30));
+                @include flex-center;
+
+                svg {
+                    @include square(length(24));
+                }
+            }
+
+            .text {
+                @include text-20-14-normal-basefont;
+                line-height: 1.3;
+                color: $white;
+                width: calc(100% - 1.875rem);
+            }
+        }
+    }
+}
+
+.toast-danger {
+    background-color: rgba($danger, .85);
+}
+
+.toast-warning {
+    background-color: rgba($warning, .85);
+}
+
+.toast-info {
+    background-color: rgba($info, .85);
+}
+
+.toast-success {
+    background-color: rgba($accessActiveBg, .85);
 }
