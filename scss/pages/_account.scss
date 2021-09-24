@@ -788,57 +788,401 @@
 
 .toaster {
     position: fixed;
-    top: length(100);
-    left: length(180);
+    top: length(96);
+    left: length(38);
+
+    @include breakpoint(phone768) {
+        top: length(75);
+        left: length(15);
+        right: length(15);
+    }
 }
 
 .toast {
-    width: length(350);
+    width: length(400);
     max-width: 100%;
-    font-size: .875rem;
     pointer-events: auto;
-    background-color: rgba($accessActiveBg, .85);
     background-clip: padding-box;
     border: none;
     box-shadow: none;
-    border-radius: .25rem;
+    @include radius(4);
+
+    @include breakpoint(phone768) {
+        width: 95%;
+        margin: 0 auto;
+    }
 
     &-body {
         .descriptons {
             @include flex-center-vert;
-            gap: length(10);
 
             .icon {
-                @include square(length(30));
+                @include square(length(32));
                 @include flex-center;
+                @include border(solid, 1, $white);
+                @include circle;
 
                 svg {
-                    @include square(length(24));
+                    @include square(length(18));
                 }
             }
 
             .text {
-                @include text-20-14-normal-basefont;
+                @include text-20-14-medium-basefont;
                 line-height: 1.3;
                 color: $white;
-                width: calc(100% - 1.875rem);
+                width: calc(100% - 4rem);
+                padding-left: length(16);
+            }
+
+            .btn-close {
+                background: transparent;
+                @include square(length(32));
+                @include flex-center;
+                padding: length(0);
+                @include radius(0);
+                opacity: 1;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+
+                    @include transition(transform $time ease);
+
+                    path {
+                        @include transition(fill $time ease);
+                    }
+                }
+
+                @include hover {
+                    opacity: 1;
+
+                    svg {
+                        @include transform(rotate(360deg));
+    
+                        path {
+                            color: $textGray-1;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 .toast-danger {
-    background-color: rgba($danger, .85);
+    background-color: $toastDanger;
 }
 
 .toast-warning {
-    background-color: rgba($warning, .85);
+    background-color: $warning;
 }
 
 .toast-info {
-    background-color: rgba($info, .85);
+    background-color: $info;
 }
 
 .toast-success {
-    background-color: rgba($accessActiveBg, .85);
+    background-color: $accessActiveBg;
+}
+
+.payment-method {
+    padding: length(32) length(40);
+    @include radius(4);
+    background: $white;
+    width: 100%;
+    @include flex-column;
+    gap: length(40);
+            
+    @include breakpoint(phone768) {
+        padding: length(24) length(20);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(8);
+
+        .title {
+            @include text-24-20-bold-basefont;
+            color: $textPrimary;
+        }
+
+        .text {
+            @include text-12-12-normal-basefont;
+            line-height: 1.75;
+            color: $formText;
+        }
+    }
+
+    &-cardinfo {
+        .title {
+            @include text-20-14-normal-basefont;
+            color: $textGray-1;
+            text-transform: uppercase;
+        }
+
+        .cardinfo {
+            @include flex-center-vert;
+            gap: length(14);
+            margin-bottom: length(8);
+
+            .cardnumber {
+                @include text-14-14-normal-basefont;
+                color: $textPrimary;
+
+                .number {
+                    @include text-28-18-medium-basefont;
+                    color: inherit;
+                }
+            }
+
+            .paymenticon {
+                width: length(36);
+                height: length(24);
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .expires {
+            @include text-20-14-normal-basefont;
+            color: $textGray-1;
+        }
+    }
+}
+
+.paymentform {
+    @include flex-column;
+    gap: length(20);
+
+    .formrow {
+        @include flex-center-vert;
+        gap: length(26);
+
+        @include breakpoint(phone768) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .formcol {
+            width: 50%;
+            @include flex-column;
+            gap: length(8);
+            height: length(70);
+
+            @include breakpoint(phone768) {
+                width: 100%;
+            }
+
+            .expired-date {
+                @include flex-center-between;
+                gap: length(20);
+
+                .expired,
+                .date {
+                    width: 50%;
+                    @include flex-column;
+                    gap: length(8);
+                    height: length(70);
+
+                    .form-floating {
+                        .formlabel {
+                            @include text-14-14-normal-basefont;
+                            color: $textGray-1;
+        
+                            .required {
+                                color: $danger;
+                            }
+                        }
+        
+                        .form-control {
+                            @include text-14-14-normal-basefont;
+                            color: $textPrimary;
+        
+                            &:focus {
+        
+                                ~ .formlabel {
+                                    @include text-12-12-normal-basefont;
+                                }
+                            }
+                        }
+                    }
+        
+                    .error-message {
+                        @include text-12-12-normal-basefont;
+                        color: $danger;
+                        display: none;
+                    }
+        
+                    &.error {
+                        .form-floating {
+                            .form-control {
+                                border-color: $danger;
+                            }
+        
+                            .formlabel {
+                                color: $danger;
+                            }
+                        }
+        
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .card-cvv {
+                @include flex-center-between;
+                gap: length(20);
+
+                .cvvcard  {
+                    .form-floating {
+                        .formlabel {
+                            @include text-14-14-normal-basefont;
+                            color: $textGray-1;
+        
+                            .required {
+                                color: $danger;
+                            }
+                        }
+        
+                        .form-control {
+                            @include text-14-14-normal-basefont;
+                            color: $textPrimary;
+        
+                            &:focus {
+                                ~ .formlabel {
+                                    @include text-12-12-normal-basefont;
+                                }
+                            }
+                        }
+                    }
+        
+                    .error-message {
+                        @include text-12-12-normal-basefont;
+                        color: $danger;
+                        display: none;
+                    }
+        
+                    &.error {
+                        .form-floating {
+                            .form-control {
+                                border-color: $danger;
+                            }
+        
+                            .formlabel {
+                                color: $danger;
+                            }
+                        }
+        
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .form-floating {
+                .formlabel {
+                    @include text-14-14-normal-basefont;
+                    color: $textGray-1;
+
+                    .required {
+                        color: $danger;
+                    }
+                }
+
+                .form-control {
+                    @include text-14-14-normal-basefont;
+                    color: $textPrimary;
+
+                    &:focus {
+
+                        ~ .formlabel {
+                            @include text-12-12-normal-basefont;
+                        }
+                    }
+                }
+            }
+
+            .error-message {
+                @include text-12-12-normal-basefont;
+                color: $danger;
+                display: none;
+            }
+
+            &.error {
+                .form-floating {
+                    .form-control,
+                    .form-select {
+                        border-color: $danger;
+                    }
+
+                    .formlabel {
+                        color: $danger;
+                    }
+                }
+
+                .error-message {
+                    display: block;
+                }
+            }
+        }
+
+        .cardbox {
+            @include flex-column;
+            gap: length(8);
+            width: 100%;
+            height: length(70);
+
+            .cardnumber {
+                height: length(50);
+                @include border(solid, 1, $searchBorder);
+                @include radius(4);
+                @include transition(border $time ease-in-out);
+
+                &:focus-within {
+                    border-color: $darklinkhovercolor;
+                }
+            }
+
+            .error-message {
+                @include text-12-12-normal-basefont;
+                color: $danger;
+                display: none;
+            }
+
+            &.error {
+                border-color: $danger;
+                
+                .cardnumber {
+                    border-color: $danger;
+
+                    .inputfield {
+                        color: $danger;
+                    }
+                }
+                
+                .inputfield {
+                    color: $danger;
+                }
+
+                .error-message {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .text {
+        @include text-14-14-normal-basefont;
+        line-height: 1.75;
+        color: $formText;
+        margin: length(-12) length(0) length(20);
+    }
 }

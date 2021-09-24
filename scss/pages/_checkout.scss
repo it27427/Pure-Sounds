@@ -349,7 +349,8 @@
 
             &.error {
                 .form-floating {
-                    .form-control {
+                    .form-control,
+                    .form-select {
                         border-color: $danger;
                     }
 
@@ -635,8 +636,6 @@
     @include flex-center;
     gap: length(8);
 }
-
-
 
 .cardbox {
     margin-bottom: 0;
