@@ -3,7 +3,13 @@
     padding: length(56) length(0) length(112);
 
     &-content {
-        @include flex-center;
+        display: flex;
+        justify-content: center;
+        gap: length(28);
+    
+        @include breakpoint(phone768) {
+            flex-direction: column;
+        }
 
         .contact-info {
             max-width: length(800);
@@ -12,6 +18,10 @@
             padding: length(28) length(30);
             @include flex-column;
             gap: length(28);
+    
+            @include breakpoint(phone768) {
+                max-width: 100%;
+            }
 
             .contact-title {
                 @include hometitle-mobile-font-style;
@@ -118,6 +128,63 @@
 
                         @include hover {
                             background: $accessActiveHoverBg;
+                        }
+                    }
+                }
+            }
+        }
+
+        .address-details {
+            max-width: length(400);
+            @include flex-column;
+            gap: length(28);
+    
+            @include breakpoint(phone768) {
+                max-width: 100%;
+            }
+
+            .address, .details {
+                background: $white;
+                box-shadow: $header-box-shadow;
+                padding: length(28) length(30);
+                @include flex-column;
+                gap: length(28);
+
+                .title {
+                    @include text-28-24-bold-basefont;
+                    color: $textPrimary;
+    
+                    @include breakpoint(phone768) {
+                        @include text-28-24-bold-basefont;
+                    }
+                }
+
+                .detail {
+                    @include flex-column;
+                    gap: length(4);
+
+                    .company {
+                        @include text-24-16-semibold-basefont;
+                        color: $contactText;
+                    }
+
+                    .location {
+                        @include text-24-16-normal-basefont;
+                        color: $titleText;
+                    }
+
+                    .text {
+                        @include text-24-16-normal-basefont;
+                        color: $titleText;
+                    }
+
+                    .link {
+                        @include text-24-16-normal-basefont;
+                        color: $textPrimary;
+                        @include transition(color $time ease-in);
+
+                        @include hover {
+                            color: $accessActiveBg;
                         }
                     }
                 }

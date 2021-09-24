@@ -24,23 +24,11 @@
                     @include flex-center;
                 }
 
-                .footer-link {
-                    @include flex-center-vert;
-                    gap: length(4);
-                    overflow: hidden;
-                    
-                    svg {
-                        width: length(24);
-                        @include square(length(24));
-                        
-                        path {
-                            fill: $featured-category-title;
-                        }
-                    }
-                    
-                    .link-title {
-                        @include text-20-14-semibold-basefont;
-                        color: $featured-category-title;
+                .logo {
+                    width: length(200);
+
+                    img {
+                        max-width: 80%;
                     }
                 }
             }

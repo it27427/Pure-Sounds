@@ -722,17 +722,12 @@
     text-align: left;
 
     .logo {
-        @include flex-center-vert;
-        gap: length(4);
-        overflow: hidden;
-        
-        svg {
-            @include square(length(24));
-        }
+        width: length(200);
+        height: length(40);
 
-        .brand-title {
-            color: $black;
-            font-weight: 700;
+        img {
+            max-width: 100%;
+            height: 100%;
         }
     }
 
