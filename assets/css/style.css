@@ -616,7 +616,7 @@ label::selection,
 .home-header .brand {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 12.5rem;
+  width: 9.375rem;
   height: 2.5rem;
   margin: 1.1875rem 2.75rem 1.25rem 0rem;
   display: -webkit-box;
@@ -1274,8 +1274,8 @@ label::selection,
 .dark-header .brand {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 7.0625rem;
-  height: 2rem;
+  width: 9.375rem;
+  height: 2.5rem;
   margin: 1.1875rem 2.75rem 1.25rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1283,33 +1283,15 @@ label::selection,
   position: relative;
 }
 
-.dark-header .brand-title {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.42857;
-  color: white;
-}
-
 .dark-header .brand .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.25rem;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.dark-header .brand .logo svg {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.dark-header .brand .logo svg path {
-  fill: white;
+.dark-header .brand .logo img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 48rem) {
@@ -1658,11 +1640,13 @@ label::selection,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 4.4375rem;
 }
 
 @media screen and (max-width: 61.9375rem) {
   .blog-header {
     background: black;
+    height: auto;
   }
   .blog-header .container-fluid {
     padding: 0;
@@ -1682,45 +1666,38 @@ label::selection,
   padding: 0rem 1.5rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .blog-header-content {
+    padding: 1.5rem;
+  }
+}
+
 .blog-header-content .brand {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 7.0625rem;
-  height: 2rem;
-  margin: 1.1875rem 2.75rem 1.25rem 0rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 9.375rem;
+  height: 2.5rem;
   position: relative;
 }
 
-.blog-header-content .brand-title {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.42857;
-  color: white;
-}
-
 .blog-header-content .brand .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.25rem;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.blog-header-content .brand .logo svg {
-  height: 1.5rem;
-  width: 1.5rem;
+.blog-header-content .brand .logo img {
+  width: 100%;
+  height: 100%;
 }
 
-.blog-header-content .brand .logo svg path {
-  fill: white;
+@media screen and (max-width: 61.9375rem) {
+  .blog-header-content .brand {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin: 0.625rem 0;
+  }
 }
 
 .blog-header-content .mainlist {
@@ -2020,40 +1997,38 @@ label::selection,
 .blog-head-content .brand {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 7.0625rem;
-  margin: 1.375rem 0rem 1.375rem 0rem;
-  position: relative;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.blog-head-content .brand-title {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.42857;
-  color: white;
-}
-
-.blog-head-content .brand .logo {
+  width: 9.375rem;
+  height: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.25rem;
-  overflow: hidden;
+  position: relative;
+  opacity: 0;
 }
 
-.blog-head-content .brand .logo svg {
-  height: 1.5rem;
-  width: 1.5rem;
+@media screen and (max-width: 68.75rem) {
+  .blog-head-content .brand {
+    width: 6.25rem;
+  }
 }
 
-.blog-head-content .brand .logo svg path {
-  fill: white;
+.blog-head-content .brand .logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blog-head-content .brand .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 48rem) {
+  .blog-head-content .brand {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
 }
 
 .blog-head-content .social-list {

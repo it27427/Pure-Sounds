@@ -21,28 +21,20 @@
 
     .brand {
         object-fit: contain;
-        width: length(113);
-        height: length(32);
+        width: length(150);
+        height: length(40);
         margin: length(19) length(44) length(20) length(0);
         display: flex;
         position: relative;
 
-        &-title {
-            @include text-20-14-semibold-basefont;
-            color: $white;
-        }
-
         .logo {
-            @include flex-center-vert;
-            gap: length(4);
-            overflow: hidden;
-            
-            svg {
-                @include square(length(24));
+            width: 100%;
+            height: 100%;
+            display: block;
 
-                path {
-                    fill: $white;
-                }
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
            
@@ -294,9 +286,11 @@
 .blog-header {
     background: $blogHeaderBg;
     @include flex-center-vert;
+    height: length(71);
 
     @include breakpoint(tablet991) {
         background: $black;
+        height: auto;
 
         .container-fluid {
             padding: 0;
@@ -307,31 +301,30 @@
         @include flex-center-between;
         padding: length(0) length(24);
 
+        @include breakpoint(phone768) {
+            padding: length(24);
+        }
+
         .brand {
             object-fit: contain;
-            width: length(113);
-            height: length(32);
-            margin: length(19) length(44) length(20) length(0);
-            display: flex;
+            width: length(150);
+            height: length(40);
             position: relative;
     
-            &-title {
-                @include text-20-14-semibold-basefont;
-                color: $white;
-            }
-    
             .logo {
-                @include flex-center-vert;
-                gap: length(4);
-                overflow: hidden;
-                
-                svg {
-                    @include square(length(24));
+                width: 100%;
+                height: 100%;
+                display: block;
     
-                    path {
-                        fill: $white;
-                    }
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
+            }
+               
+            @include breakpoint(tablet991) {
+                order: 0;
+                margin: length(10) 0;
             }
         }
 
@@ -531,29 +524,29 @@
 
         .brand {
             object-fit: contain;
-            width: length(113);
-            margin: length(22) length(0) length(22) length(0);
+            width: length(150);
+            height: length(40);
+            display: flex;
             position: relative;
             opacity: 0;
-            visibility: hidden;
-    
-            &-title {
-                @include text-20-14-semibold-basefont;
-                color: $white;
+
+            @include breakpoint(laptop1100) {
+                width: length(100);
             }
     
             .logo {
-                @include flex-center-vert;
-                gap: length(4);
-                overflow: hidden;
-                
-                svg {
-                    @include square(length(24));
+                width: 100%;
+                height: 100%;
+                display: block;
     
-                    path {
-                        fill: $white;
-                    }
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
+            }
+               
+            @include breakpoint(phone768) {
+                order: 0;
             }
         }
 
