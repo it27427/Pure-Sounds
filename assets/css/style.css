@@ -966,8 +966,7 @@ label::selection,
 }
 
 .checkout-header .brand .logo img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
 }
 
 .header-overlay {
@@ -1076,6 +1075,12 @@ label::selection,
           align-items: center;
 }
 
+@media screen and (max-width: 68.75rem) {
+  .puresounds-header {
+    height: auto;
+  }
+}
+
 .puresounds-header-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1093,20 +1098,8 @@ label::selection,
      object-fit: contain;
   width: 9.375rem;
   height: 2.5rem;
-  margin: 1.1875rem 2.75rem 1.25rem 0rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-}
-
-.puresounds-header-content .brand-title {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.42857;
-  color: #333333;
+  margin: 0.875rem 0;
 }
 
 .puresounds-header-content .brand .logo {
@@ -1207,6 +1200,7 @@ label::selection,
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
+  padding-bottom: 0.875rem;
 }
 
 .puresounds-header .headermobilelist-link {
@@ -1277,9 +1271,6 @@ label::selection,
   width: 9.375rem;
   height: 2.5rem;
   margin: 1.1875rem 2.75rem 1.25rem 0rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
 }
 
@@ -1668,7 +1659,7 @@ label::selection,
 
 @media screen and (max-width: 48rem) {
   .blog-header-content {
-    padding: 1.5rem;
+    padding: 0.25rem 1.5rem;
   }
 }
 
@@ -4607,6 +4598,15 @@ label::selection,
   font-weight: 600;
   line-height: 1.55556;
   color: #333333;
+}
+
+.offcanvas-header .logo {
+  width: 8.125rem;
+  height: 2.5rem;
+}
+
+.offcanvas-header .logo img {
+  max-width: 100%;
 }
 
 .offcanvas-header .btn-close {
@@ -10987,6 +10987,12 @@ input[type=time]::-webkit-clear-button {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 61.9375rem) {
+  .puresound-box .puresoundlogo {
+    margin: 0 auto;
+  }
+}
+
 .puresound-box .puresoundlogo .logo {
   display: block;
   width: 100%;
@@ -14736,8 +14742,8 @@ input[type=time]::-webkit-clear-button {
 .affeliates-header .headerbox .brand {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 7.0625rem;
-  height: 2rem;
+  width: 9.375rem;
+  height: 2.5rem;
   margin: 1.25rem 0rem 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14755,24 +14761,14 @@ input[type=time]::-webkit-clear-button {
 }
 
 .affeliates-header .headerbox .brand .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.25rem;
-  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.affeliates-header .headerbox .brand .logo svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.affeliates-header .headerbox .brand .logo svg path {
-  fill: white;
+.affeliates-header .headerbox .brand .logo img {
+  max-width: 100%;
+  height: 100%;
 }
 
 .affeliates-header .headerbox .title {

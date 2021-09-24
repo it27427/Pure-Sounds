@@ -24,7 +24,6 @@
         width: length(150);
         height: length(40);
         margin: length(19) length(44) length(20) length(0);
-        display: flex;
         position: relative;
 
         .logo {
@@ -302,7 +301,7 @@
         padding: length(0) length(24);
 
         @include breakpoint(phone768) {
-            padding: length(24);
+            padding: length(4) length(24);
         }
 
         .brand {

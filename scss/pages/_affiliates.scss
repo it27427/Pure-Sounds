@@ -27,8 +27,8 @@
 
         .brand {
             object-fit: contain;
-            width: length(113);
-            height: length(32);
+            width: length(150);
+            height: length(40);
             margin: length(20) length(0) length(40);
             display: flex;
             position: relative;
@@ -39,17 +39,13 @@
             }
     
             .logo {
-                @include flex-center-vert;
-                gap: length(4);
-                overflow: hidden;
-                
-                svg {
-                    width: length(24);
-                    @include square(length(24));
-    
-                    path {
-                        fill: $white;
-                    }
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    max-width: 100%;
+                    height: 100%;
                 }
             }
         }

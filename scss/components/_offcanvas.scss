@@ -164,6 +164,15 @@
             color: $textPrimary;
         }
 
+        .logo {
+            width: length(130);
+            height: length(40);
+
+            img {
+                max-width: 100%;
+            }
+        }
+
         .btn-close {
             background: transparent;
             margin: length(0);
